@@ -1,0 +1,131 @@
+{{ 'product-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'parallax.js' | asset_url }}" defer="defer"></script>
+
+<div class="container">
+	<div class="product-image-with-text {% if section.blocks != blank %} product-image-with-text--image {% endif %}">
+		<div class="product-image-with-text__item">
+			{%- if section.settings.sub_title != blank -%}
+				<div class="subtitle">{{ section.settings.sub_title | escape }}</div>
+			{% endif %}
+
+			{%- if section.settings.text != blank -%}
+				<div class="product-image-with-text__text">{{ section.settings.text | escape }}</div>
+			{% endif %}
+
+			<div class="product-image-with-text__meta">
+				{%- if section.settings.image_author != blank -%}
+					<figure class="product-image-with-text__photo">
+						<img
+							srcset="{%- if section.settings.image_author.width >= 50 -%}{{ section.settings.image_author | img_url: '50x' }} 50w,{%- endif -%}
+							{%- if section.settings.image_author.width >= 100 -%}{{ section.settings.image_author | img_url: '100x' }} 100w,{%- endif -%}
+							{{ section.settings.image_author | img_url: 'master' }} {{ section.settings.image_author.width }}w"
+							src="{{ section.settings.image_author | img_url: '50x' }}"
+							loading="lazy"
+							alt="{{ section.settings.image_author.alt | escape }}"
+							width="{{ section.settings.image_author.width }}"
+							height="{{ section.settings.image_author.width | divided_by: section.settings.image_author.aspect_ratio }}"
+						>
+					</figure>
+				{%- endif -%}
+
+				{%- if section.settings.name_author != blank or section.settings.position_author != blank -%}
+					<div class="product-image-with-text__info">
+						{%- if section.settings.name_author != blank -%}
+							<span class="product-image-with-text__name">{{ section.settings.name_author | escape }}</span>
+						{% endif %}
+
+						{%- if section.settings.position_author != blank -%}
+							<span class="product-image-with-text__position">{{ section.settings.position_author | escape }}</span>
+						{% endif %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+		<div class="product-image-with-text__images">
+			<div class="product-image-with-text__images-item">
+				{%- for block in section.blocks -%}
+					<div class="product-image-with-text__image" {{ block.shopify_attributes }}>
+						{%- if block.settings.image != blank -%}
+							{%- assign image_size = block.settings.image_width | append: 'x' -%}
+							<img srcset="{{ block.settings.image | img_url: image_size }} 1x, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
+										src="{{ block.settings.image | img_url: image_size }}"
+										alt="{{ block.settings.image.alt | escape }}"
+										width="{{ block.settings.image.width }}"
+										height="{{ block.settings.image.height }}"
+							>
+						{%- endif -%}
+					</div>
+				{%- endfor -%}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+{
+	"name": "t:sections.product-image-with-text.name",
+	"tag": "section",
+	"class": "product-image-with-text-section spaced-section",
+	"max_blocks": 4,
+	"settings": [
+		{
+			"type": "text",
+			"id": "sub_title",
+			"default": "For instance collection name",
+			"label": "t:sections.product-image-with-text.settings.sub_title.label"
+		},
+		{
+			"type": "textarea",
+			"id": "text",
+			"default": "Talk about your brand, collection or product",
+			"label": "t:sections.product-image-with-text.settings.text.label"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.product-image-with-text.settings.header.content"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_author",
+			"label": "t:sections.product-image-with-text.settings.image_author.label"
+		},
+		{
+			"type": "text",
+			"id": "name_author",
+			"default": "For instance author name,",
+			"label": "t:sections.product-image-with-text.settings.name_author.label"
+		},
+		{
+			"type": "text",
+			"id": "position_author",
+			"default": "For instance author position",
+			"label": "t:sections.product-image-with-text.settings.position_author.label"
+		}
+	],
+	"blocks": [
+		{
+			"type": "product_image_with_text",
+			"name": "t:sections.product-image-with-text.blocks.product_image_with_text.name",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "t:sections.product-image-with-text.blocks.product_image_with_text.settings.image.label"
+				},
+				{
+					"type": "range",
+					"id": "image_width",
+					"min": 50,
+					"max": 300,
+					"step": 10,
+					"default": 300,
+					"unit": "t:sections.product-image-with-text.blocks.product_image_with_text.settings.image_width.unit",
+					"label": "t:sections.product-image-with-text.blocks.product_image_with_text.settings.image_width.label"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

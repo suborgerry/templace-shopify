@@ -1,0 +1,57 @@
+// Margin Right
+.mr-0 {
+  margin-right: 0;
+}
+.mr-auto {
+  margin-right: auto;
+}
+// Negative Values
+.mr-n1\.5 {
+  margin-right: -1.5rem;
+}
+.mr-n4 {
+  margin-right: -4rem;
+}
+.mr-n5 {
+  margin-right: -5rem;
+}
+.mr-n7\.7 {
+  margin-right: -7.7rem;
+}
+.mr-n8 {
+  margin-right: -8rem;
+}
+@each $value in $m-right {
+  $formatted-value: str-replace($value, ".", "\\.");
+
+  .mr-#{$formatted-value} {
+    margin-right: #{$value}rem;
+  }
+}
+
+// Desktop
+@include media-breakpoint-up(md) {
+  .mr-0--desk {
+    margin-right: 0;
+  }
+  // Negative Values
+  .mr-n1\.5--desk {
+    margin-right: -1.5rem;
+  }
+  .mr-n4--desk {
+    margin-right: -4rem;
+  }
+  .mr-n5--desk {
+    margin-right: -5rem;
+  }
+  .mr-n7\.7--desk {
+    margin-right: -7.7rem;
+  }
+  @each $value in $m-right--desk {
+    $formatted-value: str-replace($value, ".", "\\.");
+
+    .mr-#{$formatted-value}--desk {
+      margin-right: #{$value}rem;
+    }
+  }
+}

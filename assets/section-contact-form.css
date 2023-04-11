@@ -1,0 +1,121 @@
+.contact {
+  background-color: rgb(var(--color-base-background-2));
+}
+.contact__wrapper {
+  position: relative;
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-left: 0;
+}
+@media screen and (min-width: 990px) {
+  .contact__container {
+    flex-direction: row;
+    gap: 5rem;
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__container {
+    gap: 7.4rem;
+  }
+}
+@media screen and (min-width: 990px) {
+  .contact__text {
+    max-width: 37.2rem;
+  }
+  .contact__text > p {
+    max-width: 32.9rem;
+  }
+}
+.contact__title {
+  margin: 0 0 1.6rem 0;
+}
+.contact__title > p {
+  margin: 0;
+}
+.contact-form {
+  flex: 1;
+}
+@media screen and (min-width: 990px) {
+  .contact-form {
+    margin-top: 2rem;
+    max-width: 52.6rem;
+  }
+}
+.contact__image {
+  position: absolute;
+  right: 0;
+  display: none;
+  align-items: flex-end;
+  gap: 1.4rem;
+  transform: translateY(calc(-50% + 38px));
+}
+@media screen and (min-width: 990px) {
+  .contact__image {
+    display: flex;
+  }
+}
+.contact__image-item:last-child img {
+  margin-bottom: -1.3rem;
+}
+.contact img {
+  max-width: 100%;
+  height: auto;
+}
+.contact .contact__field-error .form__message {
+  align-items: flex-start;
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  font-weight: var(--font-body-weight);
+  color: rgba(var(--color-error));
+}
+.contact .contact__field-error .form__message:before {
+  content: "*";
+  color: rgba(var(--color-error));
+  margin-right: 0.2rem;
+}
+@media screen and (min-width: 750px) {
+  .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2.4rem;
+  }
+}
+.contact .field input {
+  height: 5rem;
+}
+.contact .field {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 750px) {
+  .contact .field {
+    margin-bottom: 2.4rem;
+  }
+}
+.contact .text-area {
+  min-height: 17rem;
+}
+.contact__button {
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 750px) {
+  .contact__button {
+    margin-top: 2.4rem;
+  }
+}
+.contact__button .button {
+  min-width: 13.6rem;
+}
+.contact .icon-success {
+  margin-top: 0.2rem;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

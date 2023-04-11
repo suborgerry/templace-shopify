@@ -1,0 +1,143 @@
+{{ 'section-image.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-parallax.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'image-parallax.js' | asset_url }}" defer="defer"></script>
+
+<div class="spaced-section color-{{ section.settings.color_scheme }}">
+	<div class="container">
+		{%- if section.settings.heading != blank -%}
+			<h2 class="image-section__title h1 js{%- if section.settings.heading_animation -%}-split-text {%- endif -%}">{{ section.settings.heading }}</h2>
+		{%- endif -%}
+		{%- if section.settings.text_information != blank -%}
+			<p class="image-section__text">{{ section.settings.text_information }}</p>
+		{%- endif -%}
+	
+		{%- if section.settings.show_view_all -%}
+			<a {% if section.settings.button_link.url != blank %} href="{{ section.settings.button_link }}"{% endif %} class="button image-section__button button--primary-size button--arrow button--{{ section.settings.button_style }}" {% if section.settings.button_link.url == blank %}aria-disabled="true"{% endif %}>
+				<span>{{ section.settings.button_label | escape }}</span> {% render 'icon-button-arrow' %}
+			</a>
+		{%- endif -%}
+	
+		<div class="image-section__image-wrapper">
+			{%- if section.settings.image != blank -%}
+				{%- assign image_size = section.settings.image_width | append: 'x' -%}
+				<img srcset="{{ section.settings.image | img_url: image_size }} 1x, {{ section.settings.image | img_url: image_size, scale: 2 }} 2x"
+						 src="{{ section.settings.image | img_url: image_size }}"
+						 alt="{{ section.settings.image.alt | escape }}"
+						 loading="lazy"
+						 class="image-section__image"
+						 width
+						 height
+				>
+			{%- else -%}
+				{{ 'lifestyle-1' | placeholder_svg_tag: 'image-section__placeholder' }}
+			{%- endif -%}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.image-parallax.name",
+	"tag": "section",
+	"class": "image-parallax-section image-section",
+	"limit": 1,
+	"settings": [
+		{
+			"type": "select",
+			"id": "color_scheme",
+			"options": [
+				{
+					"value": "background-1",
+					"label": "t:sections.header.settings.color_scheme.options__1.label"
+				},
+				{
+					"value": "background-2",
+					"label": "t:sections.header.settings.color_scheme.options__2.label"
+				}
+			],
+			"default": "background-1",
+			"label": "t:sections.header.settings.color_scheme.label"
+		},
+		{
+			"type": "richtext",
+			"id": "heading",
+			"default": "<p>Some header for your <em>collection</em></p>",
+			"label": "t:sections.image-parallax.settings.heading.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "heading_animation",
+			"default": true,
+			"label": "t:sections.image-parallax.settings.heading_animation.label"
+		},
+		{
+			"type": "textarea",
+			"id": "text_information",
+			"default": "Some descriptive text for your collection. For better alignment, it is better to use text in several lines.",
+			"label": "t:sections.image-parallax.settings.text_information.label"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.image-parallax.settings.header__1.content"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_view_all",
+			"default": true,
+			"label": "t:sections.image-parallax.settings.show_view_all.label"
+		},
+		{
+			"type": "text",
+			"id": "button_label",
+			"default": "Shop now",
+			"label": "t:sections.image-parallax.settings.button_label.label"
+		},
+		{
+			"type": "select",
+			"id": "button_style",
+			"options": [
+				{
+					"value": "primary",
+					"label": "t:sections.image-parallax.settings.button_style.options__1.label"
+				},
+				{
+					"value": "secondary",
+					"label": "t:sections.image-parallax.settings.button_style.options__2.label"
+				}
+			],
+			"default": "secondary",
+			"label": "t:sections.image-parallax.settings.button_style.label"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "t:sections.image-parallax.settings.button_link.label"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "t:sections.image-parallax.settings.image.label",
+			"info": "t:sections.image-parallax.settings.image.info"
+		},
+		{
+			"type": "range",
+			"id": "image_width",
+			"min": 600,
+			"max": 1000,
+			"step": 10,
+			"default": 800,
+			"unit": "t:sections.image-parallax.settings.image_width.unit",
+			"label": "t:sections.image-parallax.settings.image_width.label"
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.image-parallax.presets.name"
+		}
+	],
+	"templates": [
+		"index"
+	]
+}
+{% endschema %}

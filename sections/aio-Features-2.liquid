@@ -1,0 +1,2870 @@
+{%- capture minify -%}
+
+{%- comment -%}
+{
+  "pack_name": "Heading",
+  "pack_author": "Huski Apps AioSections"
+}
+{%- endcomment -%}
+
+{% comment %} Security Code - hides section when app uninstalled {% endcomment %}
+
+<!-- Animation CSS link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+
+.has-process-main-contain-four{
+     margin-top: {{ section.settings.margin_top07 }}{{ section.settings.margin_top_value }};
+     margin-bottom: {{ section.settings.margin_bottom08 }}{{ section.settings.margin_bottom_value }};
+     padding-top: {{ section.settings.padding_top05 }}{{ section.settings.paading_top_value }};
+     padding-bottom: {{ section.settings.padding_bottom06 }}{{ section.settings.paading_bottom_value }};
+     background-size: 100% 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+
+.has-process-info-hedings-wrapper{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+     width: 60%;
+}
+
+.has-process-info-subtitle-fourwpr .has-process-subtitle-wpr{
+    color: #333333;
+    font-size: {{ section.settings.font_size }}{{ section.settings.option_value }};
+    line-height: {{ section.settings.font_lineheight }}{{ section.settings.option_value_abc }};
+    font-weight: {{ section.settings.font_weight }};
+    letter-spacing: {{ section.settings.font_letterspaceing }}{{ section.settings.option_value_spaceing }};
+    text-transform: {{ section.settings.heading_transform }};
+    text-align: center;
+    font-style: normal;
+    margin: 0px 0px 0px 0px;
+    padding-top: {{ section.settings.padding_top_051 }}{{ section.settings.top_value_051 }};
+    padding-bottom: {{ section.settings.padding_bottom_052 }}{{ section.settings.top_value_052 }};
+    padding-left: {{ section.settings.padding_left_053 }}{{ section.settings.top_value_053 }};
+    padding-right: {{ section.settings.padding_right_054 }}{{ section.settings.top_value_054 }};
+}
+
+.has-process-info-title-fourwpr .has-process-title-wpr{
+     color: #282828;
+     font-size: {{ section.settings.font_size_02 }}{{ section.settings.option_value_02 }};
+     line-height: {{ section.settings.font_lineheight_02 }}{{ section.settings.option_value_abc_02 }};
+     font-weight: {{ section.settings.font_weight_02 }};
+     letter-spacing: {{ section.settings.font_letterspaceing_02 }}{{ section.settings.option_value_spaceing_02 }};
+     text-transform: {{ section.settings.heading_transform_02 }};
+     text-align: center;
+     font-style: normal;
+     margin: 0px 0px 0px 0px;
+     padding-top: {{ section.settings.padding_top_041 }}{{ section.settings.top_value_041 }};
+     padding-bottom: {{ section.settings.padding_bottom_042 }}{{ section.settings.top_value_042 }};
+     padding-left: {{ section.settings.padding_left_043 }}{{ section.settings.top_value_043 }};
+     padding-right: {{ section.settings.padding_right_044 }}{{ section.settings.top_value_044 }};
+}
+
+.has-process-info-text-fourwpr .has-process-text-wpr{
+     color: #6a6969;
+     font-size: {{ section.settings.textfont_size }}{{ section.settings.option_value_text }};
+     line-height: {{ section.settings.text_lineheight }}{{ section.settings.option_value_abctext }};
+     font-weight: {{ section.settings.font_weight_text }};
+     letter-spacing: {{ section.settings.text_letterspaceing }}{{ section.settings.option_text_spaceing }};
+     text-transform: {{ section.settings.text_transform }};
+     text-align: center;     
+     font-style: normal;
+     margin: 0px 0px 0px 0px;
+     padding-top: {{ section.settings.padding_top_021 }}{{ section.settings.top_value_021 }};
+     padding-bottom: {{ section.settings.padding_bottom_022 }}{{ section.settings.top_value_022 }};
+     padding-left: {{ section.settings.padding_left_023 }}{{ section.settings.top_value_023 }};
+     padding-right: {{ section.settings.padding_right_024 }}{{ section.settings.top_value_024 }};
+}
+
+.has-precess-main-wrepper-four-boxs{
+    margin-top: {{ section.settings.margin_top_015 }}{{ section.settings.top_value_015 }};
+    margin-bottom: {{ section.settings.margin_bottom_016 }}{{ section.settings.bottom_value_016 }};
+    margin-left: {{ section.settings.margin_left_017 }}{{ section.settings.left_value_017 }};
+    margin-right: {{ section.settings.margin_right_018 }}{{ section.settings.right_value_018 }};
+    padding-top: {{ section.settings.padding_top_011 }}{{ section.settings.top_value_011 }};
+    padding-bottom: {{ section.settings.padding_bottom_012 }}{{ section.settings.top_value_012 }};
+    padding-left: {{ section.settings.padding_left_013 }}{{ section.settings.top_value_013 }};
+    padding-right: {{ section.settings.padding_right_014 }}{{ section.settings.top_value_014 }};
+    border-radius: {{ section.settings.button_radius002 }}{{ section.settings.btn_radius_value002 }};
+    box-shadow: 0 0 0 0.05rem #083c820f, 0 0 1.25rem #1e22280a;
+}
+
+.has-process-boxs-image-four{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.has-process-boxs-image-four img{
+     width: {{ section.settings.img_width }}%;
+     height: auto;
+     border-radius: {{ section.settings.button_radius003 }}{{ section.settings.btn_radius_value003 }};
+     transform: rotate({{ section.settings.angle }}deg);
+     padding-top: {{ section.settings.padding_top_05 }}{{ section.settings.top_value_05 }};
+     padding-bottom: {{ section.settings.padding_bottom_06 }}{{ section.settings.top_value_06 }};
+     padding-left: {{ section.settings.padding_left_07 }}{{ section.settings.top_value_07 }};
+     padding-right: {{ section.settings.padding_right_08 }}{{ section.settings.top_value_08 }};
+}
+
+.has-process-boxs-title-four .has-process-heading-four{
+     color: #41494F;
+     font-size: {{ section.settings.font_size_03 }}{{ section.settings.option_value_03 }};
+     line-height: {{ section.settings.font_lineheight_03 }}{{ section.settings.option_value_abc_03 }};
+     font-weight: {{ section.settings.font_weight_03 }};
+     letter-spacing: {{ section.settings.font_letterspaceing_03 }}{{ section.settings.option_value_spaceing_03 }};
+     text-transform: {{ section.settings.heading_transform_03 }};
+     text-align: center;
+     font-style: normal;
+     margin: 0px 0px 0px 0px;
+     padding-top: {{ section.settings.padding_top_061 }}{{ section.settings.top_value_061 }};
+     padding-bottom: {{ section.settings.padding_bottom_062 }}{{ section.settings.top_value_062 }};
+     padding-left: {{ section.settings.padding_left_063 }}{{ section.settings.top_value_063 }};
+     padding-right: {{ section.settings.padding_right_064 }}{{ section.settings.top_value_064 }};
+}
+
+.has-process-boxs-text-four .has-process-info-four{
+     color: #818181;
+     font-size: {{ section.settings.textfont_size_04 }}{{ section.settings.option_value_text_04 }};
+     line-height: {{ section.settings.text_lineheight_04 }}{{ section.settings.option_value_abctext_04 }};
+     font-weight: {{ section.settings.font_weight_text_04 }};
+     letter-spacing: {{ section.settings.text_letterspaceing_04 }}{{ section.settings.option_text_spaceing_04 }};
+     text-transform: {{ section.settings.text_transform_04 }};
+     text-align: center;   
+     font-style: normal;
+     margin: 0px 0px 0px 0px;
+     padding-top: {{ section.settings.padding_top_071 }}{{ section.settings.top_value_071 }};
+     padding-bottom: {{ section.settings.padding_bottom_072 }}{{ section.settings.top_value_072 }};
+     padding-left: {{ section.settings.padding_left_073 }}{{ section.settings.top_value_073 }};
+     padding-right: {{ section.settings.padding_right_074 }}{{ section.settings.top_value_074 }};
+}
+
+{%- if section.settings.custom_css != blank -%}
+  {%- assign custom_section_declarations = section.settings.custom_css | split: '}' -%}
+  {%- for declaration in custom_section_declarations -%}
+    {%- if declaration contains '{' -%}
+      #HAS--{{ section.id }} {{ declaration }} }
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+@media only screen and (max-width: 4000px){
+
+    {%- if section.settings.wide_custom_css != blank -%}
+    {%- assign wide_custom_declarations = section.settings.wide_custom_css | split: '}' -%}
+    {%- for declaration in wide_custom_declarations -%}
+      {%- if declaration contains '{' -%}
+        #HAS--{{ section.id }} {{ declaration }} }
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+  
+}
+
+@media only screen and (max-width: 1200px){
+
+      {%- if section.settings.desktop_custom_css != blank -%}
+         {%- assign desktop_custom_declarations = section.settings.desktop_custom_css | split: '}' -%}
+           {%- for declaration in desktop_custom_declarations -%}
+             {%- if declaration contains '{' -%}
+                 #HAS--{{ section.id }} {{ declaration }} }
+             {%- endif -%}
+         {%- endfor -%}
+      {%- endif -%}
+  
+}
+
+@media only screen and (max-width: 991px){
+
+     .has-process-info-hedings-wrapper{
+           width: 80%;
+     }
+
+     .has-precess-main-wrepper-four-boxs{
+          margin: 20px 20px 20px 20px;
+     }
+
+     .has-process-info-text-fourwpr .has-process-text-wpr{
+          margin: 0px 0px 30px 0px;
+     }
+
+     .has-process-main-contain-four{
+          background-size: cover;
+     }
+
+      {%- if section.settings.tablet_custom_css != blank -%}
+        {%- assign tablet_custom_declarations = section.settings.tablet_custom_css | split: '}' -%}
+            {%- for declaration in tablet_custom_declarations -%}
+            {%- if declaration contains '{' -%}
+                #HAS--{{ section.id }} {{ declaration }} }
+            {%- endif -%}
+        {%- endfor -%}
+     {%- endif -%}
+}
+
+@media only screen and (max-width: 767px){
+
+       {%- if section.settings.mobile_custom_css != blank -%}
+         {%- assign mobile_custom_declarations = section.settings.mobile_custom_css | split: '}' -%}
+            {%- for declaration in mobile_custom_declarations -%}
+               {%- if declaration contains '{' -%}
+                   #HAS--{{ section.id }} {{ declaration }} }
+               {%- endif -%}
+          {%- endfor -%}
+      {%- endif -%}
+
+     .has-process-info-hedings-wrapper{
+           width: 100%;
+           padding: 0px 25px 0px 25px;
+     }
+
+     .has-precess-main-wrepper-four-boxs{
+          margin: 20px 10px 20px 10px;
+     }
+
+    .has-process-main-contain-four{
+          margin-top: {{ section.settings.mobile_margin_top07 }}{{ section.settings.marginmobil_top_value }};
+          margin-bottom: {{ section.settings.mobile_margin_bottom08 }}{{ section.settings.marginmobil_bottom_value }};
+          padding-top: {{ section.settings.mobile_padding_top05 }}{{ section.settings.mobile_top_value }};
+          padding-bottom: {{ section.settings.mobile_padding_bottom06 }}{{ section.settings.mobile_bottom_value }};
+     }
+
+     .has-process-info-subtitle-fourwpr .has-process-subtitle-wpr{
+          padding-top: {{ section.settings.padding_top_055 }}{{ section.settings.top_value_055 }};
+          padding-bottom: {{ section.settings.padding_bottom_056 }}{{ section.settings.top_value_056 }};
+          padding-left: {{ section.settings.padding_left_057 }}{{ section.settings.top_value_057 }};
+          padding-right: {{ section.settings.padding_right_058 }}{{ section.settings.top_value_058 }};
+     }
+
+     .has-process-info-title-fourwpr .has-process-title-wpr{
+          padding-top: {{ section.settings.padding_top_045 }}{{ section.settings.top_value_045 }};
+          padding-bottom: {{ section.settings.padding_bottom_046 }}{{ section.settings.top_value_046 }};
+          padding-left: {{ section.settings.padding_left_047 }}{{ section.settings.top_value_047 }};
+          padding-right: {{ section.settings.padding_right_048 }}{{ section.settings.top_value_048 }};
+     }
+
+    .has-process-info-text-fourwpr .has-process-text-wpr{
+          padding-top: {{ section.settings.padding_top_025 }}{{ section.settings.top_value_025 }};
+          padding-bottom: {{ section.settings.padding_bottom_026 }}{{ section.settings.top_value_026 }};
+          padding-left: {{ section.settings.padding_left_027 }}{{ section.settings.top_value_027 }};
+          padding-right: {{ section.settings.padding_right_028 }}{{ section.settings.top_value_028 }};
+    }
+
+    .has-process-boxs-image-four img{
+          padding-top: {{ section.settings.padding_top_01 }}{{ section.settings.top_value_01 }};
+          padding-bottom: {{ section.settings.padding_bottom_02 }}{{ section.settings.top_value_02 }};
+          padding-left: {{ section.settings.padding_left_03 }}{{ section.settings.top_value_03 }};
+          padding-right: {{ section.settings.padding_right_04 }}{{ section.settings.top_value_04 }};
+    }
+
+    .has-process-boxs-title-four .has-process-heading-four{
+          padding-top: {{ section.settings.padding_top_065 }}{{ section.settings.top_value_065 }};
+          padding-bottom: {{ section.settings.padding_bottom_066 }}{{ section.settings.top_value_066 }};
+          padding-left: {{ section.settings.padding_left_067 }}{{ section.settings.top_value_067 }};
+          padding-right: {{ section.settings.padding_right_068 }}{{ section.settings.top_value_068 }};
+    }
+
+    .has-process-boxs-text-four .has-process-info-four{
+          padding-top: {{ section.settings.padding_top_075 }}{{ section.settings.top_value_075 }};
+          padding-bottom: {{ section.settings.padding_bottom_076 }}{{ section.settings.top_value_076 }};
+          padding-left: {{ section.settings.padding_left_077 }}{{ section.settings.top_value_077 }};
+          padding-right: {{ section.settings.padding_right_078 }}{{ section.settings.top_value_078 }};
+    }
+
+}
+
+@media only screen and (max-width: 580px){
+
+     .has-precess-main-wrepper-four-boxs{
+          margin: 20px 20px 20px 20px;
+     }
+}
+
+@media only screen and (max-width: 490px){
+
+    .has-process-info-subtitle-fourwpr .has-process-subtitle-wpr {
+          font-size: 13px;
+          line-height: 19px;
+    }
+
+    .has-process-info-title-fourwpr .has-process-title-wpr {
+         font-size: 28px;
+         line-height: 35px;
+         margin: 0px 0px 10px 0px;
+    }
+
+    .has-process-info-text-fourwpr .has-process-text-wpr {
+         font-size: 15px;
+         line-height: 24px;
+    }
+  
+}
+
+@media only screen and (max-width: 310px){
+
+    .has-process-info-title-fourwpr .has-process-title-wpr {
+         font-size: 24px;
+         line-height: 30px;
+         margin: 0px 0px 10px 0px;
+    }
+
+    .has-process-info-text-fourwpr .has-process-text-wpr {
+         font-size: 15px;
+         line-height: 22px;
+    }
+
+     .has-process-info-hedings-wrapper{
+           padding: 0px 20px 0px 20px;
+     }
+  
+}
+  
+</style>
+
+<section id="HAS--{{ section.id }}" style="{% if section.settings.add_bg_color %}background-color: {{ section.settings.color_title07 }};{% endif %}
+  {% if section.settings.add_bg_image %}background-image: url('{{ section.settings.banner_b_img | img_url: 'master' }}');{% endif %}
+   {% if section.settings.add_bg_gradiant %}background: {{ section.settings.color_title001 }}{% endif %}" class="{{ section.id }} has-process-main-contain-four">
+  
+     <div class="has-container">
+          <div class="has-row has-justify-content-center">
+               <div class="has-col-12">
+                    <div class="has-process-info-hedings-wrapper">
+                        {%- if section.settings.sub_title != blank -%}
+                               <div class="has-process-info-subtitle-fourwpr">
+                                     <h5 style="color: {{ section.settings.color_title01 }}" class="animate__animated animate__{{ section.settings.animation }} animate__delay-4s has-process-subtitle-wpr">{{ section.settings.sub_title }}</h5>
+                               </div>
+                        {% endif %}
+                        {%- if section.settings.title != blank -%}
+                               <div class="has-process-info-title-fourwpr">
+                                     <h1 style="color: {{ section.settings.color_title02 }}" class="animate__animated animate__{{ section.settings.animation }} animate__delay-4s has-process-title-wpr">{{ section.settings.title }}</h1>
+                               </div>
+                        {% endif %}
+                        {%- if section.settings.text != blank -%}
+                               <div class="has-process-info-text-fourwpr">
+                                     <p style="color: {{ section.settings.color_title03 }}" class="animate__animated animate__{{ section.settings.animation }} animate__delay-4s has-process-text-wpr">{{ section.settings.text }}</p>
+                               </div>
+                        {% endif %}
+                    </div>
+               </div>
+          </div>
+
+          <div class="has-row">
+              {%- for block in section.blocks -%}                
+                         <div class="has-col-lg-4 has-col-sm-6 has-col-12">
+                             <div style="background-color: {{ section.settings.color_title04 }}" class="animate__animated animate__{{ section.settings.animation }} animate__delay-4s has-precess-main-wrepper-four-boxs">
+                                {%- if block.settings.image != blank -%}
+                                       <div class="has-process-boxs-image-four">
+                                            <img src="{{ block.settings.image | img_url: 'master' }}" class="has-img-fluid">
+                                       </div>
+                                 {%- else -%}
+                                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                {% endif %}
+                                {%- if block.settings.heading != blank -%}
+                                       <div class="has-process-boxs-title-four">
+                                             <h4 style="color: {{ section.settings.color_title05 }}" class="has-process-heading-four">{{ block.settings.heading }}</h4>
+                                       </div>
+                                {% endif %}
+                                {%- if block.settings.text != blank -%}
+                                      <div class="has-process-boxs-text-four">
+                                            <p style="color: {{ section.settings.color_title06 }}" class="has-process-info-four">{{ block.settings.text }}</p>
+                                      </div>
+                                {% endif %}
+                              </div>
+                          </div>                
+              {% endfor %}
+          </div>
+       
+     </div>
+</section>
+
+{%- endcapture -%}
+{{ minify | strip_newlines }}
+  
+{% schema %}
+  {
+    "name": "Aio Process B",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sub_title",
+            "label": "Sub Heading",
+            "default": "Your Sub Heading here"
+        },
+        {
+             "type": "text",
+             "id": "title",
+             "label": "Heading",
+             "default": "Your Heading here"
+        },
+        {
+             "type": "textarea",
+             "id": "text",
+             "label": "Text",
+             "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+             "type": "header",
+             "content": "🎨 Main Sub Heading Design ✏️"
+        },
+        {
+               "type": "color",
+               "id": "color_title01",
+               "label": "Sub Heading color",
+               "default": "#333333"
+        },
+        {
+              "type": "select",
+              "id": "heading_transform",
+              "label": "Heading Text Transform",
+              "default": "uppercase",
+              "options": [
+                  {
+                     "value": "uppercase",
+                     "label": "Uppercase"
+                  },
+                  {
+                     "value": "capitalize",
+                     "label": "Capitalize"
+                  },
+                  {
+                     "value": "lowercase",
+                     "label": "Lowercase"
+                  },
+                  {
+                     "value": "unset",
+                     "label": "Unset"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_size",             
+               "label": "Sub Heading Font Size",
+               "default": "15"
+         },
+         {
+              "type": "select",
+              "id": "option_value",
+              "label": "Font Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_lineheight",
+               "label": "Heading Line Height",
+               "default": "20"
+         },
+         {
+              "type": "select",
+              "id": "option_value_abc",
+              "label": "Line-Hieght Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_weight",
+               "label": "Heading Font Weight",
+               "default": "500"
+         },
+         {
+               "type": "text",
+               "id": "font_letterspaceing",
+               "label": "Heading Letter Spacing",
+               "default": "1.5"
+         },
+         {
+              "type": "select",
+              "id": "option_value_spaceing",
+              "label": "Letter-Spacing Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_051",
+               "label": "Heading Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_051",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_052",
+               "label": "Heading Padding Bottom",
+               "default": "5"
+         },
+         {
+              "type": "select",
+              "id": "top_value_052",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_053",
+               "label": "Heading Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_053",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_054",
+               "label": "Heading Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_054",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_055",
+               "label": "Mobile Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_055",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_056",
+               "label": "Mobile Padding Bottom",
+               "default": "5"
+         },
+         {
+              "type": "select",
+              "id": "top_value_056",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_057",
+               "label": "Mobile Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_057",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_058",
+               "label": "Mobile Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_058",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+             "type": "header",
+             "content": "🎨 Main Heading Design ✏️"
+         },
+         {
+               "type": "color",
+               "id": "color_title02",
+               "label": "Heading color",
+               "default": "#282828"
+         },
+         {
+              "type": "select",
+              "id": "heading_transform_02",
+              "label": "Heading Text Transform",
+              "default": "capitalize",
+              "options": [
+                  {
+                     "value": "uppercase",
+                     "label": "Uppercase"
+                  },
+                  {
+                     "value": "capitalize",
+                     "label": "Capitalize"
+                  },
+                  {
+                     "value": "lowercase",
+                     "label": "Lowercase"
+                  },
+                  {
+                     "value": "unset",
+                     "label": "Unset"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_size_02",             
+               "label": "Heading Font Size",
+               "default": "35"
+         },
+         {
+              "type": "select",
+              "id": "option_value_02",
+              "label": "Font Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_lineheight_02",
+               "label": "Heading Line Height",
+               "default": "46"
+         },
+         {
+              "type": "select",
+              "id": "option_value_abc_02",
+              "label": "Line-Hieght Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_weight_02",
+               "label": "Heading Font Weight",
+               "default": "600"
+         },
+         {
+               "type": "text",
+               "id": "font_letterspaceing_02",
+               "label": "Heading Letter Spacing",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "option_value_spaceing_02",
+              "label": "Letter-Spacing Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_041",
+               "label": "Heading Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_041",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_042",
+               "label": "Heading Padding Bottom",
+               "default": "15"
+         },
+         {
+              "type": "select",
+              "id": "top_value_042",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_043",
+               "label": "Heading Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_043",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_044",
+               "label": "Heading Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_044",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_045",
+               "label": "Mobile Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_045",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_046",
+               "label": "Mobile Padding Bottom",
+               "default": "15"
+         },
+         {
+              "type": "select",
+              "id": "top_value_046",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_047",
+               "label": "Mobile Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_047",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_048",
+               "label": "Mobile Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_048",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+             "type": "header",
+             "content": "🎨 Main Content Design ✏️"
+         },
+         {
+               "type": "color",
+               "id": "color_title03",
+               "label": "Text color",
+               "default": "#6a6969"
+         },
+         {
+              "type": "select",
+              "id": "text_transform",
+              "label": "Content Text Transform",
+              "default": "unset",
+              "options": [
+                  {
+                     "value": "uppercase",
+                     "label": "Uppercase"
+                  },
+                  {
+                     "value": "capitalize",
+                     "label": "Capitalize"
+                  },
+                  {
+                     "value": "lowercase",
+                     "label": "Lowercase"
+                  },
+                  {
+                     "value": "unset",
+                     "label": "Unset"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "textfont_size",             
+               "label": "Text Font Size",
+               "default": "16"
+         },
+         {
+              "type": "select",
+              "id": "option_value_text",
+              "label": "Font Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "text_lineheight",
+               "label": "Text Line Height",
+               "default": "24"
+         },
+         {
+              "type": "select",
+              "id": "option_value_abctext",
+              "label": "Line-Hieght Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_weight_text",
+               "label": "Heading Font Weight",
+               "default": "400"
+         },
+         {
+               "type": "text",
+               "id": "text_letterspaceing",
+               "label": "Text Letter Spacing",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "option_text_spaceing",
+              "label": "Letter-Spacing Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_021",
+               "label": "Content Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_021",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_022",
+               "label": "Content Padding Bottom",
+               "default": "15"
+         },
+         {
+              "type": "select",
+              "id": "top_value_022",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_023",
+               "label": "Content Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_023",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_024",
+               "label": "Content Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_024",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_025",
+               "label": "Mobile Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_025",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_026",
+               "label": "Mobile Padding Bottom",
+               "default": "15"
+         },
+         {
+              "type": "select",
+              "id": "top_value_026",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_027",
+               "label": "Mobile Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_027",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_028",
+               "label": "Mobile Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_028",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+             "type": "header",
+             "content": "🎨 Flex Box Design ✏️" 
+         },
+         {
+             "type": "color",
+             "id": "color_title04",
+             "label": "Contain Box Background color",
+             "default": "#FFFFFF"
+         },
+         {
+              "type": "text",
+              "id": "button_radius002",
+              "label": "Box border radius",
+              "default": "10"
+         },
+         {
+              "type": "select",
+              "id": "btn_radius_value002",
+              "label": "Border Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_011",
+               "label": "Box Padding Top",
+               "default": "30"
+         },
+         {
+              "type": "select",
+              "id": "top_value_011",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_012",
+               "label": "Box Padding Bottom",
+               "default": "40"
+         },
+         {
+              "type": "select",
+              "id": "top_value_012",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_013",
+               "label": "Box Padding Left",
+               "default": "20"
+         },
+         {
+              "type": "select",
+              "id": "top_value_013",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_014",
+               "label": "Box Padding Right",
+               "default": "20"
+         },
+         {
+              "type": "select",
+              "id": "top_value_014",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "margin_top_015",
+               "label": "Margin Top",
+               "default": "40"
+         },
+         {
+              "type": "select",
+              "id": "top_value_015",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "margin_bottom_016",
+               "label": "Margin Bottom",
+               "default": "30"
+         },
+         {
+              "type": "select",
+              "id": "bottom_value_016",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "margin_left_017",
+               "label": "Margin Left",
+               "default": "20"
+         },
+         {
+              "type": "select",
+              "id": "left_value_017",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "margin_right_018",
+               "label": "Margin Right",
+               "default": "20"
+         },
+         {
+              "type": "select",
+              "id": "right_value_018",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+             "type": "header",
+             "content": "🎨 Image Design ✏️"
+         },
+         {
+              "type": "range",
+              "id": "img_width",
+              "label": "Image Width",
+              "min": 10,
+              "max": 100,
+              "step": 1,
+              "default": 60,
+              "unit": "%"
+         },
+         {
+              "type": "text",
+              "id": "button_radius003",
+              "label": "Image border radius",
+              "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "btn_radius_value003",
+              "label": "Image Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+              "type": "range",
+              "id": "angle",
+              "label": "Image Angle",
+              "min": -50,
+              "max": 50,
+              "default": 0,
+              "unit": "deg"
+         },
+         {
+               "type": "text",
+               "id": "padding_top_05",
+               "label": "Image Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_05",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_06",
+               "label": "Image Padding Bottom",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_06",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_07",
+               "label": "Image Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_07",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_08",
+               "label": "Image Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_08",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_01",
+               "label": "Mobile Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_01",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_02",
+               "label": "Mobile Padding Bottom",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_02",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_03",
+               "label": "Mobile Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_03",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_04",
+               "label": "Mobile Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_04",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+             "type": "header",
+             "content": "🎨 Process Heading Design ✏️"
+         },
+         {
+             "type": "color",
+             "id": "color_title05",
+             "label": "Heading color",
+             "default": "#41494F"
+         },
+         {
+              "type": "select",
+              "id": "heading_transform_03",
+              "label": "Heading Text Transform",
+              "default": "unset",
+              "options": [
+                  {
+                     "value": "uppercase",
+                     "label": "Uppercase"
+                  },
+                  {
+                     "value": "capitalize",
+                     "label": "Capitalize"
+                  },
+                  {
+                     "value": "lowercase",
+                     "label": "Lowercase"
+                  },
+                  {
+                     "value": "unset",
+                     "label": "Unset"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_size_03",             
+               "label": "Heading Font Size",
+               "default": "20"
+         },
+         {
+              "type": "select",
+              "id": "option_value_03",
+              "label": "Font Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_lineheight_03",
+               "label": "Heading Line Height",
+               "default": "24"
+         },
+         {
+              "type": "select",
+              "id": "option_value_abc_03",
+              "label": "Line-Hieght Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_weight_03",
+               "label": "Heading Font Weight",
+               "default": "500"
+         },
+         {
+               "type": "text",
+               "id": "font_letterspaceing_03",
+               "label": "Heading Letter Spacing",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "option_value_spaceing_03",
+              "label": "Letter-Spacing Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_061",
+               "label": "Heading Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_061",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_062",
+               "label": "Heading Padding Bottom",
+               "default": "12"
+         },
+         {
+              "type": "select",
+              "id": "top_value_062",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_063",
+               "label": "Heading Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_063",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_064",
+               "label": "Heading Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_064",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_065",
+               "label": "Mobile Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_065",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_066",
+               "label": "Mobile Padding Bottom",
+               "default": "12"
+         },
+         {
+              "type": "select",
+              "id": "top_value_066",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_067",
+               "label": "Mobile Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_067",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_068",
+               "label": "Mobile Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_068",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+             "type": "header",
+             "content": "🎨 Process Text Design ✏️"
+         },
+         {
+             "type": "color",
+             "id": "color_title06",
+             "label": "Text color",
+             "default": "#818181"
+         },
+         {
+              "type": "select",
+              "id": "text_transform_04",
+              "label": "Content Text Transform_04",
+              "default": "unset",
+              "options": [
+                  {
+                     "value": "uppercase",
+                     "label": "Uppercase"
+                  },
+                  {
+                     "value": "capitalize",
+                     "label": "Capitalize"
+                  },
+                  {
+                     "value": "lowercase",
+                     "label": "Lowercase"
+                  },
+                  {
+                     "value": "unset",
+                     "label": "Unset"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "textfont_size_04",             
+               "label": "Text Font Size",
+               "default": "16"
+         },
+         {
+              "type": "select",
+              "id": "option_value_text_04",
+              "label": "Font Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "text_lineheight_04",
+               "label": "Text Line Height",
+               "default": "24"
+         },
+         {
+              "type": "select",
+              "id": "option_value_abctext_04",
+              "label": "Line-Height Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "font_weight_text_04",
+               "label": "Heading Font Weight",
+               "default": "400"
+         },
+         {
+               "type": "text",
+               "id": "text_letterspaceing_04",
+               "label": "Text Letter Spacing",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "option_text_spaceing_04",
+              "label": "Letter-Spacing Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_071",
+               "label": "Content Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_071",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_072",
+               "label": "Content Padding Bottom",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_072",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_073",
+               "label": "Content Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_073",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_074",
+               "label": "Content Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_074",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top_075",
+               "label": "Mobile Padding Top",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_075",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom_076",
+               "label": "Mobile Padding Bottom",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_076",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_left_077",
+               "label": "Mobile Padding Left",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_077",
+              "label": "Left Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_right_078",
+               "label": "Mobile Padding Right",
+               "default": "0"
+         },
+         {
+              "type": "select",
+              "id": "top_value_078",
+              "label": "Right Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "%",
+                     "label": "%"
+                  }
+             ]
+         },
+         {
+             "type": "header",
+             "content": "🎨 Section Design ✏️" 
+         },
+         {
+             "type": "checkbox",
+             "id": "add_bg_color",
+             "label": "Add Section Background Color",
+             "default": true
+         },
+         {
+               "type": "color",
+               "id": "color_title07",
+               "label": "Section Background color",
+               "default": "#CFD9E9"
+         },
+         {
+             "type": "checkbox",
+             "id": "add_bg_image",
+             "label": "Add Section Background Image",
+             "default": false
+         },
+         {
+              "type": "image_picker",
+              "id": "banner_b_img",
+              "label": "Background Image"
+         },
+         {
+             "type": "checkbox",
+             "id": "add_bg_gradiant",
+             "label": "Add Section Background Gradiant Color",
+             "default": false
+         },
+         {
+             "type": "color_background",
+             "id": "color_title001",
+             "label": "Section Background Gradiant color",
+             "default": "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)"
+         },
+         {
+              "type": "select",
+              "id": "animation",
+              "label": "Animation",
+              "default": "none",
+              "options": [
+                  {
+                     "value": "fadeIn",
+                     "label": "Fade-in"
+                  },
+                  {
+                     "value": "fadeInLeft",
+                     "label": "Fade-in left"
+                  },
+                  {
+                     "value": "fadeInRight",
+                     "label": "Fade-in right"
+                  },
+                  {
+                     "value": "fadeInUp",
+                     "label": "Fade-in up"
+                  },
+                  {
+                     "value": "fadeInDown",
+                     "label": "Fade-in down"
+                  },
+                  {
+                     "value": "fadeInTopLeft",
+                     "label": "Fade-in-top-left"
+                  },
+                  {
+                     "value": "fadeInTopRight",
+                     "label": "Fade-in-top-right"
+                  },
+                  {
+                     "value": "flipInX",
+                     "label": "FlipInX"
+                  },
+                  {
+                     "value": "zoomIn",
+                     "label": "zoomIn"
+                  },
+                  {
+                     "value": "none",
+                     "label": "None"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_top05",
+               "label": "Padding Top",
+               "default": "30"
+         },
+         {
+              "type": "select",
+              "id": "paading_top_value",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "padding_bottom06",
+               "label": "Padding Bottom",
+               "default": "30"
+         },
+         {
+              "type": "select",
+              "id": "paading_bottom_value",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "margin_top07",
+               "label": "Margin Top",
+               "default": "50"
+         },
+         {
+              "type": "select",
+              "id": "margin_top_value",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "auto",
+                     "label": "auto"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "margin_bottom08",
+               "label": "Margin Bottom",
+               "default": "50"
+         },
+         {
+              "type": "select",
+              "id": "margin_bottom_value",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "auto",
+                     "label": "auto"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "mobile_padding_top05",
+               "label": "Mobile Screen Padding Top",
+               "default": "25"
+         },
+         {
+              "type": "select",
+              "id": "mobile_top_value",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "mobile_padding_bottom06",
+               "label": "Mobile Screen Padding Bottom",
+               "default": "25"
+         },
+         {
+              "type": "select",
+              "id": "mobile_bottom_value",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "mobile_margin_top07",
+               "label": "Mobile Screen Margin Top",
+               "default": "40"
+         },
+         {
+              "type": "select",
+              "id": "marginmobil_top_value",
+              "label": "Top Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "auto",
+                     "label": "auto"
+                  }
+             ]
+         },
+         {
+               "type": "text",
+               "id": "mobile_margin_bottom08",
+               "label": "Mobile Screen Margin Bottom",
+               "default": "40"
+         },
+         {
+              "type": "select",
+              "id": "marginmobil_bottom_value",
+              "label": "Bottom Value",
+              "default": "px",
+              "options": [
+                  {
+                     "value": "px",
+                     "label": "px"
+                  },
+                  {
+                     "value": "em",
+                     "label": "em"
+                  },
+                  {
+                     "value": "auto",
+                     "label": "auto"
+                  }
+             ]
+        },
+        {
+              "type": "header",
+              "content": "🚨 Advanced"
+        },
+        {
+              "type": "liquid",
+              "id": "custom_css",
+              "label": "CSS"
+        },
+        {
+             "type": "liquid",
+             "id": "wide_custom_css",
+             "label": "WideScreen CSS",
+             "info": "1200 + Pixels Wide"
+        },
+        {
+             "type": "liquid",
+             "id": "desktop_custom_css",
+             "label": "Desktop Screen CSS",
+             "info": "992 - 1199px Wide"
+        },
+        {
+             "type": "liquid",
+             "id": "tablet_custom_css",
+             "label": "Tablet Screen CSS",
+             "info": "768 - 991px Wide"
+        },
+        {
+             "type": "liquid",
+             "id": "mobile_custom_css",
+             "label": "Mobile Screen CSS",
+             "info": "Up to 767px Wide"
+        }
+    ],
+    "blocks": [
+        {
+           "type": "block",
+           "name": "Features",
+           "settings": [
+               {
+                   "type": "image_picker",
+                   "id": "image",
+                   "label": "Image"
+               },
+               {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "Heading title"
+               },
+               {
+                    "type": "textarea",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "Duis aute irure dolor velit esse cillum dolore eu fugiat nulla pariatur."
+               }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Aio Process B 🎒"
+        }
+     ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,18 @@
+{
+  "name": "you-should-be-hair-theme",
+  "version": "1.1.0",
+  "scripts": {
+    "start": "yarn gulp & yarn dev",
+    "dev": "shopify theme dev -s `cat var.store.env` -e --live-reload hot-reload",
+    "serve": "shopify theme serve --theme-editor-sync",
+    "push": "shopify theme push -s `cat var.store.env`",
+    "push:new": "shopify theme push -s `cat var.store.env` --unpublished",
+    "pull": "shopify theme pull -s `cat var.store.env`",
+    "dev-init": "cd dev && yarn install",
+    "gulp": "cd dev && gulp"
+  },
+  "repository": "git@github.com:split-dev/shopify-you-should-be-hair.git",
+  "dependencies": {
+    "swiper": "^9.1.0"
+  }
+}

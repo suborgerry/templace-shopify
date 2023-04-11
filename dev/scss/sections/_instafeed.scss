@@ -1,0 +1,51 @@
+.instafeed {
+    overflow: hidden;
+
+    h4 {
+        margin-bottom: 24px;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 30px;
+            text-align: unset;
+        }
+    }
+
+    #insta-feed {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        @include media-breakpoint-up(md) {
+            margin: 0 -0.5vw;
+        }
+
+        h2 {
+            margin-bottom: 24px;
+            text-align: center;
+            font-size: calc(var(--font-heading-scale) * 2.4rem);
+
+            @include media-breakpoint-up(md) {
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+                margin-bottom: 30px;
+                text-align: start;
+                font-size: calc(var(--font-heading-scale) * 3rem);
+            }
+        }
+
+        a.slider-arrow {
+            transform: translateY(-50%);
+            box-shadow: none;
+            background: none;
+            opacity: 1;
+
+            &:first-of-type {
+                left: -18px !important;
+            }
+
+            &:last-of-type {
+                right: -18px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+development:
+  password: shptka_850b2a320acbc86b8be22925d74633e2
+  theme_id: "134433046785"
+  store: ophelia-theme-dev.myshopify.com
+
+
+production:
+  password: shptka_cb2063b7a5d48708d05fa079976731bb
+  theme_id: "121252020357"
+  store: ophelia-theme-demo.myshopify.com
+

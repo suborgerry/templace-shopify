@@ -1,0 +1,98 @@
+.text-big {
+  font-size: 16px;
+  line-height: 26.72px;
+  font-family: $body-font-family;
+  font-weight: 400;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
+
+.text-title {
+  @include text-18px;
+  font-family: $body-font-family;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.text-button {
+  @include text-18px;
+  font-family: $headings-font-family;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.text-body-22 {
+  @include text-22px;
+  font-family: $body-font-family;
+  font-weight: 400;
+}
+
+.text-body-bold {
+  @include text-16px;
+  font-family: $body-font-family;
+  font-weight: 700;
+}
+
+.text-body-link {
+  @include text-16px;
+  font-family: $body-font-family;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.text-small-title {
+  @include text-16px;
+  line-height: 1;
+  font-family: $body-font-family;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.text-subheading {
+  @include text-14px;
+  font-family: $body-font-family;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.text-small {
+  @include text-12px;
+  font-family: $body-font-family;
+  font-weight: 400;
+}
+
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
+.font-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.novatica-font {
+  font-family: $headings-font-family;
+}
+
+.adelesans-font {
+  font-family: $body-font-family;
+}
+
+.font-header {
+  font-family: $headings-font-family;
+  color: $gray;
+}
+
+body {
+  @extend .adelesans-font;
+}

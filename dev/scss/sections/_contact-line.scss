@@ -1,0 +1,73 @@
+.contact-line {
+    &__text {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 5px;
+        font-family: $headings-font-family;
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-left,
+        &-right {
+            display: flex;
+            flex-direction: column;
+
+            // align-items: center;
+            // @include media-breakpoint-down(md) {
+            //     text-align: center;
+            // }
+            @include media-breakpoint-up(lg) {
+                text-align: unset;
+                flex-direction: row;
+            }
+        }
+
+        &-right {
+            @include media-breakpoint-up(lg) {
+                justify-content: flex-end;
+            }
+        }
+
+        a,
+        p {
+            // font-size: 12px;
+            // line-height: 18px;
+            font-size: 16px;
+            line-height: 120%;
+
+            @include media-breakpoint-up(md) {
+                font-size: 18px;
+                line-height: 21.6px;
+            }
+        }
+
+        a {
+            color: $gray;
+
+            @include media-breakpoint-down(md) {
+                // text-align: center;
+                display: block;
+                width: 100%;
+                margin-top: 5px;
+                font-size: 14px;
+                line-height: 150%;
+                color: $light-gray;
+                text-transform: lowercase;
+                font-family: $body-font-family;
+            }
+
+            font-weight: 400;
+
+            @include media-breakpoint-up(md) {
+                font-weight: 500;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-left: 10px;
+            }
+        }
+    }
+}

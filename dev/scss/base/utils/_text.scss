@@ -1,0 +1,63 @@
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+@include media-breakpoint-up(md) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+}
+
+// Font Weights
+.font-light {
+  font-weight: lighter !important;
+}
+.font-regular {
+  font-weight: 400 !important;
+}
+.font-medium {
+  font-weight: 500 !important;
+}
+.font-bold {
+  font-weight: 700 !important;
+}
+
+// Text Utils
+.no-underline {
+  text-decoration: none;
+}
+
+// List Utils
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+.list-dots {
+  list-style-type: disc;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+.rounded-ellipse {
+  padding-bottom: 56%;
+  border: 1px solid c_rgb(var(--color-primary));
+  border-radius: 120% 50%;
+}
+@include media-breakpoint-up(md) {
+  .rounded-ellipse--desk {
+    border: 1px solid c_rgb(var(--color-primary));
+    border-radius: 120% 50%;
+  }
+}

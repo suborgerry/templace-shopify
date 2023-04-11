@@ -1,0 +1,113 @@
+#omnisend-dynamic-container {
+    display: none;
+}
+
+.page-menu {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.page-menu__container-item {
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #181818;
+    text-decoration: none;
+}
+
+body,
+.color-background-1.gradient:not(footer) {
+    background: #F6F6F6 !important;
+}
+
+@media screen and (min-width: 750px) {
+    span.page-menu__container-item {
+        background: #D9D9D9;
+    }
+
+    .page-menu__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-menu__container-item {
+        padding: 10px 20px;
+        height: 41px;
+    }
+
+    .page-menu {
+        position: absolute;
+        left: 5%;
+        top: 145px;
+    }
+
+    .page-menu {
+        width: 22%;
+    }
+}
+
+@media screen and (max-width: 749.98px) {
+    .page-menu {
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        margin-top: 24px;
+    }
+
+    .page-menu__container-item:not(.active) {
+        color: #848484;
+    }
+
+    .page-menu__container-swiper {
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+        height: 21px;
+        position: relative;
+    }
+
+    .page-menu__container-swiper::-webkit-scrollbar,
+    .page-menu::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .page-menu__container {
+        display: flex;
+        overflow-x: scroll;
+        width: max-content;
+        position: absolute;
+    }
+
+    .page-menu__container-item {
+        padding: 0 10px;
+    }
+
+    .page-menu__container .page-menu__container-item {
+        width: max-content;
+    }
+
+    .page-menu__container .page-menu__container-item+.page-menu__container-item {
+        /* margin-left: 20px; */
+    }
+
+    .page-menu__container .page-menu__container-item:first-child {
+        padding-left: 16px;
+    }
+
+    .page-menu__container .page-menu__container-item:last-child {
+        padding-right: 16px;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 990px) {
+    .page-menu__container>* {
+        height: auto
+    }
+}

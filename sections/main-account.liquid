@@ -1,0 +1,174 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<div class = "customer account">
+	<div class = "container">
+		<div class = "page-header">
+			<div class = "page-header__inner">
+				<div class="customer__top">
+					<h1 class = "main-page-title page-title title--page">
+						{{ 'customer.account.title_1' | t }}
+						<span>{{ 'customer.account.title_2' | t }}</span>
+					</h1>
+					<a class = "title-link" href = "{{ routes.account_logout_url }}">
+						{{ 'customer.log_out' | t }}
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class = "account-row row">
+			<div class = "account-left col-lg-8">
+				<h2 class = "h4">{{ 'customer.orders.title' | t }}</h2>
+
+				{% paginate customer.orders by 20 %}
+					{%- if customer.orders.size > 0 -%}
+						<table role = "table" class = "order-table">
+							<caption class = "visually-hidden">{{ 'customer.orders.title' | t }}</caption>
+							<thead role = "rowgroup">
+							<tr role = "row">
+								<th id = "ColumnOrder" scope = "col" role = "columnheader">{{ 'customer.orders.order_number' | t }}</th>
+								<th id = "ColumnDate" scope = "col" role = "columnheader">{{ 'customer.orders.date' | t }}</th>
+								<th id = "ColumnPayment" scope = "col" role = "columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+								<th id = "ColumnFulfillment" scope = "col" role = "columnheader">{{ 'customer.orders.fulfillment_status' | t }}</th>
+								<th id = "ColumnTotal" scope = "col" role = "columnheader">{{ 'customer.orders.total' | t }}</th>
+							</tr>
+							</thead>
+							<tbody role = "rowgroup">
+							{%- for order in customer.orders -%}
+								<tr role = "row">
+									<td id = "RowOrder" role = "cell" headers = "ColumnOrder" data-label = "{{ 'customer.orders.order_number' | t }}">
+										<a href = "{{ order.customer_url }}" aria-label = "{{ 'customer.orders.order_number_link' | t: number: order.name }}">
+											{{ order.name }}
+										</a>
+									</td>
+									<td headers = "RowOrder ColumnDate" role = "cell" data-label = "{{ 'customer.orders.date' | t }}">
+										{{ order.created_at | time_tag: format: 'date' }}
+									</td>
+									<td headers = "RowOrder ColumnPayment" role = "cell" data-label = "{{ 'customer.orders.payment_status' | t }}">
+										{{ order.financial_status_label }}
+									</td>
+									<td headers = "RowOrder ColumnFulfillment" role = "cell" data-label = "{{ 'customer.orders.fulfillment_status' | t }}">
+										{{ order.fulfillment_status_label }}
+									</td>
+									<td headers = "RowOrder ColumnTotal" role = "cell" data-label = "{{ 'customer.orders.total' | t }}">
+										{{ order.total_price | money_with_currency }}</td>
+								</tr>
+							{%- endfor -%}
+							</tbody>
+						</table>
+					{%- else -%}
+						<div class = "account-none account-none-order">
+							{% render 'icon-account-order-none' %}
+							<p class = "account-none-text">{{ 'customer.orders.none' | t }}</p>
+							<a href = "{{ routes.collections_url | sort_by: 'best-selling' }}" class = "button button--secondary button--arrow account-none-button">
+								<span>{{ 'customer.account.account_button_shop' | t }}</span> {% render 'icon-button-arrow' %}
+							</a>
+						</div>
+					{%- endif -%}
+
+					{%- if paginate.pages > 1 -%}
+						{%- if paginate.parts.size > 0 -%}
+							<nav class = "pagination" role = "navigation" aria-label = "{{ 'general.pagination.label' | t }}">
+								<ul role = "list">
+									{%- if paginate.previous -%}
+										<li>
+											<a href = "{{ paginate.previous.url }}" aria-label = "{{ 'general.pagination.previous' | t }}">
+												<svg aria-hidden = "true" focusable = "false" viewBox = "0 0 10 6">
+													<path clip-rule = "evenodd" d = "M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill = "currentColor" fill-rule = "evenodd">
+												</svg>
+											</a>
+										</li>
+									{%- endif -%}
+
+									{%- for part in paginate.parts -%}
+										<li>
+											{%- if part.is_link -%}
+												<a href = "{{ part.url }}" aria-label = "{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
+											{%- else -%}
+												{%- if part.title == paginate.current_page -%}
+													<span aria-current = "page" aria-label = "{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+												{%- else -%}
+													<span>{{ part.title }}</span>
+												{%- endif -%}
+											{%- endif -%}
+										</li>
+									{%- endfor -%}
+
+									{%- if paginate.next -%}
+										<li>
+											<a href = "{{ paginate.next.url }}" aria-label = "{{ 'general.pagination.next' | t }}">
+												<svg aria-hidden = "true" focusable = "false" viewBox = "0 0 10 6">
+													<path fill-rule = "evenodd" clip-rule = "evenodd" d = "M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill = "currentColor">
+												</svg>
+											</a>
+										</li>
+									{%- endif -%}
+								</ul>
+							</nav>
+						{%- endif -%}
+					{%- endif -%}
+				{% endpaginate %}
+			</div>
+			<div class = "account-right col-lg-4 {% if customer.addresses_count  > 0 %} account-right-address{% endif %}">
+				<h2 class = "h4">{{ 'customer.account.details' | t }}</h2>
+				{%- if customer.addresses_count  > 0 -%}
+					<div class="customer-address__list-wrapper">
+						<ul class = "customer-address__list customer-address__default">
+							{%- if customer.default_address.name != blank -%}
+								<li class = "customer-address__item customer-address__item-name">{{ customer.default_address.name }}</li>
+							{%- endif -%}
+
+							{%- if customer.default_address != blank -%}
+								<li>
+									{%- if customer.default_address.street != blank -%}
+										<span class = "customer-address__item">{{ customer.default_address.street }}</span>
+									{%- endif -%}
+
+									{%- if customer.default_address.company != blank -%}
+										<span class = "customer-address__item">{{ customer.default_address.company }}</span>
+									{%- endif -%}
+
+									{%- if customer.default_address.city != blank -%}
+										<span class = "customer-address__item">{{ customer.default_address.city }}</span>
+									{%- endif -%}
+
+									{%- if customer.default_address.zip != blank -%}
+										<span class = "customer-address__item">{{ customer.default_address.zip }}</span>
+									{%- endif -%}
+
+									{%- if customer.default_address.phone != blank -%}
+										<span class = "customer-address__item">{{ customer.default_address.phone }}</span>
+									{%- endif -%}
+								</li>
+							{%- endif -%}
+
+							{%- if customer.default_address.country != blank -%}
+								<li>
+									<span class = "customer-address__item customer-address__item-address">{{ customer.default_address.country }}</span>
+								</li>
+							{%- endif -%}
+						</ul>
+						<a class = "customer-address__link" href = "{{ routes.account_addresses_url }}">
+							<span>{{ 'customer.account.view_addresses' | t }}</span>
+							({{ customer.addresses_count }})
+						</a>
+					</div>
+				{%- else -%}
+					<div class = "account-none account-none-address">
+						{% render 'icon-account-address-none' %}
+						<p class = "account-none-text">{{ 'customer.addresses.none' | t }}</p>
+						<a href = "{{ routes.account_addresses_url }}" class = "button button--secondary button--arrow account-none-button">
+							<span> {{ 'customer.addresses.add_new' | t }}</span> {% render 'icon-button-arrow' %}
+						</a>
+					</div>
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.main-account.name"
+}
+{% endschema %}

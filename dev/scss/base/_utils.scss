@@ -1,0 +1,113 @@
+@import "utils/colors";
+@import "utils/text";
+@import "utils/spacing";
+@import "utils/sizings";
+@import "utils/position";
+@import "utils/flex";
+@import "utils/display";
+@import "utils/opacity";
+@import "utils/z-index";
+@import "media";
+@import "grid";
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-visible {
+  &--lg {
+    @include media-breakpoint-up(lg) {
+      overflow: visible;
+    }
+  }
+}
+
+.fit-contain {
+  object-fit: contain !important;
+}
+
+.border-none {
+  border: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-no-drop {
+  cursor: no-drop;
+}
+
+.placeholder-svg {
+  background-color: #f3f3f3;
+}
+
+details>* {
+  box-sizing: border-box;
+}
+
+.break {
+  word-break: break-word;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* base */
+.no-js:not(html) {
+  display: none !important;
+}
+
+html.no-js .no-js:not(html) {
+  display: block !important;
+}
+
+.no-js-inline {
+  display: none !important;
+}
+
+html.no-js .no-js-inline {
+  display: inline-block !important;
+}
+
+html.no-js .no-js-hidden {
+  display: none !important;
+}
+
+.caption-with-letter-spacing {
+  font-size: 1rem;
+  letter-spacing: 0.13rem;
+  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 750px) {
+  .small-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 989.98px) {
+  .medium-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .large-up-hide {
+    display: none !important;
+  }
+}
+
+.fit-cover {
+  object-fit: cover;
+}

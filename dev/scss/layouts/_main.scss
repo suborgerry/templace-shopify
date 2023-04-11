@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  // Hide Scrollbars
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.menu-opened {
+  .icon-caret {
+    transform: rotate(-90deg);
+  }
+
+  &+.accordion-item {
+    display: block !important;
+  }
+}

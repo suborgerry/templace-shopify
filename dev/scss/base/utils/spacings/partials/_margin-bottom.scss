@@ -1,0 +1,35 @@
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+@each $value in $m-bottom {
+  $formatted-value: str-replace($value, ".", "\\.");
+  .mb-#{$formatted-value} {
+    margin-bottom: #{$value}rem;
+  }
+}
+@include media-breakpoint-up(md) {
+  .mb-0--desk {
+    margin-bottom: 0;
+  }
+  .mb-auto--desk {
+    margin-bottom: auto;
+  }
+  .mb-n2--desk {
+    margin-bottom: -2rem;
+  }
+  @each $value in $m-bottom--desk {
+    $formatted-value: str-replace($value, ".", "\\.");
+
+    .mb-#{$formatted-value}--desk {
+      margin-bottom: #{$value}rem;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .mb-1\.5--xl-desk {
+    margin-bottom: 1.5rem;
+  }
+}

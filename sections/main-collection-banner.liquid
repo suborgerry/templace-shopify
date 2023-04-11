@@ -1,0 +1,146 @@
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'parallax.js' | asset_url }}" defer="defer"></script>
+
+<div class="container">
+  <div class="collection-hero">
+  <div class="collection-hero__inner">
+    <div class="collection-hero__text-wrapper">
+      <h1 class="collection-hero__title title--page">
+        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        {{- collection.title | escape -}} 
+        {% if section.settings.show_word and section.settings.add_word != blank %}
+          <span> {{ section.settings.add_word }}</span>
+        {% endif %}
+      </h1>
+
+      {%- if section.settings.show_collection_description and collection.description != blank -%}
+        <div class="collection-hero__description rte">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_collection_image and collection.image -%}
+      <div class="collection-hero__image-wrapper {% if section.settings.image_bottom_1 != blank or section.settings.image_bottom_2 != blank %} collection-hero__image-wrapper_bottom {% endif %}">
+        <div class="collection-hero__image-container media">
+          <img srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if collection.image.width >= 360 -%}{{ collection.image | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if collection.image.width >= 535 -%}{{ collection.image | img_url: '535x' }} 535w,{%- endif -%}
+            {%- if collection.image.width >= 720 -%}{{ collection.image | img_url: '720x' }} 720w,{%- endif -%}
+            {%- if collection.image.width >= 940 -%}{{ collection.image | img_url: '940x' }} 940w,{%- endif -%}
+            {%- if collection.image.width >= 1070 -%}{{ collection.image | img_url: '1070x' }} 1070w,{%- endif -%}
+            {%- if collection.image.width >= 1100 -%}{{ collection.image | img_url: '1100x' }} 1100w,{%- endif -%}
+            {%- if collection.image.width >= 1290 -%}{{ collection.image | img_url: '1290x' }} 1290w{%- endif -%}"
+            src="{{ collection.image | img_url: '533x' }}"
+            alt="{{ collection.title | escape }}"
+            loading="lazy"
+            width="{{ collection.image.width }}"
+            height="{{ collection.image.height }}"
+          >
+        </div>
+
+        {%- if section.settings.image_bottom_1 != blank or section.settings.image_bottom_2 != blank -%}
+          <div class="collection-hero__image-bottom">
+            {%- if section.settings.image_bottom_2 != blank -%}
+              {%- assign image_size_2 = section.settings.image_width_2 | append: 'x' -%}
+              <div class="collection-hero__image-bottom-item">
+                <img srcset="{{ section.settings.image_bottom_2 | img_url: image_size_2 }} 1x, {{ section.settings.image_bottom_2 | img_url: image_size_2, scale: 2 }} 2x"
+									src="{{ section.settings.image_bottom_2 | img_url: image_size_2 }}"
+									alt="{{ section.settings.image_bottom_2.alt | escape }}"
+									width="{{ section.settings.image_width_2 }}"
+									height="{{ section.settings.image_bottom_2.height }}"
+									loading="lazy"
+									class="js-parallax"
+									data-parallax-property="translateY" data-parallax-property-value="-75"
+								>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.image_bottom_1 != blank -%}
+              {%- assign image_size_1 = section.settings.image_width_1 | append: 'x' -%}
+              <div class="collection-hero__image-bottom-item">
+                <img srcset="{{ section.settings.image_bottom_1 | img_url: image_size_1 }} 1x, {{ section.settings.image_bottom_1 | img_url: image_size_1, scale: 2 }} 2x"
+									src="{{ section.settings.image_bottom_1 | img_url: image_size_1 }}"
+									alt="{{ section.settings.image_bottom_1.alt | escape }}"
+									width="{{ section.settings.image_width_1 }}"
+									height="{{ section.settings.image_bottom_1.height }}"
+									loading="lazy"
+									class="js-parallax"
+									data-parallax-property="translateY" data-parallax-property-value="-50"
+								>
+              </div>
+            {%- endif -%}
+          </div>
+        {% endif %}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+</div>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "spaced-section--full-width",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "text",
+      "id": "add_word",
+      "label": "t:sections.main-collection-banner.settings.add_word.label",
+      "default": "Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_word",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_word.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_1",
+      "label": "t:sections.main-collection-banner.settings.image_bottom_1.label"
+    },
+    {
+      "type": "range",
+      "id": "image_width_1",
+      "min": 50,
+      "max": 130,
+      "step": 10,
+      "default": 90,
+      "unit": "t:sections.main-collection-banner.settings.image_width.unit",
+      "label": "t:sections.main-collection-banner.settings.image_width.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_2",
+      "label": "t:sections.main-collection-banner.settings.image_bottom_2.label"
+    },
+    {
+      "type": "range",
+      "id": "image_width_2",
+      "min": 50,
+      "max": 130,
+      "step": 10,
+      "default": 90,
+      "unit": "t:sections.main-collection-banner.settings.image_width.unit",
+      "label": "t:sections.main-collection-banner.settings.image_width.label"
+    }
+  ]
+}
+{% endschema %}

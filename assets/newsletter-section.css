@@ -1,0 +1,73 @@
+.newsletter__wrapper {
+  position: relative;
+  padding: 0 2rem;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 990px) {
+  .newsletter__wrapper {
+    padding: 0 8rem;
+  }
+}
+.newsletter__text {
+  margin-top: 2.4rem;
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.35);
+}
+
+@media screen and (min-width: 990px) {
+  .newsletter__text {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.newsletter-form__field-wrapper .newsletter-form__message {
+  margin-top: 1.5rem;
+}
+
+.newsletter__button {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.newsletter__item {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 628px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 990px) {
+  .newsletter__item {
+    gap: 7rem;
+  }
+  .newsletter__button {
+    width: auto;
+  }
+}
+.newsletter-form__field-wrapper .field__label {
+  top: 2.2rem;
+}
+
+.newsletter-form__field-wrapper .field__input:focus,
+.newsletter-form__field-wrapper .select__select:focus,
+.newsletter-form__field-wrapper .field input:focus {
+  outline: none;
+}
+
+.newsletter-form__field-wrapper .field__input:focus,
+.newsletter-form__field-wrapper .field__input:not(:placeholder-shown),
+.newsletter-form__field-wrapper .field__input:-webkit-autofill {
+  padding: 1.5rem;
+}
+
+.newsletter-form__field-wrapper .field__input:focus ~ .field__label,
+.newsletter-form__field-wrapper .field__input:not(:placeholder-shown) ~ .field__label,
+.newsletter-form__field-wrapper .field__input:-webkit-autofill ~ .field__label {
+  font-size: 0.8rem;
+  top: 0.5em;
+  letter-spacing: 0.04rem;
+}

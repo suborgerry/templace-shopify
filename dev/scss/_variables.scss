@@ -1,0 +1,26 @@
+// Type
+$headings-font-family: 'BC Novatica CYR',
+sans-serif;
+$body-font-family: 'Adelle Sans',
+sans-serif;
+
+// Grid
+$sm: 576px;
+$md: 750px;
+$lg: 990px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// Colors
+$light: #fff;
+$gray: #181818;
+$light-gray: #444444;
+
+// Transitions
+$duration-short: 100ms;
+$duration-default: 200ms;
+$duration-long: 500ms;
+// From base :root
+$page-width-x-paddings-mobile: 1.6rem;
+$page-width-narrow: 1180px;
+$page-width-medium: 1260px;

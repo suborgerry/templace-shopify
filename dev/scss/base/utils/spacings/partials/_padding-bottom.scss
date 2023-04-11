@@ -1,0 +1,28 @@
+.pb-0 {
+  padding-bottom: 0;
+}
+
+@each $value in $p-bottom {
+  $formatted-value: str-replace($value, ".", "\\.");
+
+  .pb-#{$formatted-value} {
+    padding-bottom: #{$value}rem;
+  }
+}
+@include media-breakpoint-up(md) {
+  .pb-0--desk {
+    padding-bottom: 0;
+  }
+  @each $value in $p-bottom--desk {
+    $formatted-value: str-replace($value, ".", "\\.");
+    .pb-#{$formatted-value}--desk {
+      padding-bottom: #{$value}rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pb-10--xl-desk {
+    padding-top: 10rem;
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "image_width_1": 90,
+        "image_width_2": 90
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 10,
+        "image_product_grid_position": "right",
+        "image_ratio": "landscape",
+        "image_fit": "contain",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": true,
+        "enable_filtering": true,
+        "enable_sorting": true
+      }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "<p>All Canvas <em>Websites<\/em> In One Place<\/p>",
+        "heading_animation": true,
+        "description": "Don't waste your time on designing pages, our professional designers made it for you",
+        "button_link": "",
+        "button_label": "Buy Now",
+        "cover_image": "shopify:\/\/shop_images\/56.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "<p>Get the latest <em>news<\/em> & <em>special<\/em> offers to your inbox<\/p>",
+        "heading_animation": true,
+        "sub_title": "hey, we have something for you",
+        "newsletter_text": "<p>Subscribe to our newsletter and never miss the latest news and promotions<\/p>",
+        "button_style": "primary",
+        "border_top": false
+      }
+    },
+    "image-collage": {
+      "type": "image-collage",
+      "blocks": {
+        "6985d60e-bb51-4b9a-bb79-bc6de789c5a0": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jullliia-yOGWY6nmdjs-unsplash_1.jpg",
+            "image_width": 120
+          }
+        },
+        "b5584075-9bb9-4006-b82e-d9e38d23740f": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mojtaba-mosayebzadeh-3VP3nE5fqsA-unsplash.jpg",
+            "image_width": 120
+          }
+        },
+        "682aff33-ff44-464e-9d63-8b7ef6a5ba9b": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aiony-haust-hA2bgXeA5sc-unsplash.jpg",
+            "image_width": 120
+          }
+        },
+        "2a408018-b230-46a8-9883-56a2fbde601c": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-ivan-xolod-8602185.jpg",
+            "image_width": 120
+          }
+        }
+      },
+      "block_order": [
+        "6985d60e-bb51-4b9a-bb79-bc6de789c5a0",
+        "b5584075-9bb9-4006-b82e-d9e38d23740f",
+        "682aff33-ff44-464e-9d63-8b7ef6a5ba9b",
+        "2a408018-b230-46a8-9883-56a2fbde601c"
+      ],
+      "settings": {
+        "sub_title": "social media",
+        "title": "<p>Check out our <em>Instagram<\/em><\/p>",
+        "name_account": "@templace_studio",
+        "desc_account": "Instagram blog",
+        "button_label": "Explore",
+        "button_link": "",
+        "button_style": "secondary"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "video",
+    "newsletter",
+    "image-collage"
+  ]
+}

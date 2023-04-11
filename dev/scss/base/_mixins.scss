@@ -1,0 +1,82 @@
+@import "./functions";
+
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == "xxl" {
+    @media screen and (min-width: $xxl) {
+      @content;
+    }
+  } @else if $breakpoint == "xl" {
+    @media screen and (min-width: $xl) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $breakpoint == "sm" {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  }
+}
+@mixin media-breakpoint-down($breakpoint) {
+  @if $breakpoint == "sm" {
+    @media screen and (max-width: #{$md - 0.02}) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media screen and (max-width: #{$lg - 0.02}) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media screen and (max-width: #{$xl - 0.02}) {
+      @content;
+    }
+  } @else if $breakpoint == "xl" {
+    @media screen and (max-width: #{$xxl - 0.02}) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: #{$lg - 0.02}) {
+      @content;
+    }
+  }
+}
+
+
+@mixin text-28px {
+  font-size: 28px;
+  line-height: 32px;
+}
+@mixin text-22px {
+  font-size: 22px;
+  line-height: 32px;
+}
+@mixin text-20px {
+  font-size: 20px;
+  line-height: 33.4px;
+}
+@mixin text-18px {
+  font-size: 18px;
+  line-height: 21.6px;
+}
+@mixin text-16px {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin text-14px {
+  font-size: 14px;
+  line-height: 21px;
+}
+@mixin text-12px {
+  font-size: 12px;
+  line-height: 18px;
+}

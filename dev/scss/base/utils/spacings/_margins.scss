@@ -1,0 +1,79 @@
+// Generate util padding classes
+// Example: .mt-1, .mb-2--desk
+
+$m-top: "0.2", "0.5", "1", "1.5", "2", "2.5", "2.9", "3", "3.5", "3.85", "4", "13";
+$m-top--desk: "0.5", "1", "1.5", "2", "2.5", "2.9", "3", "3.5", "3.85", "4", "6", "7.7", "13";
+
+$m-bottom: "0.5", "0.75", "1", "1.5", "2", "2.3", "2.5", "3", "3.5", "5", "6", "13";
+$m-bottom--desk: "0.5", "1", "1.5", "2", "2.3", "2.5", "3", "3.5", "4.5", "6", "7", "13";
+
+$m-right: "1", "2", "2.5", "4.5";
+$m-right--desk: "2.5", "4.5";
+
+$m-left: "1", "2", "3.5", "4.5", "4", "5";
+$m-left--desk: "2", "3.5", "4.5";
+
+@import "partials/margin-top";
+@import "partials/margin-bottom";
+@import "partials/margin-right";
+@import "partials/margin-left";
+
+// General
+.mx-auto {
+  @extend .ml-auto, .mr-auto;
+}
+.mx-0 {
+  @extend .ml-0, .ml-0;
+}
+.mx-n1\.5 {
+  @extend .mr-n1\.5, .ml-n1\.5;
+}
+.mx-n4 {
+  @extend .ml-n4, .mr-n4;
+}
+.mx-n5 {
+  @extend .ml-n5, .mr-n5;
+}
+.mx-n7\.7 {
+  @extend .ml-n7\.7, .mr-n7\.7;
+}
+.mx-n8 {
+  @extend .mr-n8, .ml-n8;
+}
+.mx-n10 {
+  margin-left: -10rem;
+  margin-right: -10rem;
+}
+// Desktop
+.mx-0 {
+  &--desk {
+    @extend .ml-0--desk, .mr-0--desk;
+  }
+}
+.mx-n1\.5 {
+  &--desk {
+    @extend .mr-n1\.5--desk, .ml-n1\.5--desk;
+  }
+}
+.mx-n4 {
+  &--desk {
+    @extend .ml-n4--desk, .mr-n4--desk;
+  }
+}
+.mx-n5 {
+  &--desk {
+    @extend .ml-n5--desk, .mr-n5--desk;
+  }
+}
+.mx-n7\.7 {
+  &--desk {
+    @extend .ml-n7\.7--desk, .mr-n7\.7--desk;
+  }
+}
+
+@media (min-width: 1199px) {
+  .mx-0--xl {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

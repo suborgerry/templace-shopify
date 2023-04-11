@@ -1,0 +1,68 @@
+// Generate util padding classes
+// Example: .pt-1, .pb-2--desk
+
+$p-top: "0.6", "0.85", "1", "1.5", "2", "2.5", "3", "3.5", "3.7", "4", "4.5", "5", "10";
+$p-top--desk: "1.5", "2", "2.5", "3", "3.5", "3.7", "4", "4.5", "5", "8", "10";
+
+$p-bottom: "0.6", "0.85", "1", "1.5", "2", "2.5", "2.8", "3", "3.5", "4", "5", "6", "10";
+$p-bottom--desk: "1.5", "2.5", "3", "3.5", "4", "5", "6", "8.5", "10";
+
+$p-right: "0.6", "1", "1.5", "2", "3.5", "4", "5";
+$p-right--desk: "0.6", "1.5", "2", "3.5", "3.85", "4", "8";
+
+$p-left: "0.6", "1", "1.5", "2", "4", "5";
+$p-left--desk: "0.6", "1", "1.5", "2", "3.85", "4", "5";
+
+@import "partials/padding-top";
+@import "partials/padding-bottom";
+@import "partials/padding-left";
+@import "partials/padding-right";
+
+// Manual extends
+.p-0 {
+  padding: 0 !important;
+}
+.py-1 {
+  @extend .pt-1, .pb-1;
+}
+.px-0 {
+  @extend .pl-0, .pr-0;
+  &--desk {
+    @extend .pl-0--desk, .pr-0--desk;
+  }
+}
+.px-1\.5 {
+  @extend .pl-1\.5, .pr-1\.5;
+  &--desk {
+    @extend .pl-1\.5--desk, .pr-1\.5--desk;
+  }
+}
+.px-4 {
+  &--desk {
+    @extend .pl-4--desk, .pr-4--desk;
+  }
+}
+.py-0\.6 {
+  @extend .pt-0\.6, .pb-0\.6;
+}
+.py-2 {
+  @extend .pt-2, .pb-2;
+}
+.py-2\.5 {
+  @extend .pt-2\.5, .pb-2\.5;
+}
+.py-3 {
+  &--desk {
+    @extend .pt-3--desk, .pb-3--desk;
+  }
+}
+.py-3\.5 {
+  &--desk {
+    @extend .pt-3\.5--desk, .pb-3\.5--desk;
+  }
+}
+.py-4 {
+  &--desk {
+    @extend .pt-4--desk, .pb-4--desk;
+  }
+}

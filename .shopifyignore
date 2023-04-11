@@ -1,0 +1,5 @@
+dev
+dev/
+dev/*
+package.json
+.vscode

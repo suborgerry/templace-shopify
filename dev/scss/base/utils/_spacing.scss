@@ -1,0 +1,10 @@
+@import "spacings/margins";
+@import "spacings/padding";
+
+
+.section-space {
+  margin: 3.85rem 0;
+  @include media-breakpoint-up(md) {
+    margin: 7.7rem 0;
+  }
+}

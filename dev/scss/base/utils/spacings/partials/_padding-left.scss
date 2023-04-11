@@ -1,0 +1,23 @@
+.pl-0 {
+  padding-left: 0;
+}
+
+@each $value in $p-left {
+  $formatted-value: str-replace($value, ".", "\\.");
+
+  .pl-#{$formatted-value} {
+    padding-left: #{$value}rem;
+  }
+}
+@include media-breakpoint-up(md) {
+  .pl-0--desk {
+    padding-left: 0;
+  }
+  @each $value in $p-left--desk {
+    $formatted-value: str-replace($value, ".", "\\.");
+
+    .pl-#{$formatted-value}--desk {
+      padding-left: #{$value}rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.image-section__image-wrapper {
+  max-height: 300px;
+  margin-top: 6.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-parallax-section .image-section__image {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.image-section__placeholder {
+  width: 80rem;
+  max-width: 100%;
+}

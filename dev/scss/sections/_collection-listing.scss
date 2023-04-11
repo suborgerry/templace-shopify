@@ -1,0 +1,261 @@
+.collection-listing {
+    h4 {
+        margin-bottom: 34px;
+
+        @include media-breakpoint-down(sm) {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21.6px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-row-gap: 42px;
+
+        @include media-breakpoint-up(sm) {
+            grid-column-gap: 20px;
+            grid-row-gap: 48px;
+        }
+
+        &.mobile-padded {
+            @include media-breakpoint-down(sm) {
+                padding-left: var(--page-width-x-paddings-mobile);
+                padding-right: var(--page-width-x-paddings-mobile);
+
+                .collection-listing__item-image,
+                .collection-listing__item-text {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+            }
+        }
+    }
+
+    &--col-mob-1 {
+        grid-template-columns: 1fr;
+
+        &:not(.mobile-padded) {
+            .collection-listing__item-text {
+                padding-left: var(--page-width-x-paddings-mobile);
+                padding-right: var(--page-width-x-paddings-mobile);
+            }
+        }
+    }
+
+    &--col-mob-1,
+    &--col-mob-2:not(.mobile-padded) {
+        .collection-listing__item {
+            &:nth-of-type(even) {
+                text-align: right;
+
+                .collection-listing__item-text {
+                    align-items: flex-end;
+                }
+            }
+        }
+    }
+
+    &--col-mob-2 {
+        grid-template-columns: 1fr 1fr;
+
+        .collection-listing__item {
+            &:nth-of-type(odd) {
+                .collection-listing__item-text {
+                    padding-left: var(--page-width-x-paddings-mobile);
+                }
+            }
+
+            &:nth-of-type(even) {
+                .collection-listing__item-text {
+                    padding-right: var(--page-width-x-paddings-mobile);
+                }
+            }
+        }
+
+        &.mobile-padded {
+            @include media-breakpoint-down(sm) {
+                .collection-listing__item {
+                    text-align: center;
+
+                    .collection-listing__item-text {
+                        h6 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .collection-listing__item-image,
+                .collection-listing__mobile-text {
+                    height: 63vw;
+                }
+            }
+        }
+
+        &:not(.mobile-padded) {
+            @include media-breakpoint-down(sm) {
+                .collection-listing__mobile-text {
+                    height: 72vw;
+                }
+            }
+        }
+    }
+
+    &--col-desk-2 {
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .collection-listing__item {
+            &:nth-of-type(odd) {
+                .collection-listing__item-text {
+                    @include media-breakpoint-up(md) {
+                        padding-right: unset;
+                        padding-left: 5rem;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        padding-left: 4.86vw;
+                    }
+                }
+            }
+
+            &:nth-of-type(even) {
+                .collection-listing__item-text {
+                    @include media-breakpoint-up(md) {
+                        padding-left: unset;
+                        padding-right: 5rem;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        padding-right: 4.86vw;
+                    }
+                }
+            }
+        }
+    }
+
+    &--col-desk-3 {
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .collection-listing__item {
+            &:nth-of-type(even) {
+                @include media-breakpoint-up(md) {
+                    text-align: unset;
+
+                    .collection-listing__item-text {
+                        align-items: unset;
+                    }
+                }
+            }
+
+            &:nth-of-type(3n + 1) {
+                .collection-listing__item-text {
+                    @include media-breakpoint-up(md) {
+                        padding-right: unset;
+                        padding-left: 5rem;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        padding-left: 4.86vw;
+                    }
+                }
+            }
+
+            &:nth-of-type(3n + 3) {
+                .collection-listing__item-text {
+                    @include media-breakpoint-up(md) {
+                        padding-left: unset;
+                        padding-right: 5rem;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        padding-right: 4.86vw;
+                    }
+                }
+            }
+
+            .collection-listing__item-image {
+                @include media-breakpoint-up(md) {
+                    height: 53.8vw;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &>a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            // &:hover + div {
+            //     img {
+            //         transform: scale(1.05);
+            //     }
+            // }
+        }
+
+        &-image {
+            width: 100%;
+            height: 72vw;
+            overflow: hidden;
+
+            @include media-breakpoint-up(md) {
+                height: 41.875vw;
+            }
+
+            svg,
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                object-fit: cover;
+                transition: $duration-long ease;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+
+            &:not(h6) {
+                color: $light-gray;
+            }
+
+            h6 {
+                margin-top: 16px;
+                margin-bottom: 0;
+
+                @include media-breakpoint-up(md) {
+                    margin-top: 20px;
+                }
+            }
+
+            p {
+                margin-top: 8px;
+
+                @include media-breakpoint-up(md) {
+                    margin-top: 20px;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    max-width: 39vw;
+                }
+            }
+        }
+    }
+}

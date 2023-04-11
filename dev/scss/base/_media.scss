@@ -1,0 +1,45 @@
+.media {
+  @extend .d-block, .position-relative, .overflow-hidden;
+
+  img {
+    @extend .d-block, .w-100, .h-100, .absolute-fill, .fit-cover;
+  }
+}
+.media--transparent {
+  background-color: transparent;
+}
+
+.media--square {
+  padding-bottom: 100%;
+}
+
+.media--portrait {
+  padding-bottom: 125%;
+}
+
+.media--landscape {
+  padding-bottom: 66.6%;
+}
+
+.media--cropped {
+  padding-bottom: 56%;
+}
+
+.media--16-9 {
+  padding-bottom: 56.25%;
+}
+
+.media--circle {
+  padding-bottom: 100%;
+  border-radius: 50%;
+}
+
+.media.media--hover-effect > img + img {
+  opacity: 0;
+}
+
+@media screen and (min-width: 990px) {
+  .media--cropped {
+    padding-bottom: 63%;
+  }
+}

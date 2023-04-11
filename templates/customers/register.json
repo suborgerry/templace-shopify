@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-register",
+      "settings": {
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "button_style": "secondary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

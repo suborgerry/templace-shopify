@@ -1,0 +1,44 @@
+.text-primary {
+  color: c_rgb(var(--color-primary)) !important;
+}
+
+.text-secondary {
+  color: c_rgb(var(--color-secondary)) !important;
+}
+
+.text-light {
+  color: c_rgb(var(--color-light)) !important;
+}
+
+.text-transparent {
+  color: transparent !important;
+}
+
+.bg-primary {
+  background-color: c_rgb(var(--color-primary));
+}
+
+.bg-tertiary {
+  background-color: c_rgb(var(--bg-tertiary));
+}
+
+.bg-secondary {
+  background-color: c_rgb(var(--bg-secondary)) !important;
+}
+
+.bg-loading,
+html:not(.no-js) .media--lazy-animation {
+  background-image: var(--bg-loading);
+}
+
+.bg-light {
+  background-color: $light;
+}
+
+.bg-body {
+  background-color: c_rgb(var(--color-body));
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}

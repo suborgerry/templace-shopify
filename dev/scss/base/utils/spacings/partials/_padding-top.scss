@@ -1,0 +1,32 @@
+.pt-0 {
+  padding-top: 0;
+}
+@each $value in $p-top {
+  $formatted-value: str-replace($value, ".", "\\.");
+
+  .pt-#{$formatted-value} {
+    padding-top: #{$value}rem;
+  }
+}
+@include media-breakpoint-up(md) {
+  .pt-0--desk {
+    padding-top: 0;
+  }
+  @each $value in $p-top--desk {
+    $formatted-value: str-replace($value, ".", "\\.");
+    .pt-#{$formatted-value}--desk {
+      padding-top: #{$value}rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pt-10--xl-desk {
+    padding-top: 10rem;
+  }
+}
+@media (min-width: 1199px) {
+  .pt-10--xxl {
+    padding-top: 10rem;
+  }
+}

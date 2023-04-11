@@ -1,0 +1,106 @@
+.rte:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.rte h1, .rte h2, .rte h3, .rte h4 {
+  margin-top: 4.7rem;
+}
+.rte div {
+  margin: 0;
+}
+.rte p:first-child {
+  margin-top: 0;
+}
+.rte p:last-child {
+  margin-bottom: 0;
+}
+.rte ol, .rte ul {
+  padding-left: 2rem;
+  margin: 0.8rem 0 1.6rem 1.6rem;
+}
+.rte li {
+  list-style: inherit;
+  padding-left: 1.2rem;
+  margin: 1.2rem 0rem;
+  letter-spacing: -0.035rem;
+}
+.rte li:last-child {
+  margin-bottom: 0;
+}
+.rte a {
+  color: rgba(var(--color-link), 0.6);
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.1rem;
+  transition: var(--duration-short) ease;
+}
+.rte a:hover {
+  color: rgb(var(--color-link));
+}
+.rte img,
+.rte figure {
+  height: auto;
+  max-width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 2.2rem;
+}
+.rte figure > img {
+  margin: 0;
+}
+.rte figcaption {
+  font-size: 1rem;
+  color: rgba(var(--color-foreground), 0.6);
+  text-align: center;
+}
+.rte table {
+  table-layout: fixed;
+  overflow: auto;
+}
+@media screen and (min-width: 750px) {
+  .rte table td {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+.rte iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.rte blockquote {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 3.5rem 0 3rem 0;
+  padding: 4.6rem 4.3rem;
+  border: none;
+  font-family: var(--font-heading-family);
+  background-color: rgb(var(--color-base-background-2));
+}
+@media screen and (min-width: 990px) {
+  .rte blockquote {
+    margin: 4.5rem 0 4rem 0;
+    padding: 7.6rem 6.3rem;
+  }
+}
+.rte blockquote > * {
+  margin: -0.5rem 0 -0.5rem 0;
+}
+.rte blockquote p {
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: -0.12rem;
+}
+@media screen and (min-width: 750px) {
+  .rte blockquote p {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+.rte blockquote p:nth-child(2) {
+  font-family: var(--font-body-family);
+  font-size: 1rem;
+  letter-spacing: 0px;
+  margin-top: 2.4rem;
+}

@@ -1,0 +1,51 @@
+.section-main-search {
+  &__header {
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+      padding-right: 7.7rem;
+    }
+  }
+
+  &__recommended-list {
+    &__item {
+      margin-bottom: 1.35rem;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 1.85rem;
+      }
+
+      .link__icon {
+        opacity: 0;
+      }
+
+      &:hover {
+        .link__icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .drawer__navigation {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .drawer {
+    z-index: 99999;
+  }
+
+  .drawer--grain:before {
+    content: none;
+  }
+
+  .drawer__overlay {
+    z-index: 2000;
+  }
+}
