@@ -1,7 +1,18 @@
 {
   "sections": {
+    "2bfe90fa-a125-4a50-b3db-a6aea751da59": {
+      "type": "product-banner-custom",
+      "settings": {
+        "heading": "<p>Influencer Showit Template<\/p>",
+        "description": "Minimalistic Website Template",
+        "button_link": "",
+        "button_label": "",
+        "cover_image": "shopify:\/\/shop_images\/Group_78.jpg"
+      }
+    },
     "main": {
       "type": "main-product",
+      "disabled": true,
       "blocks": {
         "vendor": {
           "type": "text",
@@ -220,6 +231,7 @@
     }
   },
   "order": [
+    "2bfe90fa-a125-4a50-b3db-a6aea751da59",
     "main",
     "product-image-banner",
     "testimonials",
