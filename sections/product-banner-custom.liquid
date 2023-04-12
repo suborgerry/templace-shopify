@@ -1,96 +1,125 @@
-{{ 'product-image-banner.css' | asset_url | stylesheet_tag }}
-{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+{{ 'product-banner-custom.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media-custom.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'parallax.js' | asset_url }}" defer="defer"></script>
 
-<div class="product-image-banner">
-  <div class="container">
-    <div class="product-image-banner__poster-wrapper">
-      <div class="product-image-banner__poster media deferred-media__poster media--landscape">
-        {%- if section.settings.cover_image != blank -%}
+<div class="product-banner-custom">
+  <div class="">
+    <div class="product-banner-custom__poster-wrapper">
+      <div class="product-banner-custom__poster media deferred-media-custom__poster media--landscape">
+        {% if section.settings.use_product_image %}
+          {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
           <img
             srcset="
-              {%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | img_url: '375x' }} 375w,{%- endif -%}
-              {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | img_url: '750x' }} 750w,{%- endif -%}
-              {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | img_url: '1100x' }} 1100w,{%- endif -%}
-              {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | img_url: '1500x' }} 1500w,{%- endif -%}
-              {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | img_url: '1780x' }} 1780w,{%- endif -%}
-              {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | img_url: '2000x' }} 2000w,{%- endif -%}
-              {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | img_url: '3000x' }} 3000w,{%- endif -%}
-              {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | img_url: '3840x' }} 3840w,{%- endif -%}
-              {{ section.settings.cover_image | img_url: 'master' }} {{ section.settings.cover_image.width }}w
+              {%- if product.media[0].preview_image.width >= 375 -%}{{ product.media[0].preview_image | img_url: '375x' }} 375w,{%- endif -%}
+              {%- if product.media[0].preview_image.width >= 750 -%}{{ product.media[0].preview_image | img_url: '750x' }} 750w,{%- endif -%}
+              {%- if product.media[0].preview_image.width >= 1100 -%}{{ product.media[0].preview_image | img_url: '1100x' }} 1100w,{%- endif -%}
+              {%- if product.media[0].preview_image.width >= 1500 -%}{{ product.media[0].preview_image | img_url: '1500x' }} 1500w,{%- endif -%}
+              {%- if product.media[0].preview_image.width >= 1780 -%}{{ product.media[0].preview_image | img_url: '1780x' }} 1780w,{%- endif -%}
+              {%- if product.media[0].preview_image.width >= 2000 -%}{{ product.media[0].preview_image | img_url: '2000x' }} 2000w,{%- endif -%}
+              {%- if product.media[0].preview_image.width >= 3000 -%}{{ product.media[0].preview_image | img_url: '3000x' }} 3000w,{%- endif -%}
+              {%- if product.media[0].preview_image.width >= 3840 -%}{{ product.media[0].preview_image | img_url: '3840x' }} 3840w,{%- endif -%}
+              {{ product.media[0].preview_image | img_url: 'master' }} {{ product.media[0].preview_image.width }}w
             "
-            src="{{ section.settings.cover_image | img_url: '1920x' }}"
+            src="{{ product.media[0].preview_image | img_url: '1920x' }}"
             sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
             alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
             loading="lazy"
-            width="{{ section.settings.cover_image.width }}"
-            height="{{ section.settings.cover_image.height }}"
-            style="object-position: {{ section.settings.cover_image.presentation.focal_point }}"
+            width="{{ product.media[0].preview_image.width }}"
+            height="{{ product.media[0].preview_image.height }}"
+            class="only_one"
           >
-        {%- else -%}
-          {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-        {%- endif -%}
+        {% else %}
+          {%- if section.settings.cover_image != blank -%}
+            <img
+              srcset="
+                {%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | img_url: '375x' }} 375w,{%- endif -%}
+                {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | img_url: '750x' }} 750w,{%- endif -%}
+                {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | img_url: '1100x' }} 1100w,{%- endif -%}
+                {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | img_url: '1500x' }} 1500w,{%- endif -%}
+                {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | img_url: '1780x' }} 1780w,{%- endif -%}
+                {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | img_url: '2000x' }} 2000w,{%- endif -%}
+                {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | img_url: '3000x' }} 3000w,{%- endif -%}
+                {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | img_url: '3840x' }} 3840w,{%- endif -%}
+                {{ section.settings.cover_image | img_url: 'master' }} {{ section.settings.cover_image.width }}w
+              "
+              src="{{ section.settings.cover_image | img_url: '1920x' }}"
+              sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
+              alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+              loading="lazy"
+              width="{{ section.settings.cover_image.width }}"
+              height="{{ section.settings.cover_image.height }}"
+            >
+          {%- else -%}
+            {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+          {%- endif -%}
+
+          {%- if section.settings.cover_image_mobile != blank -%}
+            <img
+              srcset="
+                {%- if section.settings.cover_image_mobile.width >= 375 -%}{{ section.settings.cover_image_mobile | img_url: '375x' }} 375w,{%- endif -%}
+                {%- if section.settings.cover_image_mobile.width >= 750 -%}{{ section.settings.cover_image_mobile | img_url: '750x' }} 750w,{%- endif -%}
+                {%- if section.settings.cover_image_mobile.width >= 1100 -%}{{ section.settings.cover_image_mobile | img_url: '1100x' }} 1100w,{%- endif -%}
+                {%- if section.settings.cover_image_mobile.width >= 1500 -%}{{ section.settings.cover_image_mobile | img_url: '1500x' }} 1500w,{%- endif -%}
+                {%- if section.settings.cover_image_mobile.width >= 1780 -%}{{ section.settings.cover_image_mobile | img_url: '1780x' }} 1780w,{%- endif -%}
+                {%- if section.settings.cover_image_mobile.width >= 2000 -%}{{ section.settings.cover_image_mobile | img_url: '2000x' }} 2000w,{%- endif -%}
+                {%- if section.settings.cover_image_mobile.width >= 3000 -%}{{ section.settings.cover_image_mobile | img_url: '3000x' }} 3000w,{%- endif -%}
+                {%- if section.settings.cover_image_mobile.width >= 3840 -%}{{ section.settings.cover_image_mobile | img_url: '3840x' }} 3840w,{%- endif -%}
+                {{ section.settings.cover_image_mobile | img_url: 'master' }} {{ section.settings.cover_image_mobile.width }}w
+              "
+              src="{{ section.settings.cover_image_mobile | img_url: '1920x' }}"
+              sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
+              alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+              loading="lazy"
+              width="{{ section.settings.cover_image_mobile.width }}"
+              height="{{ section.settings.cover_image_mobile.height }}"
+              class="mobile"
+            >
+          {%- else -%}
+            {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+          {%- endif -%}
+        {% endif %}
       </div>
 
-      <div class="product-image-banner__content">
-        <div class="product-image-banner__wrapper">
-          {%- if section.settings.heading -%}
-            <h2 class="title title--section h3">{{ section.settings.heading }}</h2>
-          {%- endif -%}
+      <div
+        class="product-banner-custom__content text-position"
+        style="--ai: {{ section.settings.align_items }}; --jc: {{ section.settings.justify_content }}"
+      >
+        <div class="product-banner-custom__wrapper">
+          {% if section.settings.use_product_title %}
+            {% assign words = product.title | split: ' ' %}
+
+            <h2 class="title title--section h3">
+              <p>
+                {% for word in words %}
+                  {% if forloop.index == 2 %}
+                    <i>{{ word }}</i>
+                  {% else %}
+                    {{ word }}
+                  {% endif %}
+                {% endfor %}
+              </p>
+            </h2>
+          {% else %}
+            {%- if section.settings.heading -%}
+              <h2 class="title title--section h3">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+          {% endif %}
           {%- if section.settings.description -%}
-            <p class="product-image-banner__text">
+            <p class="product-banner-custom__text">
               {{ section.settings.description }}
             </p>
           {%- endif -%}
           {%- if section.settings.button_label != blank -%}
             <a
               href="{{ section.settings.button_link }}"
-              class="product-image-banner__button button color-inverse button--arrow button--primary-size button--secondary"
+              class="product-banner-custom__button button color-inverse button--arrow button--primary-size button--secondary"
             >
               <span>{{ section.settings.button_label | escape }}</span> {% render 'icon-button-arrow' %}
             </a>
           {%- endif -%}
         </div>
       </div>
-
-      <ul class="product-image-banner__images images">
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'bottom' -%}
-              <li class="images__bottom" {{ block.shopify_attributes }}>
-                {%- assign image_size_1 = block.settings.image_width_1 | append: 'x' -%}
-                {%- assign image_size_2 = block.settings.image_width_2 | append: 'x' -%}
-                {%- if block.settings.image_1 != blank -%}
-                  <img
-                    srcset="{{ block.settings.image_1 | img_url: image_size_1 }} 1x, {{ block.settings.image_1 | img_url: image_size_1, scale: 2 }} 2x"
-                    src="{{ block.settings.image_1 | img_url: image_size_1 }}"
-                    alt="{{ block.settings.image_1.alt | escape }}"
-                    width="{{ block.settings.image_width_1 }}"
-                    height="auto"
-                    loading="lazy"
-                    class="js-parallax"
-                    data-parallax-property="translateY"
-                    data-parallax-property-value="-75"
-                  >
-                {%- endif -%}
-                {%- if block.settings.image_2 != blank -%}
-                  <img
-                    srcset="{{ block.settings.image_2 | img_url: image_size_2 }} 1x, {{ block.settings.image_2 | img_url: image_size_2, scale: 2 }} 2x"
-                    src="{{ block.settings.image_2 | img_url: image_size_2 }}"
-                    alt="{{ block.settings.image_2.alt | escape }}"
-                    width="{{ block.settings.image_width_2 }}"
-                    height="auto"
-                    loading="lazy"
-                    class="js-parallax"
-                    data-parallax-property="translateY"
-                    data-parallax-property-value="-50"
-                  >
-                {%- endif -%}
-              </li>
-          {%- endcase -%}
-        {%- endfor -%}
-      </ul>
     </div>
   </div>
 </div>
@@ -99,14 +128,19 @@
 {
   "name": "Image banner custom",
   "tag": "section",
-  "class": "spaced-section section-product-image-banner",
-  "max_blocks": 2,
+  "class": "spaced-section section-product-banner-custom",
   "settings": [
     {
       "type": "richtext",
       "id": "heading",
       "default": "<p>Some title</p>",
       "label": "t:sections.product-image-banner.settings.heading.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_product_title",
+      "label": "Use product title",
+      "default": true
     },
     {
       "type": "text",
@@ -126,49 +160,65 @@
       "label": "t:sections.product-image-banner.settings.button_label.label"
     },
     {
+      "type": "checkbox",
+      "id": "use_product_image",
+      "label": "Use product image",
+      "default": true
+    },
+    {
       "type": "image_picker",
       "id": "cover_image",
       "label": "t:sections.product-image-banner.settings.cover_image.label",
       "info": "t:sections.product-image-banner.settings.cover_image.info"
-    }
-  ],
-  "blocks": [
+    },
     {
-      "type": "bottom",
-      "name": "t:sections.product-image-banner.blocks.bottom.name",
-      "limit": 1,
-      "settings": [
+      "type": "image_picker",
+      "id": "cover_image_mobile",
+      "label": "Cover image mobile"
+    },
+    {
+      "type": "header",
+      "content": "Text position"
+    },
+    {
+      "type": "select",
+      "id": "justify_content",
+      "label": "Vertical position",
+      "options": [
         {
-          "type": "image_picker",
-          "id": "image_1",
-          "label": "t:sections.product-image-banner.blocks.bottom.settings.image.label"
+          "label": "Left",
+          "value": "flex-start"
         },
         {
-          "type": "range",
-          "id": "image_width_1",
-          "min": 50,
-          "max": 130,
-          "step": 10,
-          "default": 130,
-          "unit": "t:sections.product-image-banner.blocks.bottom.settings.image_width.unit",
-          "label": "t:sections.product-image-banner.blocks.bottom.settings.image_width.label"
+          "label": "Center",
+          "value": "center"
         },
         {
-          "type": "image_picker",
-          "id": "image_2",
-          "label": "t:sections.product-image-banner.blocks.bottom.settings.image.label"
-        },
-        {
-          "type": "range",
-          "id": "image_width_2",
-          "min": 50,
-          "max": 130,
-          "step": 10,
-          "default": 130,
-          "unit": "t:sections.product-image-banner.blocks.bottom.settings.image_width.unit",
-          "label": "t:sections.product-image-banner.blocks.bottom.settings.image_width.label"
+          "label": "Right",
+          "value": "flex-end"
         }
-      ]
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "align_items",
+      "label": "Horizontal position",
+      "options": [
+        {
+          "label": "Top",
+          "value": "flex-start"
+        },
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Bottom",
+          "value": "flex-end"
+        }
+      ],
+      "default": "flex-start"
     }
   ],
   "presets": [

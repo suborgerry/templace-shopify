@@ -4,104 +4,15 @@
       "type": "product-banner-custom",
       "settings": {
         "heading": "<p>Influencer Showit Template<\/p>",
+        "use_product_title": true,
         "description": "Minimalistic Website Template",
         "button_link": "",
         "button_label": "",
-        "cover_image": "shopify:\/\/shop_images\/Group_78.jpg"
-      }
-    },
-    "main": {
-      "type": "main-product",
-      "disabled": true,
-      "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "tags": {
-          "type": "tags",
-          "settings": {
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "modals": {
-          "type": "modals",
-          "settings": {
-            "modal_label_1": "Modal label text",
-            "modal_heading_1": "<p>Title for modal<\/p>",
-            "modal_text_1": "<p>Text for modal<\/p>",
-            "modal_label_2": "Modal label text",
-            "modal_heading_2": "<p>Title for modal<\/p>",
-            "modal_text_2": "<p>Text for modal<\/p>"
-          }
-        },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {
-          }
-        },
-        "additional_1": {
-          "type": "additional",
-          "settings": {
-            "heading": "Details",
-            "content": "<p>This Minimalistic Influencer Showit template will elevate your brand and make your competitors cry! A great aesthetic website design would be an amazing fit for small business owners, authors, influencers, coaches, course creators, photographers, models, and any other professionals building their own personal brand.<\/p>"
-          }
-        },
-        "complementary_products": {
-          "type": "complementary",
-          "settings": {
-            "product_list_limit": 1
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "show_share_facebook": true,
-            "show_share_twitter": true,
-            "show_share_pinterest": true,
-            "show_share_copy": true
-          }
-        }
-      },
-      "block_order": [
-        "vendor",
-        "title",
-        "tags",
-        "price",
-        "variant_picker",
-        "buy_buttons",
-        "modals",
-        "pickup_availability",
-        "additional_1",
-        "complementary_products",
-        "share"
-      ],
-      "settings": {
-        "desktop_alignment": "left",
-        "mobile_alignment": "after",
-        "image_fit": "cover"
+        "use_product_image": false,
+        "cover_image": "shopify:\/\/shop_images\/Group_78.jpg",
+        "cover_image_mobile": "shopify:\/\/shop_images\/Group_79.jpg",
+        "justify_content": "center",
+        "align_items": "flex-start"
       }
     },
     "product-image-banner": {
@@ -228,15 +139,109 @@
         "button_link": "",
         "button_style": "secondary"
       }
+    },
+    "main": {
+      "type": "main-product",
+      "disabled": true,
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "tags": {
+          "type": "tags",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "modals": {
+          "type": "modals",
+          "settings": {
+            "modal_label_1": "Modal label text",
+            "modal_heading_1": "<p>Title for modal<\/p>",
+            "modal_text_1": "<p>Text for modal<\/p>",
+            "modal_label_2": "Modal label text",
+            "modal_heading_2": "<p>Title for modal<\/p>",
+            "modal_text_2": "<p>Text for modal<\/p>"
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "settings": {
+          }
+        },
+        "additional_1": {
+          "type": "additional",
+          "settings": {
+            "heading": "Details",
+            "content": "<p>This Minimalistic Influencer Showit template will elevate your brand and make your competitors cry! A great aesthetic website design would be an amazing fit for small business owners, authors, influencers, coaches, course creators, photographers, models, and any other professionals building their own personal brand.<\/p>"
+          }
+        },
+        "complementary_products": {
+          "type": "complementary",
+          "settings": {
+            "product_list_limit": 1
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "show_share_facebook": true,
+            "show_share_twitter": true,
+            "show_share_pinterest": true,
+            "show_share_copy": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "tags",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "modals",
+        "pickup_availability",
+        "additional_1",
+        "complementary_products",
+        "share"
+      ],
+      "settings": {
+        "desktop_alignment": "left",
+        "mobile_alignment": "after",
+        "image_fit": "cover"
+      }
     }
   },
   "order": [
     "2bfe90fa-a125-4a50-b3db-a6aea751da59",
-    "main",
     "product-image-banner",
     "testimonials",
     "product-recommendations",
     "newsletter",
-    "image-collage"
+    "image-collage",
+    "main"
   ]
 }
