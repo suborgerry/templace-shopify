@@ -72,6 +72,14 @@
   color: #818181;
 }
 
+@media screen and (max-width: 767.98px) {
+  .rating-count span[aria-hidden="true"],
+  .raing__middle {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
 @media (forced-colors: active) {
   .rating {
     display: none;
