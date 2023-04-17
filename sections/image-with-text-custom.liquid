@@ -1,0 +1,128 @@
+{{ 'component-image-with-text-custom.css' | asset_url | stylesheet_tag }}
+
+<div class="image-with-text-custom">
+  <div class="image-with-text-custom__content">
+    <h2 class="image-with-text-custom__heading">
+      {% assign words = section.settings.heading | split: ' ' %}
+
+      {% for word in words %}
+        {% if forloop.index == 2 %}
+          <i>{{ word }}</i>
+        {% else %}
+          {{ word }}
+        {% endif %}
+      {% endfor %}
+    </h2>
+
+    <ul class="image-with-text-custom__list">
+      {% if section.settings.use_metafield %}
+        {% assign list_items = product.metafields.custom.what_s_includet %}
+        {% for item in list_items.value %}
+          <li>
+            <span>
+              {% if item.number <= 9 %}
+                0{{ item.number }}
+              {% else %}
+                {{ item.number }}
+              {% endif %}
+            </span>
+            {{ item.label }}
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+  <div class="image-with-text-custom__media">
+    {%- if section.settings.image != blank -%}
+      <img
+        srcset="
+          {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+          {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+          {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+          {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+          {%- if section.settings.image.width >= 967 -%}{{ section.settings.image | img_url: '967x' }} 967w,{%- endif -%}
+          {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w{%- endif -%}
+        "
+        src="{{ section.settings.image | img_url: '967x' }}"
+        sizes="(min-width: 1100px) 1070px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+      >
+      <img
+        srcset="
+          {%- if section.settings.image_mobile.width >= 165 -%}{{ section.settings.image_mobile | img_url: '165x' }} 165w,{%- endif -%}
+          {%- if section.settings.image_mobile.width >= 360 -%}{{ section.settings.image_mobile | img_url: '360x' }} 360w,{%- endif -%}
+          {%- if section.settings.image_mobile.width >= 535 -%}{{ section.settings.image_mobile | img_url: '535x' }} 535w,{%- endif -%}
+          {%- if section.settings.image_mobile.width >= 720 -%}{{ section.settings.image_mobile | img_url: '720x' }} 720w,{%- endif -%}
+          {%- if section.settings.image_mobile.width >= 967 -%}{{ section.settings.image_mobile | img_url: '967x' }} 967w,{%- endif -%}
+          {%- if section.settings.image_mobile.width >= 1070 -%}{{ section.settings.image_mobile | img_url: '1070x' }} 1070w{%- endif -%}
+        "
+        src="{{ section.settings.image_mobile | img_url: '967x' }}"
+        sizes="(min-width: 1100px) 1070px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+        alt="{{ section.settings.image_mobile.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.image_mobile.width }}"
+        height="{{ section.settings.image_mobile.height }}"
+        class="mobile"
+      >
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "What`s includet",
+  "class": "iwtc-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_metafield",
+      "label": "Use metafield",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image mobile"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "What`s includet"
+    }
+  ]
+}
+{% endschema %}

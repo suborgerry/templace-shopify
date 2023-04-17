@@ -68,6 +68,22 @@
         "image": "{{ product.metafields.custom.template_image.value }}"
       }
     },
+    "6190a8be-8344-4ad7-87da-f06d553e5ba3": {
+      "type": "image-with-text-custom",
+      "settings": {
+        "heading": "Some heading for this section",
+        "use_metafield": true,
+        "image": "shopify:\/\/shop_images\/Group_80.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_81.jpg"
+      }
+    },
+    "3ca256c0-e827-403d-a128-a8f2752816fb": {
+      "type": "text-slider",
+      "settings": {
+        "sub_title": "You Will Appreciate It",
+        "border_top": false
+      }
+    },
     "product-image-banner": {
       "type": "product-image-banner",
       "settings": {
@@ -291,6 +307,8 @@
   "order": [
     "2bfe90fa-a125-4a50-b3db-a6aea751da59",
     "8079cb29-ae91-4d8c-8abe-2bc869349f00",
+    "6190a8be-8344-4ad7-87da-f06d553e5ba3",
+    "3ca256c0-e827-403d-a128-a8f2752816fb",
     "product-image-banner",
     "testimonials",
     "product-recommendations",
