@@ -14,18 +14,27 @@
       {% endfor %}
     </h2>
 
-    <ul class="image-with-text-custom__list">
+    <ul
+      class="image-with-text-custom__list"
+      style="--columns: {{ section.settings.column_quantity }}; --columns-width: {{ section.settings.column_width }}rem; --heading-margin-top: {{ section.settings.heading_margin_top }}rem"
+    >
       {% if section.settings.use_metafield %}
-        {% assign list_items = product.metafields.custom.what_s_includet %}
+        {% assign list_items = product.metafields.custom[section.settings.type_of_metafield] %}
         {% for item in list_items.value %}
           <li>
-            <span>
-              {% if item.number <= 9 %}
-                0{{ item.number }}
-              {% else %}
+            {% if section.settings.type_of_metafield == 'what_s_includet' %}
+              <span>
+                {% if item.number <= 9 %}
+                  0{{ item.number }}
+                {% else %}
+                  {{ item.number }}
+                {% endif %}
+              </span>
+            {% else %}
+              <span>
                 {{ item.number }}
-              {% endif %}
-            </span>
+              </span>
+            {% endif %}
             {{ item.label }}
           </li>
         {% endfor %}
@@ -75,7 +84,7 @@
 
 {% schema %}
 {
-  "name": "What`s includet",
+  "name": "Image with text custom",
   "class": "iwtc-section",
   "settings": [
     {
@@ -85,10 +94,63 @@
       "default": "Heading"
     },
     {
+      "type": "range",
+      "label": "Heading margin top",
+      "id": "heading_margin_top",
+      "min": 6,
+      "max": 10,
+      "step": 1,
+      "default": 8,
+      "unit": "rem"
+    },
+    {
       "type": "checkbox",
       "id": "use_metafield",
       "label": "Use metafield",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "type_of_metafield",
+      "label": "Type of metafield",
+      "options": [
+        {
+          "label": "What`s includet",
+          "value": "what_s_includet"
+        },
+        {
+          "label": "Influencer showit template is for",
+          "value": "influencer_showit_template_is_for"
+        }
+      ],
+      "default": "what_s_includet"
+    },
+    {
+      "type": "header",
+      "content": "Column settings"
+    },
+    {
+      "type": "range",
+      "label": "Column quantity",
+      "id": "column_quantity",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "label": "Column width",
+      "id": "column_width",
+      "min": 40,
+      "max": 60,
+      "step": 0.5,
+      "default": 42.5,
+      "unit": "rem"
+    },
+    {
+      "type": "header",
+      "content": "Images"
     },
     {
       "type": "image_picker",
@@ -121,7 +183,7 @@
   ],
   "presets": [
     {
-      "name": "What`s includet"
+      "name": "Image with text custom"
     }
   ]
 }

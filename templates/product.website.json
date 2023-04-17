@@ -72,7 +72,11 @@
       "type": "image-with-text-custom",
       "settings": {
         "heading": "Some heading for this section",
+        "heading_margin_top": 8,
         "use_metafield": true,
+        "type_of_metafield": "what_s_includet",
+        "column_quantity": 2,
+        "column_width": 42.5,
         "image": "shopify:\/\/shop_images\/Group_80.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Group_81.jpg"
       }
@@ -124,8 +128,20 @@
         "c1da78c7-4b59-4d1f-bd1d-bac28eeab997"
       ],
       "settings": {
-        "title": "You Will Appreciate It",
-        "border_top": false
+        "title": "You Will Appreciate It"
+      }
+    },
+    "c489413c-07f8-49be-9a3e-0b5283f757f1": {
+      "type": "image-with-text-custom",
+      "settings": {
+        "heading": "Influencer Showit Template Is For",
+        "heading_margin_top": 7,
+        "use_metafield": true,
+        "type_of_metafield": "influencer_showit_template_is_for",
+        "column_quantity": 1,
+        "column_width": 60,
+        "image": "shopify:\/\/shop_images\/image.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_1.jpg"
       }
     },
     "product-image-banner": {
@@ -353,6 +369,7 @@
     "8079cb29-ae91-4d8c-8abe-2bc869349f00",
     "6190a8be-8344-4ad7-87da-f06d553e5ba3",
     "3ca256c0-e827-403d-a128-a8f2752816fb",
+    "c489413c-07f8-49be-9a3e-0b5283f757f1",
     "product-image-banner",
     "testimonials",
     "product-recommendations",
