@@ -1,0 +1,152 @@
+{{ 'component-image-with-text-reverse.css' | asset_url | stylesheet_tag }}
+
+<div class="image-with-text-reverse">
+  <div class="">
+    <div class="image-with-text-reverse__container">
+      <div class="image-with-text-reverse__grid{% if section.settings.layout == 'text_last' %} image-with-text-reverse__grid--reverse{% endif %}">
+        <div class="image-with-text-reverse__left">
+          <div
+            class="image-with-text-reverse__media image-with-text-reverse__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text-reverse__media--placeholder placeholder{% endif %}"
+          >
+            {%- if section.settings.image != blank -%}
+              <img
+                srcset="
+                  {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+                  {%- if section.settings.image.width >= 967 -%}{{ section.settings.image | img_url: '967x' }} 967w,{%- endif -%}
+                  {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w{%- endif -%}
+                "
+                src="{{ section.settings.image | img_url: '967x' }}"
+                sizes="(min-width: 1100px) 1070px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ section.settings.image.alt | escape }}"
+                loading="lazy"
+                width="{{ section.settings.image.width }}"
+                height="{{ section.settings.image.height }}"
+              >
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+            {%- if section.settings.image_mobile != blank -%}
+              <img
+                srcset="
+                  {%- if section.settings.image_mobile.width >= 165 -%}{{ section.settings.image_mobile | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 360 -%}{{ section.settings.image_mobile | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 535 -%}{{ section.settings.image_mobile | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 720 -%}{{ section.settings.image_mobile | img_url: '720x' }} 720w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 967 -%}{{ section.settings.image_mobile | img_url: '967x' }} 967w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 1070 -%}{{ section.settings.image_mobile | img_url: '1070x' }} 1070w{%- endif -%}
+                "
+                src="{{ section.settings.image_mobile | img_url: '967x' }}"
+                sizes="(min-width: 1100px) 1070px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ section.settings.image_mobile.alt | escape }}"
+                loading="lazy"
+                width="{{ section.settings.image_mobile.width }}"
+                height="{{ section.settings.image_mobile.height }}"
+                class="mobile"
+              >
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="image-with-text-reverse__content">
+          {%- if section.settings.heading != blank -%}
+            {% assign words = section.settings.heading | split: ' ' %}
+
+            <h2 class="image-with-text-reverse__heading title--section">
+              {% for word in words %}
+                {% if forloop.index == section.settings.num_of_italic %}
+                  <i>{{ word }}</i>
+                {% else %}
+                  {{ word }}
+                {% endif %}
+              {% endfor %}
+            </h2>
+          {%- endif -%}
+          <div class="image-with-text-reverse__text">
+            {{ section.settings.text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with text reverse",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image desctop"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image mobile"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "default": "<p>Some heading for this section</p>",
+      "label": "t:sections.image-with-text.settings.heading.label"
+    },
+    {
+      "type": "range",
+      "label": "Number of italic word",
+      "id": "num_of_italic",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.image-with-text.settings.height.options__1.label"
+        },
+        {
+          "value": "all-height",
+          "label": "t:sections.image-with-text.settings.height.options__2.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.image-with-text.settings.height.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Description of your company, company history, company founders, and so on. There may be several paragraphs here.</p>",
+      "label": "t:sections.image-with-text.settings.text.label"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_last",
+          "label": "Image right"
+        },
+        {
+          "value": "text_last",
+          "label": "Image left"
+        }
+      ],
+      "default": "image_last",
+      "label": "t:sections.image-with-text.settings.layout.label",
+      "info": "t:sections.image-with-text.settings.layout.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text reverse"
+    }
+  ]
+}
+{% endschema %}

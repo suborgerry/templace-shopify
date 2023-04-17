@@ -144,14 +144,16 @@
         "image_mobile": "shopify:\/\/shop_images\/image_1.jpg"
       }
     },
-    "product-image-banner": {
-      "type": "product-image-banner",
+    "f8592e5f-7172-4e7b-b37b-45eb65e23464": {
+      "type": "image-with-text-reverse",
       "settings": {
-        "heading": "<p>Start Customizing Beige Showit Theme Now<\/p>",
-        "description": "Easy-to-use and incredibly user-friendly template",
-        "button_link": "",
-        "button_label": "Buy Now",
-        "cover_image": "shopify:\/\/shop_images\/444.jpg"
+        "image": "shopify:\/\/shop_images\/image_2.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_4.jpg",
+        "heading": "<p>Original Stylish Sections<\/p>",
+        "num_of_italic": 3,
+        "height": "adapt",
+        "text": "<p>Website template contains unique and visually appealing sections that have been designed with a sense of style. These sections are distinctive and eye-catching, helping to capture the attention of visitors and create<br\/>a memorable user experience.<\/p>",
+        "layout": "text_last"
       }
     },
     "testimonials": {
@@ -370,7 +372,7 @@
     "6190a8be-8344-4ad7-87da-f06d553e5ba3",
     "3ca256c0-e827-403d-a128-a8f2752816fb",
     "c489413c-07f8-49be-9a3e-0b5283f757f1",
-    "product-image-banner",
+    "f8592e5f-7172-4e7b-b37b-45eb65e23464",
     "testimonials",
     "product-recommendations",
     "newsletter",
