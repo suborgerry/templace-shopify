@@ -79,8 +79,52 @@
     },
     "3ca256c0-e827-403d-a128-a8f2752816fb": {
       "type": "text-slider",
+      "blocks": {
+        "bb30c239-86af-47a9-abd1-efd307660da9": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Available On All Devices",
+            "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
+          }
+        },
+        "313b6ab0-e00b-4669-8b96-82580eeeb42c": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Easy Customizable Design",
+            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
+          }
+        },
+        "53314644-e7f5-44f2-a840-77d33be66af9": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Designed By Professional Designers",
+            "slide_text": "<p>Our team has years of experience          in UI\/UX design, so we use this knowledge to create high-quality templates that are both functional    and visually appealing.<\/p>"
+          }
+        },
+        "75593aac-765d-4474-85a1-a0fc45470584": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Available On All Devices",
+            "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
+          }
+        },
+        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Easy Customizable Design",
+            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb30c239-86af-47a9-abd1-efd307660da9",
+        "313b6ab0-e00b-4669-8b96-82580eeeb42c",
+        "53314644-e7f5-44f2-a840-77d33be66af9",
+        "75593aac-765d-4474-85a1-a0fc45470584",
+        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997"
+      ],
       "settings": {
-        "sub_title": "You Will Appreciate It",
+        "title": "You Will Appreciate It",
         "border_top": false
       }
     },
