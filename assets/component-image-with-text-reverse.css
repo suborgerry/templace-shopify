@@ -1,6 +1,6 @@
 .image-with-text-reverse__grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 @media screen and (min-width: 768px) {

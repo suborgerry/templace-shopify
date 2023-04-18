@@ -168,6 +168,30 @@
         "layout": "image_last"
       }
     },
+    "3cc2635d-c2f1-4fba-8991-dee83972498d": {
+      "type": "image-with-text-reverse",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_7.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_8.jpg",
+        "heading": "<p>Some heading for this section<\/p>",
+        "num_of_italic": 3,
+        "height": "adapt",
+        "text": "<p>Description of your company, company history, company founders, and so on. There may be several paragraphs here.<\/p>",
+        "layout": "text_last"
+      }
+    },
+    "3a386ef2-5f14-45f2-a5e0-c39fffa2b632": {
+      "type": "image-with-color-banner",
+      "settings": {
+        "heading": "<p>Take A Quiz:<br\/><em>Find<\/em> Out What <em>Is<\/em> Yours<\/p>",
+        "description": "<p>This will help you choose the best option for you, taking into account all your preferences<\/p>",
+        "button_link": "#",
+        "button_label": "TAKE A QUIZ",
+        "cover_image": "shopify:\/\/shop_images\/Group_82.jpg",
+        "cover_image_mobile": "shopify:\/\/shop_images\/Group_83.jpg",
+        "background_color": "#282828"
+      }
+    },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
@@ -244,6 +268,8 @@
     "c489413c-07f8-49be-9a3e-0b5283f757f1",
     "f8592e5f-7172-4e7b-b37b-45eb65e23464",
     "0ec97fbe-f26a-4cff-a94d-63a50eff0f86",
+    "3cc2635d-c2f1-4fba-8991-dee83972498d",
+    "3a386ef2-5f14-45f2-a5e0-c39fffa2b632",
     "testimonials",
     "product-recommendations",
     "newsletter"
