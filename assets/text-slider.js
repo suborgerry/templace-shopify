@@ -7,7 +7,7 @@
         item.style = `--parent-height: ${parentHeight}`
     });
 
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.text-slider', {
         slidesPerView: 3,
         direction: 'vertical',
         freeMode: true,

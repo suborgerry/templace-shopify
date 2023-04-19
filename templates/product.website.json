@@ -192,44 +192,54 @@
         "background_color": "#282828"
       }
     },
-    "testimonials": {
-      "type": "testimonials",
+    "67913bd6-f53a-48b9-b165-4ef2fdc39f9c": {
+      "type": "vertical-testimonials",
       "blocks": {
-        "16624510210b875cb8-0": {
+        "template--18548947026265__67913bd6-f53a-48b9-b165-4ef2fdc39f9c-1681822403f608aafc-0": {
           "type": "testimonials_slide",
           "settings": {
-            "slide_text": "“Love it. I made my stylish website very quikly!”",
-            "image": "shopify:\/\/shop_images\/testimonial_2.jpg",
-            "slide_name": "Emma",
-            "slide_position": "Psychologist"
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Anna",
+            "slide_position": "Photographer"
           }
         },
-        "16624510210b875cb8-1": {
+        "cd26aee2-698e-4fd5-8082-709919480837": {
           "type": "testimonials_slide",
           "settings": {
-            "slide_text": "“I absolutely love the template, it is easy to customize and make my own”",
-            "image": "shopify:\/\/shop_images\/testimonial_4.jpg",
-            "slide_name": "Lidy",
-            "slide_position": "Coach"
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Rachel",
+            "slide_position": "Photographer"
           }
         },
-        "16624510210b875cb8-2": {
+        "ca24d0d4-8ce4-43af-83b7-8fde8609e55f": {
           "type": "testimonials_slide",
           "settings": {
-            "slide_text": "“The quality of the Showit templates is top-notch.”",
-            "image": "shopify:\/\/shop_images\/testimonial_5.jpg",
-            "slide_name": "Loren",
-            "slide_position": "Blogger"
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Alexa",
+            "slide_position": "Photographer"
+          }
+        },
+        "d41453e1-42b8-44e2-b431-2d98a03c852c": {
+          "type": "testimonials_slide",
+          "settings": {
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Alex",
+            "slide_position": "Photographer"
           }
         }
       },
       "block_order": [
-        "16624510210b875cb8-0",
-        "16624510210b875cb8-1",
-        "16624510210b875cb8-2"
+        "template--18548947026265__67913bd6-f53a-48b9-b165-4ef2fdc39f9c-1681822403f608aafc-0",
+        "cd26aee2-698e-4fd5-8082-709919480837",
+        "ca24d0d4-8ce4-43af-83b7-8fde8609e55f",
+        "d41453e1-42b8-44e2-b431-2d98a03c852c"
       ],
       "settings": {
-        "sub_title": "What people say",
+        "sub_title": "subheading",
         "border_top": false
       }
     },
@@ -270,7 +280,7 @@
     "0ec97fbe-f26a-4cff-a94d-63a50eff0f86",
     "3cc2635d-c2f1-4fba-8991-dee83972498d",
     "3a386ef2-5f14-45f2-a5e0-c39fffa2b632",
-    "testimonials",
+    "67913bd6-f53a-48b9-b165-4ef2fdc39f9c",
     "product-recommendations",
     "newsletter"
   ]
