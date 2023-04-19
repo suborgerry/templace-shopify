@@ -26,23 +26,10 @@
 }
 
 .vertical-testimonials-swiper {
-  height: 42rem;
+  height: var(--height-reviews);
   margin-top: 3.2rem;
   display: flex;
   align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .vertical-testimonials-swiper {
-    padding: 0 5rem;
-    height: 34rem;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .vertical-testimonials-swiper {
-    height: 41.9rem;
-  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -119,6 +106,7 @@
   position: absolute;
   left: 0;
   z-index: 1;
+  width: max-content;
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -137,7 +125,7 @@
   .vertical-testimonials__pagination {
     display: flex;
     justify-content: center;
-    bottom: 0;
+    bottom: 0 !important;
     position: absolute;
   }
 
