@@ -239,8 +239,44 @@
         "d41453e1-42b8-44e2-b431-2d98a03c852c"
       ],
       "settings": {
-        "sub_title": "subheading",
-        "border_top": false
+        "sub_title": "subheading"
+      }
+    },
+    "8279d451-295f-4617-8845-971f4c50bd75": {
+      "type": "payment-methods",
+      "blocks": {
+        "f1fbea83-8607-46ec-a4c8-d9069a3a4c46": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "<p><em>Pay<\/em> 3 Times<\/p>",
+            "slide_text": "<p>Most flexible payment<\/p>",
+            "quantity_payments": 2
+          }
+        },
+        "833c0b02-e4d7-4cef-b473-dda2f347b777": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "<p><em>Pay<\/em> 2 Times<\/p>",
+            "slide_text": "<p>Most chosen payment<\/p>",
+            "quantity_payments": 2
+          }
+        },
+        "23851f3c-5342-42c6-8b66-1a2ed2feed08": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "<p><em>Pay<\/em> In Full<\/p>",
+            "slide_text": "<p>Most efficient payment<\/p>",
+            "quantity_payments": 1
+          }
+        }
+      },
+      "block_order": [
+        "f1fbea83-8607-46ec-a4c8-d9069a3a4c46",
+        "833c0b02-e4d7-4cef-b473-dda2f347b777",
+        "23851f3c-5342-42c6-8b66-1a2ed2feed08"
+      ],
+      "settings": {
+        "title": "<p>Payment <em>Options<\/em><\/p>"
       }
     },
     "product-recommendations": {
@@ -281,6 +317,7 @@
     "3cc2635d-c2f1-4fba-8991-dee83972498d",
     "3a386ef2-5f14-45f2-a5e0-c39fffa2b632",
     "67913bd6-f53a-48b9-b165-4ef2fdc39f9c",
+    "8279d451-295f-4617-8845-971f4c50bd75",
     "product-recommendations",
     "newsletter"
   ]

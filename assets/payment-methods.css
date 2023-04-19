@@ -1,0 +1,200 @@
+@media screen and (max-width: 989.98px) {
+  .payment-methods {
+    width: calc(100% + 1.2rem * 2);
+    margin: 0 !important;
+    margin-left: -1.2rem !important;
+    padding: 0 1.2rem !important;
+    border-bottom: 1px solid #c7c7c7;
+    border-top: 1px solid #c7c7c7;
+  }
+}
+
+.payment-methods-section {
+  padding: 8rem 1.2rem;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods-section {
+    padding: 12rem 0;
+  }
+}
+.swiper {
+  min-height: 333px;
+}
+
+.payment-methods__title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 53px;
+  text-align: center;
+  color: #282828;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__title {
+    font-size: 60px;
+    line-height: 80px;
+    margin-bottom: 8rem;
+  }
+}
+
+.payment-methods__title p {
+  margin: 0;
+}
+
+.payment-methods__slide {
+  border: 1px solid #c7c7c7;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0;
+  min-height: calc(333px - 8rem - 2px);
+}
+
+@media screen and (max-width: 989.98px) {
+  .payment-methods__slide {
+    justify-content: center;
+    max-height: 272px;
+    width: calc(100% - 2px) !important;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__slide {
+    height: calc(var(--parent-height) - 8rem - 2px) !important;
+  }
+}
+
+.payment-methods__slide h4 {
+  margin: 0;
+}
+
+.payment-methods__slide h4 p {
+  margin: 0;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #282828;
+  padding: 0 5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__slide h4 p {
+    font-size: 40px;
+    line-height: 53px;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.payment-methods__slide .payment-methods__description p {
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282828;
+  margin: 0;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__slide .payment-methods__description p {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.payment-methods__options {
+  width: calc(100% - 8.2rem);
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__options {
+    margin-top: 6rem;
+  }
+}
+
+.payment-methods__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.payment-methods__quantity {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__quantity {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.payment-methods__price .price-wrapper .price__sale {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.payment-methods__price .price-wrapper {
+  margin: 0;
+}
+
+.payment-methods__price .price dd:not(:last-child) {
+  margin: 0;
+}
+
+.payment-methods__price .price .price__sale .price-item--regular {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b93131;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__price .price .price__sale .price-item--regular {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.payment-methods__price .price--on-sale .price-item--sale {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__price .price--on-sale .price-item--sale {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+
+.payment-methods__buybutton {
+  margin-top: 3.2rem;
+}
+
+@media screen and (min-width: 990px) {
+  .payment-methods__buybutton {
+    margin-top: 4rem;
+  }
+}
+
+.payment-methods__buybutton .product-form__buttons button {
+  width: 100%;
+  max-width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f2f2f2;
+}
