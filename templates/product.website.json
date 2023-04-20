@@ -279,6 +279,45 @@
         "title": "<p>Payment <em>Options<\/em><\/p>"
       }
     },
+    "1f2a0237-555f-4b6c-be1f-60b7b7e2e575": {
+      "type": "text-columns",
+      "blocks": {
+        "ba92b3d2-9be7-4a4a-bd91-be6f357b4735": {
+          "type": "text_slide",
+          "settings": {
+            "number": "01",
+            "heading": "<p>Make A Purchase<\/p>",
+            "text": "<p>You'll  get instant access to your new site         via a private key code.<\/p>"
+          }
+        },
+        "6c0cb930-78e1-43f8-a616-a9c49d505d2c": {
+          "type": "text_slide",
+          "settings": {
+            "number": "02",
+            "heading": "<p>Install Template<\/p>",
+            "text": "<p>Sign up for Showit and follow the instructions    to add your design into your account. <\/p>"
+          }
+        },
+        "3502a938-f8f5-4495-8a62-66ef092da0b7": {
+          "type": "text_slide",
+          "settings": {
+            "number": "03",
+            "heading": "<p>Customize & Launch!<\/p>",
+            "text": "<p>Edit your brand colors + fonts, then plug in your copy + photos and hit publish!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ba92b3d2-9be7-4a4a-bd91-be6f357b4735",
+        "6c0cb930-78e1-43f8-a616-a9c49d505d2c",
+        "3502a938-f8f5-4495-8a62-66ef092da0b7"
+      ],
+      "settings": {
+        "title": "<p>How It <em>Works<\/em><\/p>",
+        "image": "shopify:\/\/shop_images\/Group_84.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_85.jpg"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -318,6 +357,7 @@
     "3a386ef2-5f14-45f2-a5e0-c39fffa2b632",
     "67913bd6-f53a-48b9-b165-4ef2fdc39f9c",
     "8279d451-295f-4617-8845-971f4c50bd75",
+    "1f2a0237-555f-4b6c-be1f-60b7b7e2e575",
     "product-recommendations",
     "newsletter"
   ]
