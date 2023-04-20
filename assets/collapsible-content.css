@@ -1,0 +1,189 @@
+.collapsible-content {
+  position: relative;
+  z-index: 0;
+  padding: 8rem 1.2rem;
+}
+
+@media screen and (min-width: 990px) {
+  .collapsible-content {
+    padding: 12rem 0;
+  }
+}
+
+.collapsible-content__container {
+  max-width: 87.2rem;
+  margin: auto;
+}
+
+.collapsible-content__media--small {
+  height: 19.4rem;
+}
+
+.collapsible-content__media--large {
+  height: 43.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible-content__media--small {
+    height: 31.4rem;
+  }
+
+  .collapsible-content__media--large {
+    height: 69.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible-content__grid--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.collapsible-content-wrapper-narrow {
+  margin: 0 auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  max-width: 73.4rem;
+}
+
+.collapsible-content__header {
+  word-break: break-word;
+}
+
+.collapsible-content__heading {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  line-height: 53px;
+  margin-bottom: 4rem;
+}
+
+.collapsible-content__heading p {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible-content__heading {
+    margin-bottom: 8rem;
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
+
+.collapsible-accordion details[open] summary {
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible-accordion details[open] summary {
+    padding-bottom: 1.6rem;
+  }
+}
+
+.collapsible-none-layout .collapsible-accordion + .collapsible-accordion {
+  border-top: 0;
+}
+
+.caption-with-letter-spacing + h2 {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible-content .collapsible-accordion {
+    margin-top: 0;
+  }
+}
+
+/* check for flexbox gap in older Safari versions */
+@supports not (inset: 10px) {
+  @media screen and (min-width: 768px) {
+    .collapsible-content__grid:not(.collapsible-content__grid--reverse)
+      .grid__item:last-child,
+    .collapsible-content__grid--reverse .collapsible-content__grid-item {
+      padding-left: 5rem;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .collapsible-content__grid:not(.collapsible-content__grid--reverse)
+      .grid__item:last-child,
+    .collapsible-content__grid--reverse .collapsible-content__grid-item {
+      padding-left: 7rem;
+    }
+  }
+}
+
+.collapsible-accordion summary {
+  display: flex;
+  position: relative;
+  line-height: 1;
+  padding: 2.8rem 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible-accordion summary {
+    padding: 2.65rem 0;
+  }
+}
+
+.collapsible-accordion .summary__title {
+  display: flex;
+  flex: 1;
+}
+
+.collapsible-accordion .summary__title + .icon-caret {
+  height: calc(var(--font-heading-scale) * 0.6rem);
+}
+
+.collapsible-accordion + .collapsible-accordion {
+  margin-top: 0;
+  border-top: none;
+}
+
+.collapsible-accordion {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  border-top: 0.1rem solid #c7c7c7;
+  border-bottom: 0.1rem solid #c7c7c7;
+}
+
+.collapsible-accordion__title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible-accordion__title {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.collapsible-accordion .icon-collapsible-accordion {
+  align-self: center;
+  fill: rgb(var(--color-foreground));
+  height: calc(var(--font-heading-scale) * 2rem);
+  margin-right: calc(var(--font-heading-scale) * 1rem);
+  width: calc(var(--font-heading-scale) * 2rem);
+}
+
+.collapsible-accordion details > summary svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.collapsible-accordion details[open] > summary svg {
+  transform: rotate(180deg);
+}
+
+.collapsible-accordion__content {
+  margin-bottom: 2.4rem;
+  font-size: 16px;
+  line-height: 24px;
+}

@@ -318,6 +318,57 @@
         "image_mobile": "shopify:\/\/shop_images\/Group_85.jpg"
       }
     },
+    "9676429a-0b49-45e0-97a7-935e21362aae": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Showit?",
+            "row_content": "<p>Showit is a super-easy subscription-based website builder that gives you ultimate creative freedom. Unlike other websites themes and templates that lock you into designing in columns and rows, with Showit, you can literally drag and drop any element, anywhere on the page!<\/p>"
+          }
+        },
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does this work with WordPress?",
+            "row_content": "<p>Yes, WordPress is a popular content management system that can work with a wide variety of applications and services, including language models like ChatGPT. If you're interested in integrating ChatGPT into a WordPress website, there are a few ways you could go about it.<\/p>"
+          }
+        },
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is included in my purchase?",
+            "row_content": "<p>In general, the contents of a purchase will depend on the specific product or service being purchased. For example, if you bought a physical product, it would typically include the item itself and any accessories or documentation that come with it. If you purchased a digital product or service, such as software or a subscription, it would typically include access to the product or service itself, along with any relevant documentation, support, or updates.<\/p>"
+          }
+        },
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do i need to know how to code?",
+            "row_content": "<p>It depends on what you're trying to do. If you want to use a language model like ChatGPT as a user or customer, then you don't need to know how to code. You can interact with the language model through an existing interface, such as a chatbot or voice assistant, without having to write any code yourself.<\/p>"
+          }
+        },
+        "25baefb7-de71-463a-a7b4-3e2b4904f8b2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can i use my own logo & colors?",
+            "row_content": "<p>It depends on the specific application or platform you are using to integrate ChatGPT. In general, most chatbot platforms or plugins allow you to customize the appearance of the chatbot to some extent, including the ability to use your own logo and colors.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0",
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1",
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2",
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3",
+        "25baefb7-de71-463a-a7b4-3e2b4904f8b2"
+      ],
+      "settings": {
+        "heading": "<p><em>F<\/em>AQs<\/p>",
+        "open_first_collapsible_row": false
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -358,6 +409,7 @@
     "67913bd6-f53a-48b9-b165-4ef2fdc39f9c",
     "8279d451-295f-4617-8845-971f4c50bd75",
     "1f2a0237-555f-4b6c-be1f-60b7b7e2e575",
+    "9676429a-0b49-45e0-97a7-935e21362aae",
     "product-recommendations",
     "newsletter"
   ]
