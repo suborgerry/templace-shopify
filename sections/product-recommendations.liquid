@@ -1,39 +1,58 @@
 <link rel="stylesheet" href="{{ 'component-badge.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-product-recommendations.css' | asset_url }}" media="print" onload="this.media='all'">
+<link
+  rel="stylesheet"
+  href="{{ 'section-product-recommendations.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'"
+>
 
 <noscript>{{ 'component-badge.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
 
-<product-recommendations class="product-recommendations container" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}">
-
+<product-recommendations
+  class="product-recommendations container"
+  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}"
+>
   <div class="product-recommendations__item product-recommendations__item{%- if section.settings.border_top -%}--border{% endif %}">
-    <h2 class="product-recommendations__heading h3 title--section">
+    <h2
+      class="{% if section.settings.button_link.url == blank %}text-center{% endif %} product-recommendations__heading h3 title--section"
+    >
       {{ section.settings.heading }}
-      <a {% if section.settings.button_link.url != blank %} href="{{ section.settings.button_link.url }}" {% endif %} class="product-recommendations__link button button--arrow button--simple link-hover-line" {% if section.settings.button_link.url == blank %}aria-disabled="true"{% endif %}>
-        <span>{{ section.settings.link | escape }}</span>
-        {% render 'icon-button-arrow' %}
-      </a>
+      {% if section.settings.button_link.url != blank %}
+        <a
+          {% if section.settings.button_link.url != blank %}
+            href="{{ section.settings.button_link.url }}"
+          {% endif %}
+          class="product-recommendations__link button button--arrow button--simple link-hover-line"
+          {% if section.settings.button_link.url == blank %}
+            aria-disabled="true"
+          {% endif %}
+        >
+          <span>{{ section.settings.link | escape }}</span>
+          {% render 'icon-button-arrow' %}
+        </a>
+      {% endif %}
     </h2>
     {% if recommendations.performed and recommendations.products_count > 0 %}
-    <ul class="product-recommendations__list" role="list">
-      {% for recommendation in recommendations.products limit: section.settings.products_limit %}
-        <li class="collection-product-card featured-products__item featured-products__item--card product-recommendations__product quickview{%- if settings.quickview_hover -%}--hover{% endif %}">
-          {% render 'product-card',
-            product_card_product: recommendation,
-            media_size: section.settings.image_ratio,
-						media_fit: section.settings.image_fit,
-            show_secondary_image: section.settings.show_secondary_image,
-            show_vendor: section.settings.show_vendor,
-            show_desc: section.settings.show_desc
-          %}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+      <ul class="product-recommendations__list" role="list">
+        {% for recommendation in recommendations.products limit: section.settings.products_limit %}
+          <li class="collection-product-card featured-products__item featured-products__item--card product-recommendations__product quickview{%- if settings.quickview_hover -%}--hover{% endif %}">
+            {% render 'product-card',
+              product_card_product: recommendation,
+              media_size: section.settings.image_ratio,
+              media_fit: section.settings.image_fit,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_desc: section.settings.show_desc
+            %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </div>
 </product-recommendations>
 
@@ -47,8 +66,8 @@
         observer.unobserve(this);
 
         fetch(this.dataset.url)
-          .then(response => response.text())
-          .then(text => {
+          .then((response) => response.text())
+          .then((text) => {
             const html = document.createElement('div');
             html.innerHTML = text;
             const recommendations = html.querySelector('product-recommendations');
@@ -56,12 +75,12 @@
               this.innerHTML = recommendations.innerHTML;
             }
           })
-          .catch(e => {
+          .catch((e) => {
             console.error(e);
           });
-      }
+      };
 
-      new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 200px 0px'}).observe(this);
+      new IntersectionObserver(handleIntersection.bind(this), { rootMargin: '0px 0px 200px 0px' }).observe(this);
     }
   }
 
@@ -72,7 +91,7 @@
 {
   "name": "t:sections.product-recommendations.name",
   "tag": "section",
-  "class": "spaced-section",
+  "class": "spaced-section product-recommendations__main",
   "settings": [
     {
       "type": "paragraph",
@@ -134,10 +153,10 @@
       "default": "square",
       "label": "t:sections.product-recommendations.settings.image_ratio.label"
     },
-		{
+    {
       "type": "select",
       "id": "image_fit",
-			"label": "t:sections.featured-products.settings.image_fit.label",
+      "label": "t:sections.featured-products.settings.image_fit.label",
       "options": [
         {
           "value": "contain",
@@ -162,15 +181,18 @@
       "default": false,
       "label": "t:sections.product-recommendations.settings.show_vendor.label"
     },
-		{
+    {
       "type": "checkbox",
       "id": "show_desc",
       "default": false,
       "label": "t:sections.product-recommendations.settings.show_desc.label"
     }
   ],
-  "templates": [
-    "product"
+  "templates": ["product"],
+  "presets": [
+    {
+      "name": "Product recommendations"
+    }
   ]
 }
 {% endschema %}
