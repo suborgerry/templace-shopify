@@ -71,6 +71,7 @@
   align-items: baseline;
   justify-content: space-between;
   border-bottom: 1px solid #818181;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 989.98px) {

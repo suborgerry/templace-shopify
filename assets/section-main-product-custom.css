@@ -44,6 +44,7 @@
 @media (min-width: 767.98px) {
   .product__media-custom-wrapper {
     width: 50%;
+    max-width: 100%;
   }
 }
 @media (min-width: 1200px) {

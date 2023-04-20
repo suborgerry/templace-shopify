@@ -9,8 +9,8 @@
         "button_link": "",
         "button_label": "",
         "use_product_image": false,
-        "cover_image": "shopify:\/\/shop_images\/Group_78.jpg",
-        "cover_image_mobile": "shopify:\/\/shop_images\/Group_79.jpg",
+        "cover_image": "shopify:\/\/shop_images\/Group_487.jpg",
+        "cover_image_mobile": "shopify:\/\/shop_images\/Group_488.jpg",
         "justify_content": "center",
         "align_items": "flex-start"
       }
@@ -21,7 +21,7 @@
         "c5e16fb8-9972-4ee8-849f-b2f3cf4291b8": {
           "type": "link",
           "settings": {
-            "text": "View demo",
+            "text": "",
             "url": "#"
           }
         },
@@ -77,55 +77,55 @@
         "type_of_metafield": "what_s_includet",
         "column_quantity": 2,
         "column_width": 42.5,
-        "image": "shopify:\/\/shop_images\/Group_80.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Group_81.jpg"
+        "image": "shopify:\/\/shop_images\/Group_489.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_490.jpg"
       }
     },
     "3ca256c0-e827-403d-a128-a8f2752816fb": {
       "type": "text-slider",
       "blocks": {
+        "c33ef91c-f520-4107-b627-474fb39381e9": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Designes Templates Avaliable In 3 Sizes",
+            "slide_text": "<p>Our templates includes 3 sizes: 1:1, portrait post size and story size. So it gives you more opportunities to use it in different ways.<\/p>"
+          }
+        },
         "bb30c239-86af-47a9-abd1-efd307660da9": {
           "type": "text_slide",
           "settings": {
-            "slide_name": "Available On All Devices",
-            "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
+            "slide_name": "Fully Editable Design in Canva Editor",
+            "slide_text": "<p>To use our templates all you need it’s just a free Canva account. Here you can easily customize all templates and enjoy the result.<\/p>"
           }
         },
         "313b6ab0-e00b-4669-8b96-82580eeeb42c": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "Easy Customizable Design",
-            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
-          }
-        },
-        "53314644-e7f5-44f2-a840-77d33be66af9": {
           "type": "text_slide",
           "settings": {
             "slide_name": "Designed By Professional Designers",
             "slide_text": "<p>Our team has years of experience          in UI\/UX design, so we use this knowledge to create high-quality templates that are both functional    and visually appealing.<\/p>"
           }
         },
-        "75593aac-765d-4474-85a1-a0fc45470584": {
+        "53314644-e7f5-44f2-a840-77d33be66af9": {
           "type": "text_slide",
           "settings": {
-            "slide_name": "Available On All Devices",
-            "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
+            "slide_name": "Designes Templates Avaliable In 3 Sizes",
+            "slide_text": "<p>Our templates includes 3 sizes: 1:1, portrait post size and story size. So it gives you more opportunities to use it in different ways.<\/p>"
           }
         },
-        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997": {
+        "595b3366-484e-4b04-b5e5-846dea2b1c9e": {
           "type": "text_slide",
           "settings": {
-            "slide_name": "Easy Customizable Design",
-            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
+            "slide_name": "Fully Editable Design in Canva Editor",
+            "slide_text": "<p>To use our templates all you need it’s just a free Canva account. Here you can easily customize all templates and enjoy the result.<\/p>"
           }
         }
       },
       "block_order": [
+        "c33ef91c-f520-4107-b627-474fb39381e9",
         "bb30c239-86af-47a9-abd1-efd307660da9",
         "313b6ab0-e00b-4669-8b96-82580eeeb42c",
         "53314644-e7f5-44f2-a840-77d33be66af9",
-        "75593aac-765d-4474-85a1-a0fc45470584",
-        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997"
+        "595b3366-484e-4b04-b5e5-846dea2b1c9e"
       ],
       "settings": {
         "title": "You Will Appreciate It"
@@ -140,43 +140,43 @@
         "type_of_metafield": "influencer_showit_template_is_for",
         "column_quantity": 1,
         "column_width": 60,
-        "image": "shopify:\/\/shop_images\/image.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/image_1.jpg"
+        "image": "shopify:\/\/shop_images\/image_10.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_11.jpg"
       }
     },
     "f8592e5f-7172-4e7b-b37b-45eb65e23464": {
       "type": "image-with-text-reverse",
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_2.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/image_4.jpg",
-        "heading": "<p>Original Stylish Sections<\/p>",
+        "image": "shopify:\/\/shop_images\/Group_492.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_493.jpg",
+        "heading": "<p>200 <em>Unique<\/em> Design Templates<\/p>",
         "num_of_italic": 3,
         "height": "adapt",
-        "text": "<p>Website template contains unique and visually appealing sections that have been designed with a sense of style. These sections are distinctive and eye-catching, helping to capture the attention of visitors and create<br\/>a memorable user experience.<\/p>",
+        "text": "<p>Small Business Minimalistic Carousel Templates features 5-8 step carousel posts, totaling 30 carousel posts and 200 templates in a square size. All posts have unique design and modern layouts, created by professional designers from our team.<\/p>",
         "layout": "text_last"
       }
     },
     "0ec97fbe-f26a-4cff-a94d-63a50eff0f86": {
       "type": "image-with-text-reverse",
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_5.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/image_6.jpg",
-        "heading": "<p>Consistent  Designed Pages<\/p>",
+        "image": "shopify:\/\/shop_images\/Group_494.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_495.jpg",
+        "heading": "<p><em>Free<\/em> Stock Images, Graphics <em>And<\/em> Icons<\/p>",
         "num_of_italic": 1,
         "height": "adapt",
-        "text": "<p>Website template has a unified design across all its pages. The various sections and elements on each page have been designed to have a consistent look and feel, with a cohesive color palette, typography, and layout. It makes  easier for visitors to navigate the site.<\/p>",
+        "text": "<p>Our templates includes only free high-resolution stock images, graphics and icons, and modern fonts. You can leave the included photos or replace them with your own, change the text, colors, backgrounds, and more, all within the free Canva.com editor.<\/p>",
         "layout": "image_last"
       }
     },
     "3cc2635d-c2f1-4fba-8991-dee83972498d": {
       "type": "image-with-text-reverse",
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_7.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/image_8.jpg",
-        "heading": "<p>Some heading for this section<\/p>",
+        "image": "shopify:\/\/shop_images\/Group_496.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_497.jpg",
+        "heading": "<p><em>C<\/em>RO-Focused Templates<\/p>",
         "num_of_italic": 3,
         "height": "adapt",
-        "text": "<p>Description of your company, company history, company founders, and so on. There may be several paragraphs here.<\/p>",
+        "text": "<p>The templates are created by professional designer, who cares about CRO and other key metrics. These templates are designed to enhance the aesthetics of your Instagram profile, drive engagement and conversions, and attract  new leads.<\/p>",
         "layout": "text_last"
       }
     },
@@ -198,7 +198,7 @@
         "template--18548947026265__67913bd6-f53a-48b9-b165-4ef2fdc39f9c-1681822403f608aafc-0": {
           "type": "testimonials_slide",
           "settings": {
-            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "slide_text": "<p>“Templates helped me maintain a consistent brand aesthetic and create posts so quickly!”<\/p>",
             "image": "shopify:\/\/shop_images\/IMAGE.png",
             "slide_name": "Anna",
             "slide_position": "Photographer"
@@ -207,7 +207,7 @@
         "cd26aee2-698e-4fd5-8082-709919480837": {
           "type": "testimonials_slide",
           "settings": {
-            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "slide_text": "<p>“Templates helped me maintain a consistent brand aesthetic and create posts so quickly!”<\/p>",
             "image": "shopify:\/\/shop_images\/IMAGE.png",
             "slide_name": "Rachel",
             "slide_position": "Photographer"
@@ -216,7 +216,7 @@
         "ca24d0d4-8ce4-43af-83b7-8fde8609e55f": {
           "type": "testimonials_slide",
           "settings": {
-            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "slide_text": "<p>“Templates helped me maintain a consistent brand aesthetic and create posts so quickly!”<\/p>",
             "image": "shopify:\/\/shop_images\/IMAGE.png",
             "slide_name": "Alexa",
             "slide_position": "Photographer"
@@ -225,7 +225,7 @@
         "d41453e1-42b8-44e2-b431-2d98a03c852c": {
           "type": "testimonials_slide",
           "settings": {
-            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "slide_text": "<p>“Templates helped me maintain a consistent brand aesthetic and create posts so quickly!”<\/p>",
             "image": "shopify:\/\/shop_images\/IMAGE.png",
             "slide_name": "Alex",
             "slide_position": "Photographer"
@@ -242,43 +242,6 @@
         "sub_title": "subheading"
       }
     },
-    "8279d451-295f-4617-8845-971f4c50bd75": {
-      "type": "payment-methods",
-      "blocks": {
-        "f1fbea83-8607-46ec-a4c8-d9069a3a4c46": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "<p><em>Pay<\/em> 3 Times<\/p>",
-            "slide_text": "<p>Most flexible payment<\/p>",
-            "quantity_payments": 2
-          }
-        },
-        "833c0b02-e4d7-4cef-b473-dda2f347b777": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "<p><em>Pay<\/em> 2 Times<\/p>",
-            "slide_text": "<p>Most chosen payment<\/p>",
-            "quantity_payments": 2
-          }
-        },
-        "23851f3c-5342-42c6-8b66-1a2ed2feed08": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "<p><em>Pay<\/em> In Full<\/p>",
-            "slide_text": "<p>Most efficient payment<\/p>",
-            "quantity_payments": 1
-          }
-        }
-      },
-      "block_order": [
-        "f1fbea83-8607-46ec-a4c8-d9069a3a4c46",
-        "833c0b02-e4d7-4cef-b473-dda2f347b777",
-        "23851f3c-5342-42c6-8b66-1a2ed2feed08"
-      ],
-      "settings": {
-        "title": "<p>Payment <em>Options<\/em><\/p>"
-      }
-    },
     "1f2a0237-555f-4b6c-be1f-60b7b7e2e575": {
       "type": "text-columns",
       "blocks": {
@@ -287,7 +250,7 @@
           "settings": {
             "number": "01",
             "heading": "<p>Make A Purchase<\/p>",
-            "text": "<p>You'll  get instant access to your new site         via a private key code.<\/p>"
+            "text": "<p>After buying the template, download the PDF instruction guide from \"Account -&gt; Purchases and Reviews\". Here is link to Canva templates.<\/p>"
           }
         },
         "6c0cb930-78e1-43f8-a616-a9c49d505d2c": {
@@ -295,7 +258,7 @@
           "settings": {
             "number": "02",
             "heading": "<p>Install Template<\/p>",
-            "text": "<p>Sign up for Showit and follow the instructions    to add your design into your account. <\/p>"
+            "text": "<p>Register as a free user on Canva.com. After that open links from PDF.<\/p>"
           }
         },
         "3502a938-f8f5-4495-8a62-66ef092da0b7": {
@@ -303,7 +266,7 @@
           "settings": {
             "number": "03",
             "heading": "<p>Customize & Launch!<\/p>",
-            "text": "<p>Edit your brand colors + fonts, then plug in your copy + photos and hit publish!<\/p>"
+            "text": "<p>Edit your brand colors + fonts, then download the design as JPG or PNG and post it!<\/p>"
           }
         }
       },
@@ -314,7 +277,7 @@
       ],
       "settings": {
         "title": "<p>How It <em>Works<\/em><\/p>",
-        "image": "shopify:\/\/shop_images\/Group_84.jpg",
+        "image": "shopify:\/\/shop_images\/Group_498.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Group_85.jpg"
       }
     },
@@ -324,14 +287,14 @@
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is Showit?",
-            "row_content": "<p>Showit is a super-easy subscription-based website builder that gives you ultimate creative freedom. Unlike other websites themes and templates that lock you into designing in columns and rows, with Showit, you can literally drag and drop any element, anywhere on the page!<\/p>"
+            "heading": "Are the photos included?",
+            "row_content": "<p>They are all sourced from free stocks, so you can be free to use them for your social media.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Does this work with WordPress?",
+            "heading": "What can I edit?",
             "row_content": "<p>Yes, WordPress is a popular content management system that can work with a wide variety of applications and services, including language models like ChatGPT. If you're interested in integrating ChatGPT into a WordPress website, there are a few ways you could go about it.<\/p>"
           }
         },
@@ -373,9 +336,9 @@
       "type": "image-with-button",
       "settings": {
         "subheading": "Don’t waste your time!",
-        "title": "<p>T<em>a<\/em>ke Your W<em>e<\/em>bsite To<br\/>The Next Level N<em>o<\/em>w<\/p>",
-        "image": "shopify:\/\/shop_images\/Group_485.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Group_486.jpg"
+        "title": "<p>T<em>a<\/em>ke Your <em>Social<\/em> Media<br\/>To The Next Level Now<\/p>",
+        "image": "shopify:\/\/shop_images\/Group_500.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_501.jpg"
       }
     },
     "product-recommendations": {
@@ -420,7 +383,6 @@
     "3cc2635d-c2f1-4fba-8991-dee83972498d",
     "3a386ef2-5f14-45f2-a5e0-c39fffa2b632",
     "67913bd6-f53a-48b9-b165-4ef2fdc39f9c",
-    "8279d451-295f-4617-8845-971f4c50bd75",
     "1f2a0237-555f-4b6c-be1f-60b7b7e2e575",
     "9676429a-0b49-45e0-97a7-935e21362aae",
     "e23bdbcd-612c-41d0-8b33-7ba5d4b6bd69",

@@ -196,3 +196,9 @@
     padding: 0;
   }
 }
+
+@media screen and (min-width: 990px) {
+  .product-recommendations__main {
+    padding-top: 12rem;
+  }
+}

@@ -187,13 +187,14 @@
                   {% render block %}
 
                 {%- when 'link' -%}
-                  <a href="{{ block.settings.url }}" class="product__text" {{ block.shopify_attributes }}>
-                    {{- block.settings.text -}}
-                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21.3536 13.3536C21.5488 13.1583 21.5488 12.8417 21.3536 12.6464L18.1716 9.46447C17.9763 9.2692 17.6597 9.2692 17.4645 9.46447C17.2692 9.65973 17.2692 9.97631 17.4645 10.1716L20.2929 13L17.4645 15.8284C17.2692 16.0237 17.2692 16.3403 17.4645 16.5355C17.6597 16.7308 17.9763 16.7308 18.1716 16.5355L21.3536 13.3536ZM3 13.5H21V12.5H3V13.5Z" fill="#282828"/>
-                    </svg>
-                  </a>
-
+                  {% unless block.settings.text == blank %}
+                    <a href="{{ block.settings.url }}" class="product__text" {{ block.shopify_attributes }}>
+                      {{- block.settings.text -}}
+                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.3536 13.3536C21.5488 13.1583 21.5488 12.8417 21.3536 12.6464L18.1716 9.46447C17.9763 9.2692 17.6597 9.2692 17.4645 9.46447C17.2692 9.65973 17.2692 9.97631 17.4645 10.1716L20.2929 13L17.4645 15.8284C17.2692 16.0237 17.2692 16.3403 17.4645 16.5355C17.6597 16.7308 17.9763 16.7308 18.1716 16.5355L21.3536 13.3536ZM3 13.5H21V12.5H3V13.5Z" fill="#282828"/>
+                      </svg>
+                    </a>
+                  {% endunless %}
                 {%- when 'title' -%}
                   <div
                     class="product__title__wrapper {%- if product.available == false %} price--sold-out {% endif -%} {%- if product.compare_at_price > product.price %} price--on-sale {% endif -%}"
