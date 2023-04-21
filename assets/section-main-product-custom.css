@@ -21,10 +21,6 @@
   .product__outer-custom {
     flex-direction: row;
   }
-
-  .product__info-wrapper {
-    margin-left: 11.2rem;
-  }
 }
 @media (min-width: 1500px) {
   .product__outer-custom {
@@ -39,7 +35,7 @@
 }
 .product__media-custom-wrapper {
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
 }
 @media (min-width: 767.98px) {
   .product__media-custom-wrapper {
@@ -49,7 +45,7 @@
 }
 @media (min-width: 1200px) {
   .product__media-custom-wrapper {
-    width: 32%;
+    width: 35%;
   }
 }
 @media (min-width: 750px) {
@@ -108,7 +104,8 @@
 }
 @media (min-width: 990px) {
   .product__info-wrapper {
-    width: calc(68% - 11.2rem);
+    width: calc(65% - 8rem);
+    margin-left: 8rem;
   }
 }
 
@@ -595,8 +592,8 @@
   font-family: "Poppins";
   font-weight: 600;
   font-style: var(--font-button-style);
-  background-color: #282828;
-  border: 1px solid #282828;
+  background-color: #000;
+  border: 1px solid #000;
   min-height: 5rem;
   padding: 1em;
   overflow: hidden;
@@ -620,9 +617,9 @@
   bottom: 0;
   left: 0;
   transform: translateY(calc(100% + 1px));
-  transition: var(--duration-default);
+  transition: all 0.2s ease-in-out;
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
-  background-color: rgb(58, 42, 37);
+  background-color: #000;
   filter: brightness(1);
   z-index: -1;
 }
@@ -637,7 +634,7 @@
 }
 
 .shopify-payment-button__button--unbranded:hover:not([disabled]) {
-  background-color: rgb(var(--color-button));
+  background-color: #000;
   background-position: calc(50% + 75px) center;
 }
 @media (min-width: 1200px) {
@@ -843,6 +840,11 @@
   padding: 0;
   height: 75px;
 }
+
+.product-form__submit::after {
+  background-color: #000;
+}
+
 .product-form__submit[disabled] + .shopify-payment-button {
   display: none;
 }

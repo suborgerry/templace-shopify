@@ -234,4 +234,10 @@
   line-height: 27px;
   text-align: center;
   color: #f2f2f2;
+  transition: all 0.2s ease-in-out;
+}
+
+.image-with-button-section
+  .shopify-payment-button__button.shopify-payment-button__button--unbranded:hover {
+  border-color: #000;
 }
