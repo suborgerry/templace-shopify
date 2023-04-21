@@ -160,6 +160,12 @@
               </ul>
             </div>
           {% endif %}
+          {% if section.settings.video != blank %}
+            {{
+              section.settings.video
+              | video_tag: autoplay: false, controls: true, loading: 'lazy', mute: true, autoplay: true
+            }}
+          {% endif %}
           {%- if first_3d_model -%}
             <button
               class="button button--full-width product__xr-button"
@@ -461,11 +467,43 @@
 
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
-    {{ product.media | where: 'media_type', 'model' | json }}
-  </script>
+      {{ product.media | where: 'media_type', 'model' | json }}
+    </scrip>
 
-  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+    <script src="{{ 'product-model.js' | asset_url }}" defer>
+  </script>
 {%- endif -%}
+
+<script>
+  (() => {
+    const productMedia = document.querySelector('.product__media-custom-wrapper');
+
+    function isElementHalfInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+      const vertInView = rect.top <= windowHeight && rect.top + rect.height >= windowHeight / 2;
+      const horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
+
+      return vertInView && horInView;
+    }
+
+    function handleVisibility() {
+      if (isElementHalfInViewport(productMedia)) {
+        productMedia.classList.add('vision');
+        productMedia.querySelector('video').play();
+      } else {
+        productMedia.classList.remove('vision');
+        productMedia.querySelector('video').pause();
+      }
+    }
+
+    window.addEventListener('scroll', handleVisibility);
+
+    handleVisibility();
+  })();
+</script>
 
 {% schema %}
 {
@@ -491,6 +529,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
     }
   ],
   "blocks": [

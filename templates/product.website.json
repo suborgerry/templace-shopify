@@ -65,7 +65,8 @@
       ],
       "settings": {
         "use_metafield_image": true,
-        "image": "{{ product.metafields.custom.template_image.value }}"
+        "image": "{{ product.metafields.custom.template_image.value }}",
+        "video": "{{ product.metafields.custom.template_video.value }}"
       }
     },
     "6190a8be-8344-4ad7-87da-f06d553e5ba3": {

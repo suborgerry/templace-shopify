@@ -32,10 +32,12 @@
   height: 100%;
   object-fit: cover;
   filter: drop-shadow(3.67812px 3.67812px 18.3906px rgba(0, 0, 0, 0.15));
+  transition: all 0.2s ease;
 }
 .product__media-custom-wrapper {
   width: 100%;
   max-width: 300px;
+  position: relative;
 }
 @media (min-width: 767.98px) {
   .product__media-custom-wrapper {
@@ -48,6 +50,28 @@
     width: 35%;
   }
 }
+
+.product__media-custom-wrapper video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.product__media-custom-wrapper.vision video {
+  z-index: 1;
+  opacity: 1;
+}
+
+.product__media-custom-wrapper.vision img {
+  z-index: -1;
+  opacity: 0;
+}
+
 @media (min-width: 750px) {
   .product__media-custom-wrapper--desktop-order {
     order: 1;
