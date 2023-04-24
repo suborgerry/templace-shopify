@@ -477,31 +477,32 @@
 <script>
   (() => {
     const productMedia = document.querySelector('.product__media-custom-wrapper');
+    if (productMedia.querySelector('video')) {
+      function isElementHalfInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const windowWidth = window.innerWidth || document.documentElement.clientWidth;
 
-    function isElementHalfInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+        const vertInView = rect.top <= windowHeight && rect.top + rect.height >= windowHeight / 2;
+        const horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
 
-      const vertInView = rect.top <= windowHeight && rect.top + rect.height >= windowHeight / 2;
-      const horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
-
-      return vertInView && horInView;
-    }
-
-    function handleVisibility() {
-      if (isElementHalfInViewport(productMedia)) {
-        productMedia.classList.add('vision');
-        productMedia.querySelector('video').play();
-      } else {
-        productMedia.classList.remove('vision');
-        productMedia.querySelector('video').pause();
+        return vertInView && horInView;
       }
+
+      function handleVisibility() {
+        if (isElementHalfInViewport(productMedia)) {
+          productMedia.classList.add('vision');
+          productMedia.querySelector('video').play();
+        } else {
+          productMedia.classList.remove('vision');
+          productMedia.querySelector('video').pause();
+        }
+      }
+
+      window.addEventListener('scroll', handleVisibility);
+
+      handleVisibility();
     }
-
-    window.addEventListener('scroll', handleVisibility);
-
-    handleVisibility();
   })();
 </script>
 
