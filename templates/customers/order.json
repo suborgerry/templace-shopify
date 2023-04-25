@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-order",
+      "settings": {
+      }
+    },
+    "popular-products": {
+      "type": "popular-products",
+      "settings": {
+        "products_limit": 3,
+        "image_ratio": "landscape",
+        "image_fit": "contain",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": true
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "button_style": "secondary"
+      }
+    },
+    "image-collage": {
+      "type": "image-collage",
+      "settings": {
+        "button_style": "secondary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "popular-products",
+    "newsletter",
+    "image-collage"
+  ]
+}

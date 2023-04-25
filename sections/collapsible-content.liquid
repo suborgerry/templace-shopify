@@ -1,0 +1,107 @@
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+<div class="collapsible-content__container">
+  <div class="collapsible-content__header">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="collapsible-content__heading">
+        {{ section.settings.heading }}
+      </h2>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
+    {% endif %}
+  </div>
+  <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid">
+    <div class="grid__item">
+      {%- for block in section.blocks -%}
+        <div
+          class="collapsible-accordion"
+          {{ block.shopify_attributes }}
+        >
+          <details
+            id="Details-{{ block.id }}-{{ section.id }}"
+            {% if section.settings.open_first_collapsible_row and forloop.first %}
+              open
+            {% endif %}
+          >
+            <summary id="Summary-{{ block.id }}-{{ section.id }}">
+              <h3 class="collapsible-accordion__title h4">
+                {{ block.settings.heading }}
+              </h3>
+              <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.31863 0.333333L0.666626 1.93741L9.99996 11L19.3333 1.93741L17.6813 0.333333L9.99996 7.79184L2.31863 0.333333Z" fill="#282828"/>
+              </svg>
+            </summary>
+            <div
+              class="collapsible-accordion__content rte"
+              id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+              role="region"
+              aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+            >
+              {{ block.settings.row_content }}
+            </div>
+          </details>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collapsible content",
+  "tag": "section",
+  "class": "collapsible-content",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Content",
+      "default": "<p>Collapsible content</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_collapsible_row",
+      "default": false,
+      "label": "Open first collapsible row"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_row",
+      "name": "Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collapsible content",
+      "blocks": [
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

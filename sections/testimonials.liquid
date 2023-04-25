@@ -1,0 +1,156 @@
+{{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'testimonials.js' | asset_url }}" defer="defer"></script>
+<noscript>
+  <style>
+    .testimonials__slide-text {
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
+<div class="{% if section.settings.border_top -%}section-border-top{%- endif -%}">
+  <div class="container {% if section.settings.border_top -%}section-border-top__inner{%- endif -%}">
+    <div class="testimonials">
+      <div class="testimonials__text">
+        {%- if section.settings.sub_title != blank -%}
+          <div class="subtitle">{{ section.settings.sub_title }}</div>
+        {% endif %}
+      </div>
+      <div class="testimonials__slider">
+        <button
+          class="testimonials__button testimonials__button--prev slider-btn slider-btn--prev"
+          aria-label="Prev"
+        >
+          {% render 'icon-caret-left' %}
+        </button>
+        <div class="testimonials__wrapper">
+          {%- for block in section.blocks -%}
+            <div class="testimonials__slide" {{ block.shopify_attributes }}>
+              <p class="testimonials__slide-text title--section h3">
+                {{ block.settings.slide_text | escape }}
+              </p>
+              <div class="testimonials__slide-meta">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    srcset="{{ block.settings.image | img_url: '42px' }} 1x, {{ block.settings.image | img_url: '42px', scale: 2 }} 2x"
+                    src="{{ block.settings.image | img_url: '42px' }}"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="42"
+                    height="42"
+                    loading="lazy"
+                    class="testimonials__slide-image"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'testimonials_placeholder' }}
+                {%- endif -%}
+                <div class="testimonials__slide-wrapper">
+                  {%- if block.settings.slide_name != blank -%}
+                    <span class="testimonials__slide-name">
+                      {{- block.settings.slide_name | truncate: 50, '' -}}
+                      ,&nbsp;</span
+                    >
+                  {%- endif -%}
+                  {%- if block.settings.slide_position != blank -%}
+                    <span class="testimonials__slide-position">
+                      {{- block.settings.slide_position | truncate: 50, '' -}}
+                    </span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <button
+          class="testimonials__button testimonials__button--next slider-btn slider-btn--next"
+          aria-label="Next"
+        >
+          {% render 'icon-caret-right' %}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.testimonials.name",
+  "tag": "section",
+  "class": "testimonials-section spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sub_title",
+      "default": "subheading",
+      "label": "t:sections.testimonials.settings.sub_title.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "border_top",
+      "default": false,
+      "label": "t:sections.newsletter.settings.border_top.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonials_slide",
+      "name": "t:sections.testimonials.blocks.testimonials_slide.name",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "slide_text",
+          "default": "“Description feedback from your buyers”",
+          "label": "t:sections.testimonials.blocks.testimonials_slide.settings.slide_text.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.testimonials.blocks.testimonials_slide.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "slide_name",
+          "default": "Name buyers",
+          "label": "t:sections.testimonials.blocks.testimonials_slide.settings.slide_name.label",
+          "info": "t:sections.testimonials.blocks.testimonials_slide.settings.slide_name.info"
+        },
+        {
+          "type": "text",
+          "id": "slide_position",
+          "default": "Position buyers",
+          "label": "t:sections.testimonials.blocks.testimonials_slide.settings.slide_position.label",
+          "info": "t:sections.testimonials.blocks.testimonials_slide.settings.slide_name.info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.testimonials.presets.name",
+      "blocks": [
+        {
+          "type": "testimonials_slide"
+        },
+        {
+          "type": "testimonials_slide"
+        },
+        {
+          "type": "testimonials_slide"
+        },
+        {
+          "type": "testimonials_slide"
+        },
+        {
+          "type": "testimonials_slide"
+        },
+        {
+          "type": "testimonials_slide"
+        },
+        {
+          "type": "testimonials_slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

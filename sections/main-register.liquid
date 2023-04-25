@@ -1,0 +1,163 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'input.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'parallax.js' | asset_url }}" defer="defer"></script>
+
+<div class = "customer login register">
+	<div class="login__wrapper">
+		<div class="login__left">
+			<div class="login__form">
+				<div class="page-header">
+					<div class="page-header__inner">
+						<div class="container">
+							<nav class="breadcrumb breadcrumb--center" role="navigation" aria-label="breadcrumbs">
+								<a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home' | t}}">{{ 'general.breadcrumbs.home' | t}}</a>
+								{% render 'icon-breadcrumb' %}
+								<span>{{ 'customer.register.breadcrumb' | t }}</span>
+							</nav>
+						</div>
+
+						<h1 class="title--page login__title">
+							<span>{{ 'customer.register.title_1' | t }}</span>
+							<span>{{ 'customer.register.title_2' | t }}</span>
+						</h1>
+
+						{%- if section.settings.subtitle != blank -%}
+							<div class="login__subtitle">
+								{{ section.settings.subtitle }}
+							</div>
+						{%- endif -%}
+					</div>
+				</div>
+				{%- form 'create_customer', novalidate: 'novalidate' -%}
+					<div class = "field__wrapper">
+						<div class = "field">
+							<input
+								type = "text"
+								name = "customer[first_name]"
+								id = "RegisterForm-FirstName"
+								{% if form.first_name %}value = "{{ form.first_name }}"{% endif %}
+								autocomplete = "given-name"
+								placeholder = "{{ 'customer.register.first_name' | t }}"
+							>
+							<label for = "RegisterForm-FirstName">
+								{{ 'customer.register.first_name' | t }}
+							</label>
+						</div>
+						<div class = "field">
+							<input
+								type = "text"
+								name = "customer[last_name]"
+								id = "RegisterForm-LastName"
+								{% if form.last_name %}value = "{{ form.last_name }}"{% endif %}
+								autocomplete = "family-name"
+								aria-required = "true"
+								required
+							>
+							<label for = "RegisterForm-LastName" placeholder="{{ 'customer.register.last_name' | t }}"></label>
+						</div>
+						{%- if form.errors contains 'last_name' -%}
+							<span id = "RegisterForm-email-error" class = "form__message">
+							{{ form.errors.translated_fields['last_name'] | capitalize }} {{ form.errors.messages['last_name'] }}.
+						</span>
+						{%- endif -%}
+					</div>
+					<div class = "field">
+						<input
+							type = "email"
+							name = "customer[email]"
+							id = "RegisterForm-email"
+							{% if form.email %} value="{{ form.email }}"{% endif %}
+							spellcheck = "false"
+							autocapitalize = "off"
+							autocomplete = "email"
+							aria-required = "true"
+							{% if form.errors contains 'email' %}
+								aria-invalid = "true"
+								aria-describedby = "RegisterForm-email-error"
+							{% endif %}
+							required
+						>
+						<label for = "RegisterForm-email" placeholder="{{ 'customer.register.email' | t }}"></label>
+					</div>
+					{%- if form.errors contains 'email' -%}
+						<span id = "RegisterForm-email-error" class = "form__message">
+							{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
+						</span>
+					{%- endif -%}
+					<div class = "field">
+						<input
+							type = "password"
+							name = "customer[password]"
+							id = "RegisterForm-password"
+							aria-required = "true"
+							{% if form.errors contains 'password' %}
+								aria-invalid = "true"
+								aria-describedby = "RegisterForm-password-error"
+							{% endif %}
+							required
+						>
+						<label for = "RegisterForm-password" placeholder="{{ 'customer.register.password' | t }}"></label>
+					</div>
+					{%- if form.errors contains 'password' -%}
+						<span id = "RegisterForm-password-error" class = "form__message">
+							{{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
+						</span>
+					{%- endif -%}
+
+					<div class = "customer__buttons center">
+						<button class="button--arrow">
+							{{ 'customer.register.submit' | t }}
+							{% render 'icon-button-arrow' %}
+						</button>
+					</div>
+
+					<div class="customer__login-link">
+						{{ 'customer.register.login' | t }}
+						<a href="{{ routes.account_url }}">
+							{{ 'customer.register.login_link' | t }}
+						</a>
+					</div>
+				{%- endform -%}
+			</div>
+		</div>
+		<div class="login__right">
+			<div class="login__right-inner js-parallax"
+					 data-parallax-property="translateY"
+					 data-parallax-property-value="-160"
+					 data-parallax-steps="0, 100">
+				{% if section.settings.image != blank %}
+					<img srcset="{{ section.settings.image | img_url: '432x' }} 1x, {{ section.settings.image | img_url: '432x', scale: 2 }} 2x"
+							 src="{{ section.settings.image | img_url: '432x' }}"
+							 class="login__image"
+							 loading="lazy"
+							 width="{{ section.settings.image.width }}"
+							 height="{{ section.settings.image.height }}"
+							 alt="{{ section.settings.image.alt | escape }}"
+					>
+				{%- else -%}
+					{{ 'image' | placeholder_svg_tag: 'login__placeholder' }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.main-register.name",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "textarea",
+			"id": "subtitle",
+			"default": "Marketing non-disclosure agreement scrum project alpha lean startup startup business plan user experience angel investor focus research.",
+			"label": "t:sections.main-register.settings.text.label"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "t:sections.main-register.settings.image.label"
+		}
+	]
+}
+{% endschema %}

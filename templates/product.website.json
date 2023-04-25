@@ -1,0 +1,431 @@
+{
+  "sections": {
+    "2bfe90fa-a125-4a50-b3db-a6aea751da59": {
+      "type": "product-banner-custom",
+      "settings": {
+        "heading": "<p>Influencer Showit Template<\/p>",
+        "use_product_title": true,
+        "description": "Minimalistic Website Template",
+        "button_link": "",
+        "button_label": "",
+        "use_product_image": false,
+        "cover_image": "shopify:\/\/shop_images\/Group_78.jpg",
+        "cover_image_mobile": "shopify:\/\/shop_images\/Group_79.jpg",
+        "justify_content": "center",
+        "align_items": "flex-start"
+      }
+    },
+    "8079cb29-ae91-4d8c-8abe-2bc869349f00": {
+      "type": "main-product-custom",
+      "blocks": {
+        "c5e16fb8-9972-4ee8-849f-b2f3cf4291b8": {
+          "type": "link",
+          "settings": {
+            "text": "View demo",
+            "url": "#"
+          }
+        },
+        "a673bab7-e376-42e5-ae09-79a0c60c08b0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "ef288527-0329-44c1-bd9d-02d8f52426b4": {
+          "type": "rating",
+          "settings": {
+            "rating_range": "{{ product.metafields.custom.custom_rating.value }}"
+          }
+        },
+        "0a3aacf3-b257-4c7e-a98e-d15e2e717308": {
+          "type": "description",
+          "settings": {
+            "use_common": false,
+            "content": ""
+          }
+        },
+        "46b62d20-0ff3-496a-b290-c8d1f368d917": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "73deb899-9c2d-4d46-9712-7610f412f86e": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        }
+      },
+      "block_order": [
+        "c5e16fb8-9972-4ee8-849f-b2f3cf4291b8",
+        "a673bab7-e376-42e5-ae09-79a0c60c08b0",
+        "ef288527-0329-44c1-bd9d-02d8f52426b4",
+        "0a3aacf3-b257-4c7e-a98e-d15e2e717308",
+        "46b62d20-0ff3-496a-b290-c8d1f368d917",
+        "73deb899-9c2d-4d46-9712-7610f412f86e"
+      ],
+      "settings": {
+        "use_metafield_image": true,
+        "image": "{{ product.metafields.custom.template_image.value }}",
+        "video": "{{ product.metafields.custom.template_video.value }}"
+      }
+    },
+    "6190a8be-8344-4ad7-87da-f06d553e5ba3": {
+      "type": "image-with-text-custom",
+      "settings": {
+        "heading": "Some heading for this section",
+        "heading_margin_top": 8,
+        "use_metafield": true,
+        "type_of_metafield": "what_s_includet",
+        "column_quantity": 2,
+        "column_width": 42.5,
+        "image": "shopify:\/\/shop_images\/Group_80.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_81.jpg"
+      }
+    },
+    "3ca256c0-e827-403d-a128-a8f2752816fb": {
+      "type": "text-slider",
+      "blocks": {
+        "bb30c239-86af-47a9-abd1-efd307660da9": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Available On All Devices",
+            "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
+          }
+        },
+        "313b6ab0-e00b-4669-8b96-82580eeeb42c": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Easy Customizable Design",
+            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
+          }
+        },
+        "53314644-e7f5-44f2-a840-77d33be66af9": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Designed By Professional Designers",
+            "slide_text": "<p>Our team has years of experience          in UI\/UX design, so we use this knowledge to create high-quality templates that are both functional    and visually appealing.<\/p>"
+          }
+        },
+        "75593aac-765d-4474-85a1-a0fc45470584": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Available On All Devices",
+            "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
+          }
+        },
+        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "Easy Customizable Design",
+            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb30c239-86af-47a9-abd1-efd307660da9",
+        "313b6ab0-e00b-4669-8b96-82580eeeb42c",
+        "53314644-e7f5-44f2-a840-77d33be66af9",
+        "75593aac-765d-4474-85a1-a0fc45470584",
+        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997"
+      ],
+      "settings": {
+        "title": "You Will Appreciate It"
+      }
+    },
+    "c489413c-07f8-49be-9a3e-0b5283f757f1": {
+      "type": "image-with-text-custom",
+      "settings": {
+        "heading": "Influencer Showit Template Is For",
+        "heading_margin_top": 7,
+        "use_metafield": true,
+        "type_of_metafield": "influencer_showit_template_is_for",
+        "column_quantity": 1,
+        "column_width": 60,
+        "image": "shopify:\/\/shop_images\/image.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_1.jpg"
+      }
+    },
+    "f8592e5f-7172-4e7b-b37b-45eb65e23464": {
+      "type": "image-with-text-reverse",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_2.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_4.jpg",
+        "heading": "<p>Original Stylish Sections<\/p>",
+        "num_of_italic": 3,
+        "height": "adapt",
+        "text": "<p>Website template contains unique and visually appealing sections that have been designed with a sense of style. These sections are distinctive and eye-catching, helping to capture the attention of visitors and create<br\/>a memorable user experience.<\/p>",
+        "layout": "text_last"
+      }
+    },
+    "0ec97fbe-f26a-4cff-a94d-63a50eff0f86": {
+      "type": "image-with-text-reverse",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_5.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_6.jpg",
+        "heading": "<p>Consistent  Designed Pages<\/p>",
+        "num_of_italic": 1,
+        "height": "adapt",
+        "text": "<p>Website template has a unified design across all its pages. The various sections and elements on each page have been designed to have a consistent look and feel, with a cohesive color palette, typography, and layout. It makes  easier for visitors to navigate the site.<\/p>",
+        "layout": "image_last"
+      }
+    },
+    "3cc2635d-c2f1-4fba-8991-dee83972498d": {
+      "type": "image-with-text-reverse",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_7.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_8.jpg",
+        "heading": "<p>Some heading for this section<\/p>",
+        "num_of_italic": 3,
+        "height": "adapt",
+        "text": "<p>Description of your company, company history, company founders, and so on. There may be several paragraphs here.<\/p>",
+        "layout": "text_last"
+      }
+    },
+    "3a386ef2-5f14-45f2-a5e0-c39fffa2b632": {
+      "type": "image-with-color-banner",
+      "settings": {
+        "heading": "<p>Take A Quiz:<br\/><em>Find<\/em> Out What <em>Is<\/em> Yours<\/p>",
+        "description": "<p>This will help you choose the best option for you, taking into account all your preferences<\/p>",
+        "button_link": "#",
+        "button_label": "TAKE A QUIZ",
+        "cover_image": "shopify:\/\/shop_images\/Group_82.jpg",
+        "cover_image_mobile": "shopify:\/\/shop_images\/Group_83.jpg",
+        "background_color": "#282828"
+      }
+    },
+    "67913bd6-f53a-48b9-b165-4ef2fdc39f9c": {
+      "type": "vertical-testimonials",
+      "blocks": {
+        "template--18548947026265__67913bd6-f53a-48b9-b165-4ef2fdc39f9c-1681822403f608aafc-0": {
+          "type": "testimonials_slide",
+          "settings": {
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Anna",
+            "slide_position": "Photographer"
+          }
+        },
+        "cd26aee2-698e-4fd5-8082-709919480837": {
+          "type": "testimonials_slide",
+          "settings": {
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Rachel",
+            "slide_position": "Photographer"
+          }
+        },
+        "ca24d0d4-8ce4-43af-83b7-8fde8609e55f": {
+          "type": "testimonials_slide",
+          "settings": {
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Alexa",
+            "slide_position": "Photographer"
+          }
+        },
+        "d41453e1-42b8-44e2-b431-2d98a03c852c": {
+          "type": "testimonials_slide",
+          "settings": {
+            "slide_text": "<p>“I love the template and I loved the price compared to other templates!”<\/p>",
+            "image": "shopify:\/\/shop_images\/IMAGE.png",
+            "slide_name": "Alex",
+            "slide_position": "Photographer"
+          }
+        }
+      },
+      "block_order": [
+        "template--18548947026265__67913bd6-f53a-48b9-b165-4ef2fdc39f9c-1681822403f608aafc-0",
+        "cd26aee2-698e-4fd5-8082-709919480837",
+        "ca24d0d4-8ce4-43af-83b7-8fde8609e55f",
+        "d41453e1-42b8-44e2-b431-2d98a03c852c"
+      ],
+      "settings": {
+        "sub_title": "subheading"
+      }
+    },
+    "8279d451-295f-4617-8845-971f4c50bd75": {
+      "type": "payment-methods",
+      "blocks": {
+        "f1fbea83-8607-46ec-a4c8-d9069a3a4c46": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "<p><em>Pay<\/em> 3 Times<\/p>",
+            "slide_text": "<p>Most flexible payment<\/p>",
+            "quantity_payments": 2
+          }
+        },
+        "833c0b02-e4d7-4cef-b473-dda2f347b777": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "<p><em>Pay<\/em> 2 Times<\/p>",
+            "slide_text": "<p>Most chosen payment<\/p>",
+            "quantity_payments": 2
+          }
+        },
+        "23851f3c-5342-42c6-8b66-1a2ed2feed08": {
+          "type": "text_slide",
+          "settings": {
+            "slide_name": "<p><em>Pay<\/em> In Full<\/p>",
+            "slide_text": "<p>Most efficient payment<\/p>",
+            "quantity_payments": 1
+          }
+        }
+      },
+      "block_order": [
+        "f1fbea83-8607-46ec-a4c8-d9069a3a4c46",
+        "833c0b02-e4d7-4cef-b473-dda2f347b777",
+        "23851f3c-5342-42c6-8b66-1a2ed2feed08"
+      ],
+      "settings": {
+        "title": "<p>Payment <em>Options<\/em><\/p>"
+      }
+    },
+    "1f2a0237-555f-4b6c-be1f-60b7b7e2e575": {
+      "type": "text-columns",
+      "blocks": {
+        "ba92b3d2-9be7-4a4a-bd91-be6f357b4735": {
+          "type": "text_slide",
+          "settings": {
+            "number": "01",
+            "heading": "<p>Make A Purchase<\/p>",
+            "text": "<p>You'll  get instant access to your new site         via a private key code.<\/p>"
+          }
+        },
+        "6c0cb930-78e1-43f8-a616-a9c49d505d2c": {
+          "type": "text_slide",
+          "settings": {
+            "number": "02",
+            "heading": "<p>Install Template<\/p>",
+            "text": "<p>Sign up for Showit and follow the instructions    to add your design into your account. <\/p>"
+          }
+        },
+        "3502a938-f8f5-4495-8a62-66ef092da0b7": {
+          "type": "text_slide",
+          "settings": {
+            "number": "03",
+            "heading": "<p>Customize & Launch!<\/p>",
+            "text": "<p>Edit your brand colors + fonts, then plug in your copy + photos and hit publish!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ba92b3d2-9be7-4a4a-bd91-be6f357b4735",
+        "6c0cb930-78e1-43f8-a616-a9c49d505d2c",
+        "3502a938-f8f5-4495-8a62-66ef092da0b7"
+      ],
+      "settings": {
+        "title": "<p>How It <em>Works<\/em><\/p>",
+        "image": "shopify:\/\/shop_images\/Group_84.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_85.jpg"
+      }
+    },
+    "9676429a-0b49-45e0-97a7-935e21362aae": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Showit?",
+            "row_content": "<p>Showit is a super-easy subscription-based website builder that gives you ultimate creative freedom. Unlike other websites themes and templates that lock you into designing in columns and rows, with Showit, you can literally drag and drop any element, anywhere on the page!<\/p>"
+          }
+        },
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does this work with WordPress?",
+            "row_content": "<p>Yes, WordPress is a popular content management system that can work with a wide variety of applications and services, including language models like ChatGPT. If you're interested in integrating ChatGPT into a WordPress website, there are a few ways you could go about it.<\/p>"
+          }
+        },
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is included in my purchase?",
+            "row_content": "<p>In general, the contents of a purchase will depend on the specific product or service being purchased. For example, if you bought a physical product, it would typically include the item itself and any accessories or documentation that come with it. If you purchased a digital product or service, such as software or a subscription, it would typically include access to the product or service itself, along with any relevant documentation, support, or updates.<\/p>"
+          }
+        },
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do i need to know how to code?",
+            "row_content": "<p>It depends on what you're trying to do. If you want to use a language model like ChatGPT as a user or customer, then you don't need to know how to code. You can interact with the language model through an existing interface, such as a chatbot or voice assistant, without having to write any code yourself.<\/p>"
+          }
+        },
+        "25baefb7-de71-463a-a7b4-3e2b4904f8b2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can i use my own logo & colors?",
+            "row_content": "<p>It depends on the specific application or platform you are using to integrate ChatGPT. In general, most chatbot platforms or plugins allow you to customize the appearance of the chatbot to some extent, including the ability to use your own logo and colors.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0",
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1",
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2",
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3",
+        "25baefb7-de71-463a-a7b4-3e2b4904f8b2"
+      ],
+      "settings": {
+        "heading": "<p><em>F<\/em>AQs<\/p>",
+        "open_first_collapsible_row": false
+      }
+    },
+    "e23bdbcd-612c-41d0-8b33-7ba5d4b6bd69": {
+      "type": "image-with-button",
+      "settings": {
+        "subheading": "Don’t waste your time!",
+        "title": "<p>T<em>a<\/em>ke Your W<em>e<\/em>bsite To<br\/>The Next Level N<em>o<\/em>w<\/p>",
+        "image": "shopify:\/\/shop_images\/Group_485.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_486.jpg"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "<p>Pairs Well <em>With<\/em><\/p>",
+        "link": "",
+        "button_link": "",
+        "products_limit": 3,
+        "border_top": false,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_desc": true
+      }
+    },
+    "662cef38-fb42-4f0e-b025-75ca11434322": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "<p>You May Also <em>Like<\/em><\/p>",
+        "link": "",
+        "button_link": "",
+        "products_limit": 3,
+        "border_top": false,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_desc": true
+      }
+    }
+  },
+  "order": [
+    "2bfe90fa-a125-4a50-b3db-a6aea751da59",
+    "8079cb29-ae91-4d8c-8abe-2bc869349f00",
+    "6190a8be-8344-4ad7-87da-f06d553e5ba3",
+    "3ca256c0-e827-403d-a128-a8f2752816fb",
+    "c489413c-07f8-49be-9a3e-0b5283f757f1",
+    "f8592e5f-7172-4e7b-b37b-45eb65e23464",
+    "0ec97fbe-f26a-4cff-a94d-63a50eff0f86",
+    "3cc2635d-c2f1-4fba-8991-dee83972498d",
+    "3a386ef2-5f14-45f2-a5e0-c39fffa2b632",
+    "67913bd6-f53a-48b9-b165-4ef2fdc39f9c",
+    "8279d451-295f-4617-8845-971f4c50bd75",
+    "1f2a0237-555f-4b6c-be1f-60b7b7e2e575",
+    "9676429a-0b49-45e0-97a7-935e21362aae",
+    "e23bdbcd-612c-41d0-8b33-7ba5d4b6bd69",
+    "product-recommendations",
+    "662cef38-fb42-4f0e-b025-75ca11434322"
+  ]
+}

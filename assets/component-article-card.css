@@ -1,0 +1,197 @@
+.article {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-left: -0.1rem;
+}
+.article .media--landscape {
+  height: 100%;
+  background-color: unset;
+}
+.article-content img {
+  transition: transform var(--duration-default) ease;
+}
+.article-content:hover img {
+  transform: scale(1.07);
+}
+.article-card {
+  position: relative;
+  align-self: flex-start;
+  flex: 0 1 100%;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  padding: 1.9rem 1.9rem 3.2rem 1.9rem;
+  background: var(--color-background-card);
+  border: 0.1rem solid var(--color-border);
+}
+.article-card__image {
+  overflow: hidden;
+}
+.article-card__image-wrapper > a {
+  display: block;
+}
+.article-card__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 1rem;
+}
+.article-card__info:not(:first-child) {
+  margin-top: 3rem;
+}
+.article-card__header {
+  line-height: 0.8;
+}
+.article-card__header h2 {
+  margin: 0 0 0.2rem;
+  --font-heading-weight: 500;
+}
+.article-card__header h2:only-child {
+  margin: 0;
+}
+.article-card__header h2:not(:first-child) {
+  margin-top: 0.8rem;
+}
+.article-card__header span {
+  display: inline-flex;
+  font-size: 1.2rem;
+}
+.article-card__tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.article-card__tag:not(:last-child) {
+  position: relative;
+  padding-right: 3rem;
+}
+.article-card__tag:not(:last-child):before {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 1px;
+  background: rgba(var(--color-foreground), 0.2);
+}
+.article-card__tag a {
+  position: relative;
+  z-index: 4;
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--duration-default);
+}
+.article-card__tag a:hover {
+  color: rgba(var(--color-foreground), 0.6);
+}
+.article-card__tag a span {
+  display: flex;
+  flex-direction: column;
+  backface-visibility: hidden;
+  transition: var(--duration-default);
+}
+.article-card__title {
+  text-decoration: none;
+  word-break: break-word;
+}
+.article-card__title a {
+  position: relative;
+  z-index: 5;
+  text-decoration: none;
+  transition: var(--duration-default);
+  color: rgb(var(--color-foreground-title));
+}
+.article-card__title a:hover {
+  color: rgba(var(--color-foreground-title), 0.8);
+}
+.article-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+  line-height: 130%;
+}
+.article-card__author span {
+  margin-left: 3px;
+}
+.article-card__excerpt {
+  margin: 0;
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 750px) {
+  .article-card__excerpt {
+    font-size: 1.6rem;
+  }
+}
+.article-card__excerpt_small {
+  font-size: 1.2rem;
+}
+.article-card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+.article-card__footer:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.article-card__footer:last-child {
+  margin-top: auto;
+  padding-top: 3.5rem;
+}
+.article-card-link {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.article-card__button {
+  justify-content: flex-start;
+  z-index: 5;
+  color: rgba(var(--color-button));
+}
+.article-card__button.link-hover-line > span::after {
+  background-color: rgba(var(--color-button));
+}
+.article-card__button:not([disabled]):hover {
+  color: rgba(var(--color-button), 0.7);
+}
+.article-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.articles-wrapper.grid {
+  margin: 0 0 5rem 0;
+}
+@media screen and (min-width: 750px) {
+  .articles-wrapper.grid {
+    margin-bottom: 7rem;
+  }
+}
+.articles-wrapper .article .grid__item {
+  padding: 0;
+}
+@media screen and (max-width: 749px) {
+  .articles-wrapper {
+    width: 100%;
+  }
+}
+
+.grid--peek .article-card {
+  box-sizing: border-box;
+}

@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical_reversed",
+        "image": "collection",
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_desc": false
+      }
+    },
+    "image-collage": {
+      "type": "image-collage",
+      "blocks": {
+        "20b5c912-5431-49b0-895f-0a8d1e33aabb": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chang-min-caLZjNiAHrU-unsplash_1_1.jpg",
+            "image_width": 120
+          }
+        },
+        "e9c78cbb-0541-4037-8bf5-8205a1542757": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/artemi-shaman-T1Jbc_uMwbI-unsplash.jpg",
+            "image_width": 120
+          }
+        },
+        "742632a3-9b5a-488a-8e8a-61dbb648cc9f": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ulla-shinami-uPr_jAXmoyw-unsplash.jpg",
+            "image_width": 120
+          }
+        },
+        "cbff6171-7845-4401-9923-da81c9d3a255": {
+          "type": "image-collage_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mathilde-langevin-2DkKtRzHRB8-unsplash.jpg",
+            "image_width": 120
+          }
+        }
+      },
+      "block_order": [
+        "20b5c912-5431-49b0-895f-0a8d1e33aabb",
+        "e9c78cbb-0541-4037-8bf5-8205a1542757",
+        "742632a3-9b5a-488a-8e8a-61dbb648cc9f",
+        "cbff6171-7845-4401-9923-da81c9d3a255"
+      ],
+      "settings": {
+        "sub_title": "Social Media",
+        "title": "<p>Check out our <em>Instagram<\/em><\/p>",
+        "name_account": "@templace_studio",
+        "desc_account": "Instagram blog",
+        "button_label": "Explore",
+        "button_link": "",
+        "button_style": "secondary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image-collage"
+  ]
+}

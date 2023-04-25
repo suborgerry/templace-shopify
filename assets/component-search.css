@@ -1,0 +1,312 @@
+details > .search-modal {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(var(--color-base-background-1));
+}
+
+details[open] > .search-modal {
+  opacity: 1;
+  animation: animateSearchOpen 0.3s ease;
+}
+
+details:not([open]) .search-modal__close-button .icon {
+  transform: rotate(0deg) scale(1);
+}
+
+.search-modal--overflow {
+  overflow-y: auto;
+}
+
+.no-js details[open] > .header__icon--search {
+  top: 1rem;
+  right: 0.5rem;
+}
+
+.search-modal {
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  height: 0;
+  transition: all 1s ease;
+  z-index: 13;
+}
+
+details[open] .search-modal__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100%;
+  animation: animateSearchOpacity 0.5s ease;
+}
+details[open] .search-modal__item .header__heading,
+details[open] .search-modal__item .header__heading-link {
+  order: 0;
+  margin-bottom: 4.8rem;
+}
+details[open] .search-modal__item .header__heading .header__heading-link {
+  margin-bottom: 0;
+}
+details[open] .search-modal__item .search-modal__close-button {
+  position: absolute;
+  display: inline-flex;
+  margin-top: 3.6rem;
+  transform: translateX(-2rem);
+}
+@media screen and (max-width: 768px) {
+  details[open] .search-modal__item .search-modal__close-button {
+    margin-top: 1rem;
+  }
+}
+
+.search-modal.modal__content {
+  position: fixed;
+}
+
+.search-modal__content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-block: 2.4rem;
+  width: 100%;
+}
+@media screen and (min-width: 990px) {
+  .search-modal__content {
+    padding-block: 4.8rem;
+  }
+}
+
+.search-modal__form {
+  position: relative;
+  margin-top: 3.7rem;
+  width: 100%;
+}
+
+.search-modal__form-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.search-modal__content .search__input.field__input {
+  padding: 2rem;
+}
+
+.search-modal__content .field {
+  flex-grow: 1;
+  width: auto;
+}
+
+.search-modal__heading {
+  text-transform: none;
+}
+.search-modal__heading p {
+  margin: 0;
+}
+
+.search-modal__content .field__label {
+  left: 6.1rem;
+}
+
+.search__button {
+  min-width: 17rem;
+  padding: 1rem 2rem;
+}
+
+.search-modal__content .search-modal__close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
+@media screen and (min-width: 1920px) {
+  .search-modal__content .search-modal__close-button {
+    right: -1.3rem;
+  }
+}
+
+.search-modal__collections {
+  margin-top: 3.5rem;
+  margin-bottom: -2.5rem;
+  width: 100%;
+}
+
+.search-modal__collections h2 {
+  width: 100%;
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: 0.06rem;
+  color: rgb(var(--color-foreground));
+  line-height: 1.3;
+  word-wrap: break-word;
+  max-width: 100%;
+  text-transform: none;
+  margin: 0 0 1rem 0;
+}
+
+@keyframes animateSearchOpen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animateSearchOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Remove extra spacing for search inputs in Safari */
+input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.search__subtitle {
+  margin-bottom: 1.6rem;
+}
+
+.search__categories {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.search__categories-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.search__categories-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0 0 1rem;
+  width: 100%;
+  list-style: none;
+}
+
+.search__categories-link {
+  text-transform: none;
+  text-decoration: none;
+}
+
+.search__categories-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: none;
+}
+.search__categories-item .search__categories-link {
+  position: relative;
+}
+.search__categories-item .search__categories-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
+  width: 0;
+  height: 0.1rem;
+  width: 100%;
+  background-color: currentColor;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.4s cubic-bezier(0.58, 0.3, 0.005, 1);
+  transform-origin: 100% 50%;
+}
+.search__categories-item .search__categories-link:hover::before {
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.4s cubic-bezier(0.58, 0.3, 0.005, 1);
+  transform-origin: 0 50%;
+}
+.search__categories-item:last-child .icon-star {
+  display: none;
+}
+.search__categories-item .icon-star {
+  margin-left: 16px;
+  width: 10px;
+  height: 10px;
+  fill: var(--color-badge-icon);
+}
+.search__categories-item:nth-child(even) .search__categories-link {
+  font-style: var(--font-span-heading-style);
+}
+.search__categories-item:last-child {
+  padding-right: 1rem;
+}
+
+.search__articles {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.search__articles-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 1200px) {
+  .search__articles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.search__article {
+  margin-top: -1px;
+  margin-left: -1px;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.article-card-small__meta {
+  font-weight: var(--font-body-weight);
+}
+
+@media screen and (max-width: 1440px) {
+  .search__articles-list .article-card-small__title {
+    max-width: 20rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .search__articles-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .search__button {
+    max-width: 100%;
+    width: 100%;
+  }
+  .search__categories {
+    margin-top: 6.4rem;
+  }
+}
+@media screen and (max-width: 381px) {
+  .line-divider::after {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .search__categories,
+.search__articles {
+    margin-top: 3.2rem;
+  }
+  .search-modal__form {
+    margin-top: 2.4em;
+  }
+}
+@media screen and (max-width: 370px) {
+  .article-card-small__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    font-weight: var(--font-body-weight);
+  }
+}

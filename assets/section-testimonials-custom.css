@@ -1,0 +1,136 @@
+.vertical-testimonials {
+  background-color: #282828;
+  padding: 8rem 1.8rem;
+}
+
+@media screen and (min-width: 990px) {
+  .vertical-testimonials {
+    padding: 10rem 12rem;
+  }
+}
+
+.vertical-testimonials__heading {
+  margin: auto;
+  width: max-content;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f2f2f2;
+}
+
+@media screen and (min-width: 990px) {
+  .vertical-testimonials__heading {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.vertical-testimonials-swiper {
+  height: var(--height-reviews);
+  margin-top: 3.2rem;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1100px) {
+  .vertical-testimonials-swiper {
+    padding: 0;
+  }
+}
+
+.vertical-testimonials__review {
+  font-family: "Playfair Display";
+  font-size: 40px;
+  line-height: 53px;
+  color: #f2f2f2;
+  max-width: 87.2rem;
+  margin: auto;
+  text-align: center;
+}
+
+.vertical-testimonials__review p {
+  margin: 0;
+}
+
+@media screen and (min-width: 990px) {
+  .vertical-testimonials__review {
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
+
+.vertical-testimonials__author {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+  .vertical-testimonials__author {
+    margin-top: 6rem;
+  }
+}
+
+.vertical-testimonials__author > span {
+  margin-left: 1.6rem;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f2f2f2;
+}
+
+.vertical-testimonials__author > span > span {
+  color: #818181;
+}
+
+@media screen and (min-width: 990px) {
+  .vertical-testimonials__author > span {
+    font-size: 18px;
+    line-height: 27px;
+    margin-left: 3.2rem;
+  }
+}
+
+.vertical-testimonials__slide img {
+  display: block;
+  object-fit: cover;
+}
+
+.vertical-testimonials__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: max-content;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #818181;
+  border-radius: 0;
+  margin: 0 !important;
+  width: 0.2rem;
+  height: 4rem;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 767.98px) {
+  .vertical-testimonials__pagination {
+    display: flex;
+    justify-content: center;
+    bottom: 0 !important;
+    position: absolute;
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 2rem;
+    height: 0.2rem;
+  }
+}

@@ -1,0 +1,215 @@
+<link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<div class="container">
+
+	<div class="page-header">
+		<div class="page-header__inner">
+			<h1 class="main-page-title page-title title--page">{{ section.settings.title | escape }}</h1>
+		</div>
+	</div>
+
+	{%- liquid
+		case section.settings.sort
+		when 'products_high' or 'products_low'
+		assign collections = collections | sort: 'all_products_count'
+		when 'date' or 'date_reversed'
+		assign collections = collections | sort: 'published_at'
+		endcase
+
+		if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+		assign collections = collections | reverse
+		endif -%}
+
+	<ul class="collection-product-list collections-grid" role="list">
+		{%- for collection in collections -%}
+			<li class="collection-product-card collections-grid__card">
+        {% liquid 
+          case section.settings.image
+            when 'product_hover'
+              assign  image_first = collection.products[0].images[1]
+              assign  image_second = collection.products[0].images[0] 
+              assign  image_third = collection.featured_image
+            when 'product'
+              assign  image_first = collection.products[0].images[0] 
+              assign  image_second = collection.featured_image
+              assign  image_third = collection.products[0].images[1]
+            when 'collection'
+              assign  image_first = collection.featured_image
+              assign  image_second = collection.products[0].images[1]
+              assign  image_third = collection.products[0].images[0] 
+          endcase
+        %}
+
+        {% if image_first != blank %}
+          {% assign collection_product_image  =  image_first %}
+        {% elsif image_second != blank %}
+          {% assign collection_product_image  =  image_second %}
+        {% else %}
+          {% assign collection_product_image  =  image_third %}
+        {% endif %}
+
+        <span class="image-ratio image-ratio--{{ section.settings.image_ratio }}"
+          {% if section.settings.image_ratio == 'adapt' %}
+            style ="padding-bottom: {{ 1 | divided_by: collection_product_image.aspect_ratio | times: 100 }}%";
+          {% endif %}
+        ></span>
+        
+        <div class="card-wrapper">
+          {%- if collection_product_image != blank -%}
+            <img srcset="{%- if collection_product_image.width >= 165 -%}{{ collection_product_image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if collection_product_image.width >= 360 -%}{{ collection_product_image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if collection_product_image.width >= 533 -%}{{ collection_product_image | img_url: '533x' }} 533w,{%- endif -%}
+                {%- if collection_product_image.width >= 720 -%}{{ collection_product_image | img_url: '720x' }} 720w,{%- endif -%}
+                {%- if collection_product_image.width >= 940 -%}{{ collection_product_image | img_url: '940x' }} 940w,{%- endif -%}
+                {%- if collection_product_image.width >= 1066 -%}{{ collection_product_image | img_url: '1066x' }} 1066w{%- endif -%}"
+                  src="{{ collection_product_image | img_url: '533x' }}"
+                  sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ collection_product_image.alt | escape }}"
+                  loading="lazy"
+                  class="card-wrapper__image motion-reduce img-scale"
+                  width="{{ collection_product_image.width }}"
+                  height="{{ collection_product_image.height }}"
+                  {%- if section.settings.image_fit == 'contain' -%} style="object-fit: contain;"{%- endif -%}
+                  {%- if section.settings.image_fit == 'cover' -%} style="object-fit: cover;"{%- endif -%}
+            >
+          {% endif %}
+
+          <div class="card-information">
+            <div class="card-information__wrapper">
+              <h3 class="collections-grid__title">
+                  {{- collection.title -}}
+              </h3>
+              {%- if collection.description != blank and section.settings.show_desc -%}
+                <p class="collections-grid__desc">{{- collection.description | strip_html | truncatewords: 8 -}}</p>
+						  {%- endif -%}
+            </div>
+          </div>
+          <a href="{{ collection.url | default: '#' }}" class="link link--overlay card-wrapper__link--overlay"></a>
+        </div>
+			</li>
+		{%- endfor -%}
+	</ul>
+
+	{%- if paginate.pages > 1 -%}
+		{% render 'pagination', paginate: paginate %}
+	{%- endif -%}
+</div>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-list-collections.name",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.main-list-collections.settings.title.label",
+      "default": "Collections"
+    },
+    {
+      "type": "select",
+      "id": "sort",
+      "options": [
+        {
+          "value": "alphabetical",
+          "label": "t:sections.main-list-collections.settings.sort.options__1.label"
+        },
+        {
+          "value": "alphabetical_reversed",
+          "label": "t:sections.main-list-collections.settings.sort.options__2.label"
+        },
+        {
+          "value": "date_reversed",
+          "label": "t:sections.main-list-collections.settings.sort.options__3.label"
+        },
+        {
+          "value": "date",
+          "label": "t:sections.main-list-collections.settings.sort.options__4.label"
+        },
+        {
+          "value": "products_high",
+          "label": "t:sections.main-list-collections.settings.sort.options__5.label"
+        },
+        {
+          "value": "products_low",
+          "label": "t:sections.main-list-collections.settings.sort.options__6.label"
+        }
+      ],
+      "default": "alphabetical",
+      "label": "t:sections.main-list-collections.settings.sort.label"
+    },
+    {
+      "type": "select",
+      "id": "image",
+      "options": [
+        {
+          "value": "collection",
+          "label": "t:sections.main-list-collections.settings.image.options__1.label"
+        },
+        {
+          "value": "product",
+          "label": "t:sections.main-list-collections.settings.image.options__2.label"
+        },
+        {
+          "value": "product_hover",
+          "label": "t:sections.main-list-collections.settings.image.options__3.label"
+        }
+      ],
+      "default": "product_hover",
+      "label": "t:sections.main-list-collections.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "landscape",
+          "label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-list-collections.settings.image_ratio.options__4.label"
+        }
+      ],
+      "default": "square",
+      "label": "t:sections.main-list-collections.settings.image_ratio.label",
+      "info": "t:sections.main-list-collections.settings.image_ratio.info"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+			"label": "t:sections.featured-products.settings.image_fit.label",
+      "options": [
+        {
+          "value": "contain",
+          "label": "t:sections.featured-products.settings.image_fit.options__1.label"
+        },
+        {
+          "value": "cover",
+          "label": "t:sections.featured-products.settings.image_fit.options__2.label"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desc",
+      "default": true,
+      "label": "t:sections.main-list-collections.settings.show_desc.label"
+    }
+  ]
+}
+{% endschema %}

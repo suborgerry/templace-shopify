@@ -1,0 +1,180 @@
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-badge.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-badge.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'parallax.js' | asset_url }}" defer="defer"></script>
+
+<div class="container">
+	<ul class="featured-products__list">
+		<li class="featured-products__item color-background-2">
+			
+			{%- if section.settings.heading != blank -%}
+				<h2 class="h2 featured-products__heading">{{ section.settings.heading | truncate: 30, '' }}</h2>
+			{%- endif -%}
+
+			{%- if section.settings.description != blank -%}
+				<p class="featured-products__text">{{ section.settings.description }}</p>
+			{%- endif -%}
+
+			{%- if section.settings.subtitle != blank -%}
+				<div class="subtitle featured-products__subtitle">{% render "icon-star" %}{{ section.settings.subtitle }}</div>
+			{%- endif -%}
+
+		</li>
+		{%- for product in section.settings.product_list limit: section.settings.products_to_show -%}
+			<li class="collection-product-card featured-products__item featured-products__item--card quickview{%- if settings.quickview_hover -%}--hover{% endif %}">
+				{% render 'product-card',
+					product_card_product: product,
+					media_size: section.settings.image_ratio,
+					media_fit: section.settings.image_fit,
+					show_secondary_image: section.settings.show_secondary_image,
+					show_vendor: section.settings.show_vendor,
+					show_desc: section.settings.show_desc %}
+			</li>
+			{%- else -%}
+				{%- for i in (1 .. section.settings.products_to_show) -%}
+					<li class="collection-product-card featured-products__item">
+						{% render 'product-card-placeholder' %}
+					</li>
+				{%- endfor -%}
+		{%- endfor -%}
+		{%- if section.settings.image != blank -%}
+			<li class="featured-products__item featured-products__item--image color-background-2">
+				<div class="featured-products__parallax-wrapper js-parallax" 
+					data-parallax-property="translateY" 
+					data-parallax-property-value="100" 
+					data-parallax-steps="0, 100">
+					{%- assign image_size = section.settings.image.width | append: 'x' -%}
+						<img srcset="{{ section.settings.image | img_url: image_size }} 1x, {{ section.settings.image | img_url: image_size, scale: 2 }} 2x"
+								src="{{ section.settings.image | img_url: image_size }}"
+								alt="{{ section.settings.image.alt | escape }}"
+								width="{{ section.settings.image.width }}"
+								height="{{ section.settings.image.height }}"
+								loading="lazy"
+								class="featured-products__image"
+						>
+				</div>
+			</li>
+		{%- endif -%}
+	</ul>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.featured-products.name",
+  "tag": "section",
+  "class": "featured-products spaced-section",
+  "settings": [
+		{
+      "type": "richtext",
+      "id": "heading",
+      "default": "<p>Some header</p>",
+      "label": "t:sections.featured-products.settings.heading.label",
+      "info": "t:sections.featured-products.settings.heading.info"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "default": "Some descriptive text for your featured items section. For better alignment, it is better to use text in several lines",
+      "label": "t:sections.featured-products.settings.description.label"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Subheading",
+      "label": "t:sections.featured-products.settings.subtitle.label",
+      "info": "t:sections.featured-products.settings.subtitle.info"
+    },
+		{
+			"type": "product_list",
+			"id": "product_list",
+			"limit": 12,
+      "label": "t:sections.featured-products.settings.product_list.label"
+    },
+		{
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.featured-products.settings.products_to_show.label"
+    },
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "t:sections.featured-products.settings.image.label",
+			"info": "t:sections.featured-products.settings.image.info"
+		},
+		{
+      "type": "header",
+      "content": "t:sections.featured-products.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "landscape",
+          "label": "t:sections.featured-products.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.featured-products.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.featured-products.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "square",
+      "label": "t:sections.featured-products.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+			"label": "t:sections.featured-products.settings.image_fit.label",
+      "options": [
+        {
+          "value": "contain",
+          "label": "t:sections.featured-products.settings.image_fit.options__1.label"
+        },
+        {
+          "value": "cover",
+          "label": "t:sections.featured-products.settings.image_fit.options__2.label"
+        }
+      ],
+      "default": "contain"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.featured-products.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.featured-products.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desc",
+      "default": false,
+      "label": "t:sections.featured-products.settings.show_desc.label",
+      "info": "t:sections.featured-products.settings.show_desc.info"
+    }
+	],
+	"presets": [
+		{
+			"name": "t:sections.featured-products.name"
+		}
+	]
+}
+{% endschema %}

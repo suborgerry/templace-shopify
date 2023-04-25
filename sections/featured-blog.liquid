@@ -1,0 +1,191 @@
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
+
+<div class="blog container">
+	<div class="border-wrapper">
+		{%- if section.settings.heading != blank or section.settings.show_view_all -%}
+			<div class="blog__title-wrapper {% if section.settings.show_border %} blog__title-wrapper--border {% endif %}">
+				{%- if section.settings.heading != blank -%}
+					<h2 class="blog__title title--section h3">{{ section.settings.heading }}</h2>
+				{%- endif -%}
+
+				{%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
+					<a href="{{ section.settings.blog.url }}" class="blog__button button button--simple button--arrow link-hover-line">
+						<span>{{ 'sections.featured_blog.view_all' | t }}</span> {% render 'icon-button-arrow' %}
+					</a>
+				{%- endif -%}
+			</div>
+		{%- endif -%}
+		{%- liquid
+			if section.settings.post_limit <= section.settings.blog.articles_count
+				assign posts_exceed_limit = true
+			endif -%}
+		{%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
+			<ul class="blog__posts articles-wrapper {% if posts_exceed_limit %} blog__posts--{{ section.settings.post_limit }}-items{% else %} blog__posts--{{ section.settings.blog.articles_count }}-items{% endif %}"
+					role="list"
+			>
+				{%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+					<li class="blog__post article">
+						{% render 'article-card', blog: section.settings.blog, article: article, show_image: section.settings.show_image, show_tags: section.settings.show_tags, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt %}
+					</li>
+				{%- endfor -%}
+			</ul>
+		{%- else -%}
+			<ul class="blog__posts articles-wrapper blog__posts blog__posts--3-items">
+				<li class="blog__post article">
+					<article class="article-card">
+						<div class="article-content motion-reduce">
+							<div class="article-card__image-wrapper">
+								<div class="article-card__image media media--landscape">
+									{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+								</div>
+							</div>
+
+							<div class="article-card__info">
+								<header class="article-card__header">
+									<h2 class="article-card__title h4">
+										{{ 'sections.featured_blog.onboarding_title' | t }}
+									</h2>
+								</header>
+								<p class="article-card__excerpt">
+									{{ 'sections.featured_blog.onboarding_content' | t }}
+								</p>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="blog__post article">
+					<article class="article-card">
+						<div class="article-content motion-reduce">
+							<div class="article-card__image-wrapper">
+								<div class="article-card__image media media--landscape">
+									{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+								</div>
+							</div>
+
+							<div class="article-card__info">
+								<header class="article-card__header">
+									<h2 class="article-card__title h4">
+										{{ 'sections.featured_blog.onboarding_title' | t }}
+									</h2>
+								</header>
+								<p class="article-card__excerpt">
+									{{ 'sections.featured_blog.onboarding_content' | t }}
+								</p>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="blog__post article">
+					<article class="article-card">
+						<div class="article-content motion-reduce">
+							<div class="article-card__image-wrapper">
+								<div class="article-card__image media media--landscape">
+									{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+								</div>
+							</div>
+
+							<div class="article-card__info">
+								<header class="article-card__header">
+									<h2 class="article-card__title h4">
+										{{ 'sections.featured_blog.onboarding_title' | t }}
+									</h2>
+								</header>
+								<p class="article-card__excerpt">
+									{{ 'sections.featured_blog.onboarding_content' | t }}
+								</p>
+							</div>
+						</div>
+					</article>
+				</li>
+			</ul>
+		{%- endif -%}
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.featured-blog.name",
+	"tag": "section",
+	"class": "spaced-section",
+	"settings": [
+		{
+			"type": "richtext",
+			"id": "heading",
+			"default": "<p>Latest Articles</p>",
+			"label": "t:sections.featured-blog.settings.heading.label"
+		},
+		{
+			"type": "blog",
+			"id": "blog",
+			"label": "t:sections.featured-blog.settings.blog.label"
+		},
+		{
+			"type": "range",
+			"id": "post_limit",
+			"min": 1,
+			"max": 4,
+			"step": 1,
+			"default": 4,
+			"label": "t:sections.featured-blog.settings.post_limit.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_image",
+			"default": true,
+			"label": "t:sections.featured-blog.settings.show_image.label",
+			"info": "t:sections.featured-blog.settings.show_image.info"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_tags",
+			"default": false,
+			"label": "t:sections.main-blog.settings.show_tags.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_date",
+			"default": true,
+			"label": "t:sections.featured-blog.settings.show_date.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_author",
+			"default": false,
+			"label": "t:sections.featured-blog.settings.show_author.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_excerpt",
+			"default": false,
+			"label": "t:sections.featured-blog.settings.show_excerpt.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_view_all",
+			"default": true,
+			"label": "t:sections.featured-blog.settings.show_view_all.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_border",
+			"default": true,
+			"label": "t:sections.featured-blog.settings.show_border.label"
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.featured-blog.presets.name",
+			"settings": {
+				"blog": "News"
+			}
+		}
+	]
+}
+{% endschema %}

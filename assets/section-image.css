@@ -1,0 +1,31 @@
+.image-section {
+  text-align: center;
+}
+.image-section.shopify-section:first-child .spaced-section {
+  padding-top: 6.4rem;
+}
+@media screen and (min-width: 990px) {
+  .image-section.shopify-section:first-child .spaced-section {
+    padding-top: 9.3rem;
+  }
+}
+
+.image-section__title {
+  margin: 0 auto;
+  max-width: 92.4rem;
+  text-align: center;
+}
+.image-section__title p {
+  margin: 0;
+}
+
+.image-section__text {
+  margin: 0 auto;
+  margin-top: 2.4rem;
+  max-width: 40.6rem;
+}
+
+.image-section__button {
+  margin-top: 5.6rem;
+  padding: 2rem -5rem;
+}
