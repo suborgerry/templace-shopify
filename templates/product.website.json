@@ -3,9 +3,9 @@
     "2bfe90fa-a125-4a50-b3db-a6aea751da59": {
       "type": "product-banner-custom",
       "settings": {
-        "heading": "<p>Neutral Showit Website Template<\/p>",
+        "heading": "<p>Boho Photography Showit Website Template<\/p>",
         "use_product_title": true,
-        "description": "Neutral Website Template",
+        "description": "Minimalistic Website Template",
         "button_link": "",
         "button_label": "",
         "use_product_image": false,
@@ -115,30 +115,14 @@
           "type": "text_slide",
           "settings": {
             "slide_name": "Designed By Professional Designers",
-            "slide_text": "<p>Our team has years of experience          in UI\/UX design, so we use this knowledge to create high-quality templates that are both functional    and visually appealing.<\/p>"
-          }
-        },
-        "7ea75a52-5a00-4bfd-b399-1006db11e524": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "Available On All Devices",
-            "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
-          }
-        },
-        "e5576985-5c0f-4627-a60f-5302c520436b": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "",
-            "slide_text": ""
+            "slide_text": "<p>Our team has years of experience          in UI\/UX design, so we use this knowledge to create high-quality templates that are both functional    and visually appealing. <\/p>"
           }
         }
       },
       "block_order": [
         "bb30c239-86af-47a9-abd1-efd307660da9",
         "313b6ab0-e00b-4669-8b96-82580eeeb42c",
-        "53314644-e7f5-44f2-a840-77d33be66af9",
-        "7ea75a52-5a00-4bfd-b399-1006db11e524",
-        "e5576985-5c0f-4627-a60f-5302c520436b"
+        "53314644-e7f5-44f2-a840-77d33be66af9"
       ],
       "settings": {
         "title": "You Will Appreciate It"
