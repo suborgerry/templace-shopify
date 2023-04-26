@@ -1,0 +1,71 @@
+<script>
+  if(typeof(Spurit) === 'undefined'){
+    var Spurit = {};
+  }
+  if(!Spurit.SplitPartialPayments2){
+    Spurit.SplitPartialPayments2 = {};
+  }
+  if(!Spurit.SplitPartialPayments2.snippet){
+    Spurit.SplitPartialPayments2.snippet = {};
+  }
+  if(!Spurit.SplitPartialPayments2.snippet.product){
+      Spurit.SplitPartialPayments2.snippet.product = {};
+  }
+  if(!Spurit.SplitPartialPayments2.snippet.products){
+      Spurit.SplitPartialPayments2.snippet.products = {};
+  }
+  Spurit.SplitPartialPayments2.snippet.appId = 49
+  Spurit.SplitPartialPayments2.snippet.shopId = 13503
+  Spurit.SplitPartialPayments2.snippet.shopHash = 'c646fea7275020d725172d9a9d07d08c';
+
+  if (typeof(Spurit.globalSnippet) === 'undefined' || Object.keys(Spurit.globalSnippet).length === 0){
+      Spurit.globalSnippet = {
+          shop_currency: '{{ shop.currency }}',
+          money_format: '{{ shop.money_format | replace: "'", '"' }}',
+          cart: {{ cart | json }},
+          customer_id: '{{ customer.id }}',
+          customer_email: '{{ customer.email }}',
+      };
+  }
+
+  {% if product %}
+    Spurit.SplitPartialPayments2.snippet.product = {{product | json}};
+    Spurit.SplitPartialPayments2.snippet.product.selected_variant = {{product.selected_or_first_available_variant | json}};
+    Spurit.SplitPartialPayments2.snippet.product.collections = {{product.collections | map: 'id' | json}};
+  {% endif %}
+  {% if products %}
+  {% for product in products %}
+    Spurit.SplitPartialPayments2.snippet.products['{{product.id}}'] = {{product | json}};
+    Spurit.SplitPartialPayments2.snippet.products['{{product.id}}'].collections = {{product.collections | map: 'id' | json}};
+  {% endfor %}
+  {% endif %}
+
+  {% assign pageType = template | split: '.' | first %}
+  {% if pageType == 'product' %}
+    Spurit.SplitPartialPayments2.snippet.product = {{product | json}};
+    Spurit.SplitPartialPayments2.snippet.product.selected_variant = {{product.selected_or_first_available_variant | json}};
+    Spurit.SplitPartialPayments2.snippet.product.collections = {{product.collections | map: 'id' | json}};
+  {% elsif pageType == 'search' %}
+  {% paginate search.results %}
+  {% if products %}
+  {% for product in products %}
+    Spurit.SplitPartialPayments2.snippet.products['{{product.id}}'] = {{product | json}};
+    Spurit.SplitPartialPayments2.snippet.products['{{product.id}}'].collections = {{product.collections | map: 'id' | json}};
+  {% endfor %}
+  {% endif %}
+  {% endpaginate %}
+  {% elsif pageType == 'collection' %}
+  {% paginate collection.products %}
+  {% if products %}
+  {% for product in products %}
+  Spurit.SplitPartialPayments2.snippet.products['{{product.id}}'] = {{product | json}};
+  Spurit.SplitPartialPayments2.snippet.products['{{product.id}}'].collections = {{product.collections | map: 'id' | json}};
+  {% endfor %}
+  {% endif %}
+  {% endpaginate %}
+  {% endif %}
+</script>
+
+<script src="https://s2.cdn-spurit.com/all-apps/spurit.global-2.x.min.js" async></script>
+<script src="https://s2.cdn-spurit.com/shopify-apps/split-partial-payments-2/common.js" async></script>
+<link href="https://s2.cdn-spurit.com/shopify-apps/split-partial-payments-2/common.css" rel="stylesheet" type="text/css" media="all">

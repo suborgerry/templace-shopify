@@ -3,14 +3,14 @@
     "2bfe90fa-a125-4a50-b3db-a6aea751da59": {
       "type": "product-banner-custom",
       "settings": {
-        "heading": "<p>Neutral Showit Website Template<\/p>",
+        "heading": "<p>Influencer Showit Template<\/p>",
         "use_product_title": true,
-        "description": "Neutral Website Template",
+        "description": "Minimalistic Website Template",
         "button_link": "",
         "button_label": "",
         "use_product_image": false,
-        "cover_image": "{{ product.metafields.custom.main_baner.value }}",
-        "cover_image_mobile": "{{ product.metafields.custom.main_banner_mobile.value }}",
+        "cover_image": "shopify:\/\/shop_images\/Group_78.jpg",
+        "cover_image_mobile": "shopify:\/\/shop_images\/Group_79.jpg",
         "justify_content": "center",
         "align_items": "flex-start"
       }
@@ -40,7 +40,7 @@
           "type": "description",
           "settings": {
             "use_common": false,
-            "content": "<p>This Boho Coaching Showit Website template is a fantastic choice for those seeking for minimalistic design aesthetic blogger website or influencer template. This life coach website theme is excellent for course creators, bloggers, and influencers.<\/p>"
+            "content": ""
           }
         },
         "46b62d20-0ff3-496a-b290-c8d1f368d917": {
@@ -90,8 +90,8 @@
         "type_of_metafield": "what_s_includet",
         "column_quantity": 2,
         "column_width": 42.5,
-        "image": "{{ product.metafields.custom.what_s_includet_banner.value }}",
-        "image_mobile": "{{ product.metafields.custom.what_s_includet_banner_mobile.value }}"
+        "image": "shopify:\/\/shop_images\/Group_80.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_81.jpg"
       }
     },
     "3ca256c0-e827-403d-a128-a8f2752816fb": {
@@ -118,18 +118,18 @@
             "slide_text": "<p>Our team has years of experience          in UI\/UX design, so we use this knowledge to create high-quality templates that are both functional    and visually appealing.<\/p>"
           }
         },
-        "7ea75a52-5a00-4bfd-b399-1006db11e524": {
+        "75593aac-765d-4474-85a1-a0fc45470584": {
           "type": "text_slide",
           "settings": {
             "slide_name": "Available On All Devices",
             "slide_text": "<p>Our templates are designed to be fully responsive, meaning they look great and function perfectly on any device, from desktops to smartphones.<\/p>"
           }
         },
-        "e5576985-5c0f-4627-a60f-5302c520436b": {
+        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997": {
           "type": "text_slide",
           "settings": {
-            "slide_name": "",
-            "slide_text": ""
+            "slide_name": "Easy Customizable Design",
+            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
           }
         }
       },
@@ -137,8 +137,8 @@
         "bb30c239-86af-47a9-abd1-efd307660da9",
         "313b6ab0-e00b-4669-8b96-82580eeeb42c",
         "53314644-e7f5-44f2-a840-77d33be66af9",
-        "7ea75a52-5a00-4bfd-b399-1006db11e524",
-        "e5576985-5c0f-4627-a60f-5302c520436b"
+        "75593aac-765d-4474-85a1-a0fc45470584",
+        "c1da78c7-4b59-4d1f-bd1d-bac28eeab997"
       ],
       "settings": {
         "title": "You Will Appreciate It"
@@ -153,15 +153,15 @@
         "type_of_metafield": "influencer_showit_template_is_for",
         "column_quantity": 1,
         "column_width": 60,
-        "image": "{{ product.metafields.custom.image_with_text_banner.value }}",
-        "image_mobile": "{{ product.metafields.custom.image_with_text_banner_mobile.value }}"
+        "image": "shopify:\/\/shop_images\/image.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_1.jpg"
       }
     },
     "f8592e5f-7172-4e7b-b37b-45eb65e23464": {
       "type": "image-with-text-reverse",
       "settings": {
-        "image": "{{ product.metafields.custom.image_reverse_1.value }}",
-        "image_mobile": "{{ product.metafields.custom.image_reverse_1_mobile.value }}",
+        "image": "shopify:\/\/shop_images\/image_2.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_4.jpg",
         "heading": "<p>Original Stylish Sections<\/p>",
         "num_of_italic": 3,
         "height": "adapt",
@@ -172,8 +172,8 @@
     "0ec97fbe-f26a-4cff-a94d-63a50eff0f86": {
       "type": "image-with-text-reverse",
       "settings": {
-        "image": "{{ product.metafields.custom.image_reverse_2.value }}",
-        "image_mobile": "{{ product.metafields.custom.image_reverse_2_mobile.value }}",
+        "image": "shopify:\/\/shop_images\/image_5.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_6.jpg",
         "heading": "<p>Consistent  Designed Pages<\/p>",
         "num_of_italic": 1,
         "height": "adapt",
@@ -184,8 +184,8 @@
     "3cc2635d-c2f1-4fba-8991-dee83972498d": {
       "type": "image-with-text-reverse",
       "settings": {
-        "image": "{{ product.metafields.custom.image_reverse_3.value }}",
-        "image_mobile": "{{ product.metafields.custom.image_reverse_3_mobile.value }}",
+        "image": "shopify:\/\/shop_images\/image_7.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/image_8.jpg",
         "heading": "<p>Some heading for this section<\/p>",
         "num_of_italic": 3,
         "height": "adapt",
@@ -200,8 +200,8 @@
         "description": "<p>This will help you choose the best option for you, taking into account all your preferences<\/p>",
         "button_link": "#",
         "button_label": "TAKE A QUIZ",
-        "cover_image": "{{ product.metafields.custom.image_with_color_banner.value }}",
-        "cover_image_mobile": "{{ product.metafields.custom.image_with_color_banner_mobile.value }}",
+        "cover_image": "shopify:\/\/shop_images\/Group_82.jpg",
+        "cover_image_mobile": "shopify:\/\/shop_images\/Group_83.jpg",
         "background_color": "#282828"
       }
     },
@@ -327,8 +327,8 @@
       ],
       "settings": {
         "title": "<p>How It <em>Works<\/em><\/p>",
-        "image": "{{ product.metafields.custom.text_columns_banner.value }}",
-        "image_mobile": "{{ product.metafields.custom.text_columns_banner_mobile.value }}"
+        "image": "shopify:\/\/shop_images\/Group_84.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_85.jpg"
       }
     },
     "9676429a-0b49-45e0-97a7-935e21362aae": {
@@ -387,8 +387,8 @@
       "settings": {
         "subheading": "Don’t waste your time!",
         "title": "<p>T<em>a<\/em>ke Your W<em>e<\/em>bsite To<br\/>The Next Level N<em>o<\/em>w<\/p>",
-        "image": "{{ product.metafields.custom.image_with_button.value }}",
-        "image_mobile": "{{ product.metafields.custom.image_with_button_mobile.value }}"
+        "image": "shopify:\/\/shop_images\/Group_485.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Group_486.jpg"
       }
     },
     "product-recommendations": {

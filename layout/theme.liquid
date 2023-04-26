@@ -243,7 +243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {% render 'shogun-head' %}
 
 </script>
-</head>
+{% include 'orichi_multi_pixel' %}</head>
 
 	<body class="template-{{ template.name }} template-{{ template | replace: '.', '-' }}">
 		<a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -311,5 +311,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			}
 		</script>
 	  <script src="//cool-image-magnifier.product-image-zoom.com/js/core/main.min.js?timestamp=1667790148&shop=handmade-dv.myshopify.com" defer></script>
+{% render 'spurit_spp2_theme_snippet' %}
 </body>
 </html>
