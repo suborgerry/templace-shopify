@@ -11,7 +11,7 @@
         slidesPerView: 3,
         direction: 'vertical',
         freeMode: true,
-        enabled: false,
+        enabled: true,
         breakpoints: {
             990: {
                 // enabled: true,

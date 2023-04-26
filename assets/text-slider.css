@@ -1,3 +1,7 @@
+.swiper-free-mode > .swiper-wrapper {
+  overflow-x: auto;
+}
+
 @media screen and (max-width: 989.98px) {
   .text-slider {
     width: calc(100% + 1.2rem * 2);
