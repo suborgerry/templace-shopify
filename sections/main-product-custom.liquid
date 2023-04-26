@@ -318,9 +318,11 @@
                           disabled
                         >
                         <div class="product-form__buttons">
-                          {%- if block.settings.show_dynamic_checkout -%}
-                            {{ form | payment_button }}
-                          {%- endif -%}
+                          {%- comment -%}
+                             {%- if block.settings.show_dynamic_checkout -%}
+                              {{ form | payment_button }}
+                            {%- endif -%}
+                          {%- endcomment -%}
                           <button
                             type="submit"
                             name="add"

@@ -19,6 +19,7 @@
               {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w{%- endif -%}
             "
             src="{{ block.settings.image | img_url: '967x' }}"
+            height="{{ block.settings.image.height }}px"
             alt="{{ block.settings.image.alt | escape }}"
             loading="lazy"
           >

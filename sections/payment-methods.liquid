@@ -74,6 +74,7 @@
                 novalidate: 'novalidate',
                 data-type: 'add-to-cart-form'
               -%}
+                {%- comment -%} {{ form | payment_terms }} {%- endcomment -%}
                 <input
                   type="hidden"
                   name="id"
@@ -94,6 +95,9 @@
                     {%- else -%}
                       SOLD OUT
                     {%- endif -%}
+                  </button>
+                  <button onclick="window.location='{{ shop.url }}/apps/installments/?amount={{ product.price | times: 0.3333 | money_without_currency }}'">
+                    Рассрочка на 3 платежа
                   </button>
                 </div>
               {%- endform -%}
