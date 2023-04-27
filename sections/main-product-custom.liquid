@@ -304,6 +304,19 @@
                         </svg>
                         <span class="product-form__error-message"></span>
                       </div>
+                      {%- comment -%}
+                         <form action="/checkout" method="post">
+                          <div class="product-form__buttons">
+                            <input type="hidden" name="id" value="{{ product.id }}">
+                            <button
+                              type="submit"
+                              class="product-form__submit button button--primary-size button--primary"
+                            >
+                              BUY IT NOW
+                            </button>
+                          </div>
+                        </form>
+                      {%- endcomment -%}
                       {%- form 'product',
                         product,
                         id: product_form_id,
@@ -319,10 +332,37 @@
                         >
                         <div class="product-form__buttons">
                           {%- comment -%}
-                             {%- if block.settings.show_dynamic_checkout -%}
-                              {{ form | payment_button }}
-                            {%- endif -%}
                           {%- endcomment -%}
+                          <div
+                            data-shopify="payment-button"
+                            data-has-selling-plan="false"
+                            data-has-fixed-selling-plan="false"
+                            class="shopify-payment-button"
+                          >
+                            <div>
+                              <div>
+                                <div>
+                                  <button
+                                    type="button"
+                                    class="shopify-payment-button__button shopify-payment-button__button--unbranded BUz42FHpSPncCPJ4Pr_f jjzYeefyWpPZLH9pIgyw RWJ0IfBjxIhflh4AIrUw"
+                                    data-testid="Checkout-button"
+                                  >
+                                    Buy it now</button
+                                  ><button
+                                    aria-disabled="true"
+                                    aria-hidden="true"
+                                    class="shopify-payment-button__more-options BUz42FHpSPncCPJ4Pr_f shopify-payment-button__button--hidden"
+                                    type="button"
+                                    data-testid="sheet-open-button"
+                                  >
+                                    More payment options
+                                  </button>
+                                  <div><div></div></div>
+                                  <div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <button
                             type="submit"
                             name="add"

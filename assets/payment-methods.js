@@ -14,10 +14,10 @@
         enabled: false,
         breakpoints: {
             990: {
-                enabled: true,
+                // enabled: true,
                 slidesPerView: 3.1,
-                centeredSlides: true,
-                initialSlide: 1,
+                // centeredSlides: true,
+                // initialSlide: 1,
                 direction: 'horizontal'
             }
         }

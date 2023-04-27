@@ -3,7 +3,7 @@
     "2bfe90fa-a125-4a50-b3db-a6aea751da59": {
       "type": "product-banner-custom",
       "settings": {
-        "heading": "<p>Boho Photography Showit Website Template<\/p>",
+        "heading": "<p>Life Coach Canva Website Template<\/p>",
         "use_product_title": true,
         "description": "Minimalistic Website Template",
         "button_link": "",
@@ -33,14 +33,14 @@
         "e4a32685-50ad-4589-9779-c07e7dc3cec9": {
           "type": "rating",
           "settings": {
-            "rating_range": "4"
+            "rating_range": "5"
           }
         },
         "0a3aacf3-b257-4c7e-a98e-d15e2e717308": {
           "type": "description",
           "settings": {
             "use_common": false,
-            "content": "<p>This Boho Coaching Showit Website template is a fantastic choice for those seeking for minimalistic design aesthetic blogger website or influencer template. This life coach website theme is excellent for course creators, bloggers, and influencers.<\/p>"
+            "content": "<p>Minimalistic and luxurious, this Real Estate Agent Showit template is perfect for real estate agents looking to boost their sales and attract new clients. Showcase your listings and show your unique selling proposition to stand out from the competition!<\/p>"
           }
         },
         "46b62d20-0ff3-496a-b290-c8d1f368d917": {
@@ -108,7 +108,7 @@
           "type": "text_slide",
           "settings": {
             "slide_name": "Easy Customizable Design",
-            "slide_text": "<p>Easily update the template to make it your own using the Showit platform’s drag-and-drop builder. No coding required.<\/p>"
+            "slide_text": "<p>Easily update the template to make it your own using the Canva platform’s drag-and-drop builder. No coding required.<\/p>"
           }
         },
         "53314644-e7f5-44f2-a840-77d33be66af9": {
@@ -131,7 +131,7 @@
     "c489413c-07f8-49be-9a3e-0b5283f757f1": {
       "type": "image-with-text-custom",
       "settings": {
-        "heading": "Influencer Showit Template Is For",
+        "heading": "Life Coach Canva Template Is For",
         "heading_margin_top": 7,
         "use_metafield": true,
         "type_of_metafield": "influencer_showit_template_is_for",
@@ -244,6 +244,7 @@
       "blocks": {
         "f1fbea83-8607-46ec-a4c8-d9069a3a4c46": {
           "type": "text_slide",
+          "disabled": true,
           "settings": {
             "slide_name": "<p><em>Pay<\/em> 3 Times<\/p>",
             "slide_text": "<p>Most flexible payment<\/p>",
@@ -292,7 +293,7 @@
           "settings": {
             "number": "02",
             "heading": "<p>Install Template<\/p>",
-            "text": "<p>Sign up for Showit and follow the instructions    to add your design into your account. <\/p>"
+            "text": "<p>Sign up for Canva and follow the instructions    to add your design into your account. <\/p>"
           }
         },
         "3502a938-f8f5-4495-8a62-66ef092da0b7": {
@@ -321,22 +322,22 @@
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is Showit?",
-            "row_content": "<p>Showit is a super-easy subscription-based website builder that gives you ultimate creative freedom. Unlike other websites themes and templates that lock you into designing in columns and rows, with Showit, you can literally drag and drop any element, anywhere on the page!<\/p>"
+            "heading": "Are the Photos Included?",
+            "row_content": "<p>They are all sourced from free stocks, so you can be free to use them for your website.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Does this work with WordPress?",
-            "row_content": "<p>Yes, WordPress is a popular content management system that can work with a wide variety of applications and services, including language models like ChatGPT. If you're interested in integrating ChatGPT into a WordPress website, there are a few ways you could go about it.<\/p>"
+            "heading": "What Can I Edit?",
+            "row_content": "<p>You can edit text, colors, and fonts, and add your own photos.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is included in my purchase?",
-            "row_content": "<p>In general, the contents of a purchase will depend on the specific product or service being purchased. For example, if you bought a physical product, it would typically include the item itself and any accessories or documentation that come with it. If you purchased a digital product or service, such as software or a subscription, it would typically include access to the product or service itself, along with any relevant documentation, support, or updates.<\/p>"
+            "heading": "Can I Use it With a Free Canva Account?",
+            "row_content": "<p>Yes, but only if you’re going to use free my.canva.site domain. Otherwise, you should buy a ‘Pro’ subscription to add your own domain.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3": {

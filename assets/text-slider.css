@@ -1,5 +1,7 @@
 .swiper-free-mode > .swiper-wrapper {
-  overflow-x: auto;
+  overflow-x: visible;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 989.98px) {

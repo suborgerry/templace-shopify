@@ -11,13 +11,13 @@
         slidesPerView: 3,
         direction: 'vertical',
         freeMode: true,
-        enabled: true,
+        enabled: false,
         breakpoints: {
             990: {
                 // enabled: true,
                 slidesPerView: 3.25,
-                centeredSlides: true,
-                initialSlide: 1,
+                // centeredSlides: true,
+                // initialSlide: 1,
                 direction: 'horizontal'
             }
         }
