@@ -336,32 +336,11 @@
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is Showit?",
-            "row_content": "<p>Showit is a super-easy subscription-based website builder that gives you ultimate creative freedom. Unlike other websites themes and templates that lock you into designing in columns and rows, with Showit, you can literally drag and drop any element, anywhere on the page!<\/p>"
+            "heading": "Do I need to know how to code?",
+            "row_content": "<p>No, to utilize this ‘назва продуктуʼ you don’t need to know how to code. Canva is a very easy-to-use intuitive tool that can be used by any person without prior design experience.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does it work with Wordpress?",
-            "row_content": "<p>No, this Showit website template is only compatible with Showit site builder. However, by ordering this template, you’ll get a built-in Wordpress blog for free, so you’ll be able to post blog article easily and without any extra charge.<\/p>"
-          }
-        },
-        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Will you set up a template for me?",
-            "row_content": "<p>The Showit template setup is not included to the price of this product. Showit is a very easy and intuitive drag&drop tool, so you will be able to easily set up a theme by yourself. However, you can always order customization services for an extra charge here. The current price of this service is EUR 200 per website.<\/p>"
-          }
-        },
-        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is the code required?",
-            "row_content": "<p>Absolutely no. All features are pre-made for you and you don’t need any coding or design skills to get started.<\/p>"
-          }
-        },
-        "25baefb7-de71-463a-a7b4-3e2b4904f8b2": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Will I be able to get a refund for this product?",
@@ -371,10 +350,7 @@
       },
       "block_order": [
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0",
-        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1",
-        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2",
-        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3",
-        "25baefb7-de71-463a-a7b4-3e2b4904f8b2"
+        "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1"
       ],
       "settings": {
         "heading": "<p><em>F<\/em>AQs<\/p>",
