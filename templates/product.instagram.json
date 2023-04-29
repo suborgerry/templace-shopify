@@ -71,6 +71,18 @@
     },
     "6190a8be-8344-4ad7-87da-f06d553e5ba3": {
       "type": "image-with-text-custom",
+      "blocks": {
+        "49d6bc20-3df4-4e02-86ea-a959bd8fd2ab": {
+          "type": "item",
+          "settings": {
+            "number": "",
+            "label": ""
+          }
+        }
+      },
+      "block_order": [
+        "49d6bc20-3df4-4e02-86ea-a959bd8fd2ab"
+      ],
       "settings": {
         "heading": "What’s Included",
         "heading_margin_top": 8,
@@ -78,8 +90,8 @@
         "type_of_metafield": "what_s_includet",
         "column_quantity": 2,
         "column_width": 42.5,
-        "image": "shopify:\/\/shop_images\/Group_489.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Group_490.jpg"
+        "image": "{{ product.metafields.custom.what_s_includet_banner.value }}",
+        "image_mobile": "{{ product.metafields.custom.what_s_includet_banner_mobile.value }}"
       }
     },
     "3ca256c0-e827-403d-a128-a8f2752816fb": {
@@ -125,8 +137,8 @@
         "type_of_metafield": "influencer_showit_template_is_for",
         "column_quantity": 1,
         "column_width": 60,
-        "image": "shopify:\/\/shop_images\/image_10.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/image_11.jpg"
+        "image": "{{ product.metafields.custom.image_with_text_banner.value }}",
+        "image_mobile": "{{ product.metafields.custom.image_with_text_banner_mobile.value }}"
       }
     },
     "f8592e5f-7172-4e7b-b37b-45eb65e23464": {
@@ -172,8 +184,8 @@
         "description": "<p>This will help you choose the best option for you, taking into account all your preferences<\/p>",
         "button_link": "#",
         "button_label": "TAKE A QUIZ",
-        "cover_image": "shopify:\/\/shop_images\/Group_82.jpg",
-        "cover_image_mobile": "shopify:\/\/shop_images\/Group_83.jpg",
+        "cover_image": "{{ product.metafields.custom.image_with_color_banner.value }}",
+        "cover_image_mobile": "{{ product.metafields.custom.image_with_color_banner_mobile.value }}",
         "background_color": "#282828"
       }
     },
@@ -262,8 +274,8 @@
       ],
       "settings": {
         "title": "<p>How It <em>Works<\/em><\/p>",
-        "image": "shopify:\/\/shop_images\/Group_498.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Group_85.jpg"
+        "image": "{{ product.metafields.custom.text_columns_banner.value }}",
+        "image_mobile": "{{ product.metafields.custom.text_columns_banner_mobile.value }}"
       }
     },
     "9676429a-0b49-45e0-97a7-935e21362aae": {
@@ -272,36 +284,36 @@
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are the photos included?",
-            "row_content": "<p>They are all sourced from free stocks, so you can be free to use them for your social media.<\/p>"
+            "heading": "Can I use it with free Canva subscription?",
+            "row_content": "<p>Yes, all the materials used in this ‘назва продукту’ are sourced from free stocks and are free to use with a free Canva account. You don’t need a Pro subscription to use these templates.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What can I edit?",
-            "row_content": "<p>Yes, WordPress is a popular content management system that can work with a wide variety of applications and services, including language models like ChatGPT. If you're interested in integrating ChatGPT into a WordPress website, there are a few ways you could go about it.<\/p>"
+            "heading": "Can I resell this templates?",
+            "row_content": "<p>No, reselling of this product is strictly prohibited.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is included in my purchase?",
-            "row_content": "<p>In general, the contents of a purchase will depend on the specific product or service being purchased. For example, if you bought a physical product, it would typically include the item itself and any accessories or documentation that come with it. If you purchased a digital product or service, such as software or a subscription, it would typically include access to the product or service itself, along with any relevant documentation, support, or updates.<\/p>"
+            "heading": "Can I use it for personal or for business use?",
+            "row_content": "<p>You can use ‘назва продукту’ for both personal and commercial use. However, if you decide to use it for multiple social media accounts (businesses), you have purchase it separately for every additional account.<\/p>"
           }
         },
         "template--18548947026265__9676429a-0b49-45e0-97a7-935e21362aae-1681987856a84dffc3-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do i need to know how to code?",
-            "row_content": "<p>It depends on what you're trying to do. If you want to use a language model like ChatGPT as a user or customer, then you don't need to know how to code. You can interact with the language model through an existing interface, such as a chatbot or voice assistant, without having to write any code yourself.<\/p>"
+            "heading": "Will I be able to get a refund for this product?",
+            "row_content": "<p>No, unfortunately, due to the nature of digital products, all sales are final and no refunds will be issued.<\/p>"
           }
         },
         "25baefb7-de71-463a-a7b4-3e2b4904f8b2": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Can i use my own logo & colors?",
-            "row_content": "<p>It depends on the specific application or platform you are using to integrate ChatGPT. In general, most chatbot platforms or plugins allow you to customize the appearance of the chatbot to some extent, including the ability to use your own logo and colors.<\/p>"
+            "row_content": "<p>Yes, you can change everything, starting from imagery, ending with the color scheme and typography.<\/p>"
           }
         }
       },
@@ -322,8 +334,8 @@
       "settings": {
         "subheading": "Don’t waste your time!",
         "title": "<p>T<em>a<\/em>ke Your <em>Social<\/em> Media<br\/>To The Next Level Now<\/p>",
-        "image": "shopify:\/\/shop_images\/Group_500.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Group_501.jpg"
+        "image": "{{ product.metafields.custom.image_with_button.value }}",
+        "image_mobile": "{{ product.metafields.custom.image_with_button_mobile.value }}"
       }
     },
     "product-recommendations": {
