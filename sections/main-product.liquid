@@ -80,7 +80,7 @@
 										<img
 											srcset="{% if featured_media.preview_image.width >= 70 %}{{ featured_media.preview_image | img_url: '70x' }} 70w,{% endif %}
 										{% if featured_media.preview_image.width >= 140 %}{{ featured_media.preview_image | img_url: '140x' }} 140w,{% endif %}"
-											src="{{ featured_media | img_url: '70x70' }}"
+											src="{{ featured_media | img_url }}"
 											loading="lazy"
 											width="70"
 											height="{{ 70 | divided_by: featured_media.preview_image.aspect_ratio | ceil }}"

@@ -5,22 +5,28 @@
     <div class="image-with-text__container image-with-text__container--{{ section.settings.position }}">
       <div class="image-with-text__grid{% if section.settings.layout == 'text_last' %} image-with-text__grid--reverse{% endif %}">
         <div class="image-with-text__left">
-          <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
-            {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
+          <div
+            class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
+            {% if section.settings.height == 'adapt' and section.settings.image != blank %}
+              style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
+            {% endif %}
           >
             {%- if section.settings.image != blank -%}
-              <img srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
-              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
-              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
-              {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
-              {%- if section.settings.image.width >= 967 -%}{{ section.settings.image | img_url: '967x' }} 967w,{%- endif -%}
-              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w{%- endif -%}"
-                  src="{{ section.settings.image | img_url: '967x' }}"
-                  sizes="(min-width: 1100px) 1070px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                  alt="{{ section.settings.image.alt | escape }}"
-                  loading="lazy"
-                  width="{{ section.settings.image.width }}"
-                  height="{{ section.settings.image.height }}"
+              <img
+                srcset="
+                  {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                  {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                  {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+                  {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+                  {%- if section.settings.image.width >= 967 -%}{{ section.settings.image | img_url: '967x' }} 967w,{%- endif -%}
+                  {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w{%- endif -%}
+                "
+                src="{{ section.settings.image | img_url }}"
+                sizes="(min-width: 1100px) 1070px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ section.settings.image.alt | escape }}"
+                loading="lazy"
+                width="{{ section.settings.image.width }}"
+                height="{{ section.settings.image.height }}"
               >
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -45,13 +51,14 @@
                 <li class="image-with-text__author-avatar-item" {{ block.shopify_attributes }}>
                   {%- if block.settings.image != blank -%}
                     {%- assign image_size = block.settings.image | append: 'x' -%}
-                    <img srcset="{{ block.settings.image | img_url: image_size }} 1x, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
-                        src="{{ block.settings.image | img_url: image_size }}"
-                        width="43"
-                        height="43"
-                        alt="{{ block.settings.title }}"
-                        loading="lazy"
-												style="object-position: {{ block.settings.image.presentation.focal_point }}"
+                    <img
+                      srcset="{{ block.settings.image | img_url: image_size }} 1x, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
+                      src="{{ block.settings.image | img_url: image_size }}"
+                      width="43"
+                      height="43"
+                      alt="{{ block.settings.title }}"
+                      loading="lazy"
+                      style="object-position: {{ block.settings.image.presentation.focal_point }}"
                     >
                   {%- else -%}
                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -79,7 +86,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
 </div>
 
@@ -167,11 +174,11 @@
       "info": "t:sections.image-with-text.settings.layout.info"
     },
     {
-			"type": "checkbox",
-			"id": "border_top",
-			"default": false,
-			"label": "t:sections.newsletter.settings.border_top.label"
-		}
+      "type": "checkbox",
+      "id": "border_top",
+      "default": false,
+      "label": "t:sections.newsletter.settings.border_top.label"
+    }
   ],
   "blocks": [
     {

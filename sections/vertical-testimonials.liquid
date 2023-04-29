@@ -18,7 +18,7 @@
               {%- if block.settings.image.width >= 967 -%}{{ block.settings.image | img_url: '967x' }} 967w,{%- endif -%}
               {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w{%- endif -%}
             "
-            src="{{ block.settings.image | img_url: '967x' }}"
+            src="{{ block.settings.image | img_url }}"
             height="{{ block.settings.image.height }}px"
             alt="{{ block.settings.image.alt | escape }}"
             loading="lazy"

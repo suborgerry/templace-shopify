@@ -21,7 +21,7 @@
               {%- if product.media[0].preview_image.width >= 3840 -%}{{ product.media[0].preview_image | img_url: '3840x' }} 3840w,{%- endif -%}
               {{ product.media[0].preview_image | img_url: 'master' }} {{ product.media[0].preview_image.width }}w
             "
-            src="{{ product.media[0].preview_image | img_url: '1920x' }}"
+            src="{{ product.media[0].preview_image | img_url }}"
             sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
             alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
             loading="lazy"
@@ -43,7 +43,7 @@
                 {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | img_url: '3840x' }} 3840w,{%- endif -%}
                 {{ section.settings.cover_image | img_url: 'master' }} {{ section.settings.cover_image.width }}w
               "
-              src="{{ section.settings.cover_image | img_url: '1920x' }}"
+              src="{{ section.settings.cover_image | img_url }}"
               sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
               alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
               loading="lazy"
@@ -67,7 +67,7 @@
                 {%- if section.settings.cover_image_mobile.width >= 3840 -%}{{ section.settings.cover_image_mobile | img_url: '3840x' }} 3840w,{%- endif -%}
                 {{ section.settings.cover_image_mobile | img_url: 'master' }} {{ section.settings.cover_image_mobile.width }}w
               "
-              src="{{ section.settings.cover_image_mobile | img_url: '1920x' }}"
+              src="{{ section.settings.cover_image_mobile | img_url }}"
               sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
               alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
               loading="lazy"
