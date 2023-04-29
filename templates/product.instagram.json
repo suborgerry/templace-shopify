@@ -9,8 +9,8 @@
         "button_link": "",
         "button_label": "",
         "use_product_image": false,
-        "cover_image": "shopify:\/\/shop_images\/Group_487.jpg",
-        "cover_image_mobile": "shopify:\/\/shop_images\/Group_488.jpg",
+        "cover_image": "{{ product.metafields.custom.main_baner.value }}",
+        "cover_image_mobile": "{{ product.metafields.custom.main_banner_mobile.value }}",
         "justify_content": "center",
         "align_items": "flex-start"
       }
@@ -65,13 +65,14 @@
       ],
       "settings": {
         "use_metafield_image": true,
-        "image": "{{ product.metafields.custom.template_image.value }}"
+        "image": "{{ product.metafields.custom.template_image.value }}",
+        "video": "{{ product.metafields.custom.template_video.value }}"
       }
     },
     "6190a8be-8344-4ad7-87da-f06d553e5ba3": {
       "type": "image-with-text-custom",
       "settings": {
-        "heading": "Some heading for this section",
+        "heading": "What’s Included",
         "heading_margin_top": 8,
         "use_metafield": true,
         "type_of_metafield": "what_s_includet",
@@ -104,28 +105,12 @@
             "slide_name": "Designed By Professional Designers",
             "slide_text": "<p>Our team has years of experience          in UI\/UX design, so we use this knowledge to create high-quality templates that are both functional    and visually appealing.<\/p>"
           }
-        },
-        "53314644-e7f5-44f2-a840-77d33be66af9": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "Designes Templates Avaliable In 3 Sizes",
-            "slide_text": "<p>Our templates includes 3 sizes: 1:1, portrait post size and story size. So it gives you more opportunities to use it in different ways.<\/p>"
-          }
-        },
-        "595b3366-484e-4b04-b5e5-846dea2b1c9e": {
-          "type": "text_slide",
-          "settings": {
-            "slide_name": "Fully Editable Design in Canva Editor",
-            "slide_text": "<p>To use our templates all you need it’s just a free Canva account. Here you can easily customize all templates and enjoy the result.<\/p>"
-          }
         }
       },
       "block_order": [
         "c33ef91c-f520-4107-b627-474fb39381e9",
         "bb30c239-86af-47a9-abd1-efd307660da9",
-        "313b6ab0-e00b-4669-8b96-82580eeeb42c",
-        "53314644-e7f5-44f2-a840-77d33be66af9",
-        "595b3366-484e-4b04-b5e5-846dea2b1c9e"
+        "313b6ab0-e00b-4669-8b96-82580eeeb42c"
       ],
       "settings": {
         "title": "You Will Appreciate It"
@@ -134,7 +119,7 @@
     "c489413c-07f8-49be-9a3e-0b5283f757f1": {
       "type": "image-with-text-custom",
       "settings": {
-        "heading": "Influencer Showit Template Is For",
+        "heading": "{{ product.metafields.custom.heading_is_for.value }}",
         "heading_margin_top": 7,
         "use_metafield": true,
         "type_of_metafield": "influencer_showit_template_is_for",

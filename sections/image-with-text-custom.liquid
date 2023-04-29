@@ -13,13 +13,13 @@
         {% endif %}
       {% endfor %}
     </h2>
-
+    {% assign list_items = product.metafields.custom[section.settings.type_of_metafield] %}
+    {% assign row_size = 6 %}
     <ul
       class="image-with-text-custom__list"
       style="--columns: {{ section.settings.column_quantity }}; --columns-width: {{ section.settings.column_width }}rem; --heading-margin-top: {{ section.settings.heading_margin_top }}rem"
     >
       {% if section.settings.use_metafield %}
-        {% assign list_items = product.metafields.custom[section.settings.type_of_metafield] %}
         {% for item in list_items.value %}
           <li>
             {% if section.settings.type_of_metafield == 'what_s_includet' %}
@@ -37,9 +37,19 @@
             {% endif %}
             {{ item.label }}
           </li>
+          {% if forloop.index >= 12 %}
+            {% assign row_size = forloop.index | divided_by: 2.0 | ceil %}
+          {% endif %}
         {% endfor %}
       {% endif %}
     </ul>
+    {% if row_size > 6 and section.settings.column_quantity == 2 %}
+      <style>
+        #shopify-section-{{section.id}} .image-with-text-custom__list {
+          grid-template-rows: repeat({{ row_size }}, 6.9rem) !important;
+        }
+      </style>
+    {% endif %}
   </div>
   <div class="image-with-text-custom__media">
     {%- if section.settings.image != blank -%}
